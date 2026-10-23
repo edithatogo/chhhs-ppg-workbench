@@ -24,3 +24,5 @@ adoption/benefit reviews remain in the final deferred track.
 ## ALM-06 publication continuation
 
 Versioned source and bounded release/recovery completed in original source commits `c34dec6` and `361373f`. Current public transport/readback is recorded in [the release handoff](../../../docs/alm06-release-20261023.md).
+
+- [x] Publish ALM-06 through the separate sanitised checkout; actual content review, full remote tree parity, hosted CI39945869444 at2fc5dbf and fresh GitHub-clone recovery verified. Python3.15.1 qualified; all original private evidence/dirty work preserved. [Final handoff](../../../docs/alm06-release-20261023.md).

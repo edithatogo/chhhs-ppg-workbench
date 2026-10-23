@@ -2328,7 +2328,8 @@
       "recoverySection": "local-tools",
       "receiptRoots": [
         ".local/history-remediation-20261018",
-        ".local/alm06-release-20261023"
+        ".local/alm06-release-20261023",
+        ".local/alm06-publication-20261023"
       ],
       "runtimeState": "local-manual; no persistent runtime",
       "connectionDependencies": []

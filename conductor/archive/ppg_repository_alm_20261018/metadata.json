@@ -8,7 +8,7 @@
   "execution_eligibility": "ready",
   "dependencies": [],
   "owner_role": "Integration owns repository controls and manifest; existing native object owners retain writes",
-  "next_action": "ALM-06 bounded release/recovery complete; publication verification is recorded in docs/alm06-release-20261023.md. Preserve private evidence and production/connected-runtime boundaries.",
+  "next_action": "ALM-06 publication and bounded release/recovery complete. Retain private evidence/settings and stopped qualification target. Production migration, connected runtime and external-object recovery remain separate.",
   "native_qualified": false,
   "full_track_acceptance_achieved": false,
   "priority_scope": "First repository/publication increment; independent of existing low-effort workbench tasks",
@@ -460,7 +460,7 @@
     "cleanCommittedRecovery": true,
     "focusedTests": 25,
     "setupChecks": 4031,
-    "hostedCiForThisIncrement": "source CI39944799118 succeeded; subsequent 3.15.1 handover gets its own exact-head verification",
+    "hostedCiForThisIncrement": "actual run39945869444 succeeded on repo-local Python3.15.1",
     "originalPrivateBindings": 192,
     "publicVariantExactMaterialisation": true,
     "publicationTestsPassed": 64,
@@ -470,6 +470,18 @@
     "publicSourceTree": "cb47daa8587c683c1f3042baff8962790f0e6128",
     "publicSourceCI": 39944799118,
     "publicSourceCISucceeded": true,
-    "activePython": "3.15.1"
+    "activePython": "3.15.1",
+    "publicationCompleted": true,
+    "publicRuntimeCommit": "2fc5dbf4e3ab2ec34b83f319406741c9b171a406",
+    "publicRuntimeTree": "612cacf3de9ebec98f0453515ea4e9473f68d634",
+    "publicPrivateBindings": 206,
+    "confidentialContentReview": "actual_agent_review_completed_for_each_exact_publication_scope",
+    "publicVisibility": "public",
+    "remoteCommitTreeInventoryParity": true,
+    "hostedCIRun": 39945869444,
+    "hostedCISucceeded": true,
+    "hostedCloneBothVariantsExact": true,
+    "applicationBuilderTestsPassed": 39,
+    "branchProtectionEnforced": false
   }
 }

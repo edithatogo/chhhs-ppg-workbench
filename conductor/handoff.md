@@ -14,7 +14,9 @@ work preserved. No branch-protection enforcement claim; ALM-06 remains separate.
 [Versioned release source and recovery handoff](../docs/alm06-release-20261023.md).
 Bounded release/recovery complete; this public source variant retains 38 templates
 and 206 private binding declarations. Both variants reconstruct exact native bytes.
-Public transport and hosted verification are recorded in that handoff. Original
+Published source5056528 and runtime2fc5dbf have exact remote parity; hosted
+CI39945869444 succeeds on repo-local Python3.15.1 with64 tests. Fresh GitHub-clone
+recovery is byte-exact for both38-file variants. Main remains unprotected. Original
 history, packages, settings and unrelated dirty work remain private and preserved.
 
 ## Latest reviewed delivery
