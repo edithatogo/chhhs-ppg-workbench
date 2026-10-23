@@ -1,0 +1,93 @@
+title = "PPG publication secret and tenant-binding checks"
+
+[extend]
+useDefault = true
+
+# Only this exact fictional digest on this exact JSON field in these two fixtures.
+# Keep every other default generic-api-key match active, including in these files.
+[[rules]]
+id = "generic-api-key"
+[[rules.allowlists]]
+description = "Reviewed fictional identity exception digest; not a credential"
+condition = "AND"
+paths = ['''^(?:\./)?templates/identity-resolution/(proposal|report)\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"exceptionKey": "4835789178d9658ad7ac55fabbecb44dc3cd125e122b656af4d66e1108b1cb2e",\s*$''']
+
+[[rules]]
+id = "ppg-operational-sharepoint-binding"
+description = "Operational tenant binding belongs in private deployment storage"
+regex = '''(?i)https?://healthqld[.]sharepoint[.]com(?:/[^\s"'<>]*)?'''
+keywords = ["sharepoint"]
+
+[[rules]]
+id = "ppg-operational-email"
+description = "Operational account or respondent address belongs in private storage"
+regex = '''(?i)[a-z0-9._%+-]+@(?:health[.]qld[.]gov[.]au|flinders[.]edu[.]au|staff[.]vuw[.]ac[.]nz)'''
+keywords = ["@"]
+
+[[rules]]
+id = "ppg-dataverse-environment-url"
+description = "Native Dataverse environment URLs belong in private deployment storage"
+regex = '''(?i)https?://[a-z0-9-]+[.]crm[0-9]*[.]dynamics[.]com(?:/[^\s"'<>]*)?'''
+keywords = ["dynamics.com"]
+
+[[rules]]
+id = "ppg-native-identifier-context"
+description = "Native environment, workflow, action and record identities require private binding review"
+regex = '''(?i)(?:candidate_environment_id|native[_ -](?:flow|action|case|record|environment)[_ -]?id|environment[_ -]?id|sourceUniqueId|UniqueId|list(?:s)?\s*\(|live case schema|ETag)[^\r\n]{0,100}?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+
+[[rules.allowlists]]
+description = "Reviewed synthetic UUID values in named fixture files only; other values still rejected"
+condition = "AND"
+regexTarget = "match"
+paths = [
+  '''^(?:\./)?scripts/ppg_source_preparation\.py$''',
+  '''^(?:\./)?templates/dataverse\-migration/fictional\-normalized\-export\.json$''',
+  '''^(?:\./)?tests/test_ai_evaluation\.py$''',
+  '''^(?:\./)?tests/test_binary_proof_history_paging\.py$''',
+  '''^(?:\./)?tests/test_binary_proof_producer\.py$''',
+  '''^(?:\./)?tests/test_binary_publication\.py$''',
+  '''^(?:\./)?tests/test_case_work_closure_route\.py$''',
+  '''^(?:\./)?tests/test_complete_history_reads\.py$''',
+  '''^(?:\./)?tests/test_controlled_qualification_input\.py$''',
+  '''^(?:\./)?tests/test_evidence_check\.py$''',
+  '''^(?:\./)?tests/test_evidence_cli\.py$''',
+  '''^(?:\./)?tests/test_evidence_read\.py$''',
+  '''^(?:\./)?tests/test_generation_contract\.py$''',
+  '''^(?:\./)?tests/test_multisource_case_context\.py$''',
+  '''^(?:\./)?tests/test_native_closure_entry\.py$''',
+  '''^(?:\./)?tests/test_native_completed_review\.py$''',
+  '''^(?:\./)?tests/test_native_package_flow\.py$''',
+  '''^(?:\./)?tests/test_prepared_artifact_folder\.py$''',
+  '''^(?:\./)?tests/test_prepared_closure_check\.py$''',
+  '''^(?:\./)?tests/test_prepared_decision_outcome\.py$''',
+  '''^(?:\./)?tests/test_prepared_readiness_check\.py$''',
+  '''^(?:\./)?tests/test_prepared_recording_chain\.py$''',
+  '''^(?:\./)?tests/test_preproof_recovery_qualification\.py$''',
+  '''^(?:\./)?tests/test_readonly_preparation_source\.py$''',
+  '''^(?:\./)?tests/test_selected_ownership_projection\.py$''',
+  '''^(?:\./)?tests/test_selected_prepared_verification\.py$''',
+  '''^(?:\./)?tests/test_source_preparation\.py$''',
+  '''^(?:\./)?tests/test_source_review_requirements\.py$''',
+]
+regexes = [
+  '''(?i)00000000-0000-0000-0000-000000000000$''',
+  '''(?i)00000000-0000-4000-8000-000000000001$''',
+  '''(?i)00000000-0000-4000-8000-000000000002$''',
+  '''(?i)00000000-0000-4000-8000-000000000003$''',
+  '''(?i)00000000-0000-4000-8000-000000000007$''',
+  '''(?i)00000000-0000-4000-8000-000000000008$''',
+  '''(?i)00000000-0000-4000-8000-000000000009$''',
+  '''(?i)00000000-0000-4000-8000-000000000010$''',
+  '''(?i)00000000-0000-4000-8000-000000000011$''',
+  '''(?i)00000000-0000-4000-8000-000000000077$''',
+  '''(?i)00000000-0000-4000-8000-000000000098$''',
+  '''(?i)00000000-0000-4000-8000-000000000099$''',
+  '''(?i)11111111-1111-1111-1111-111111111111$''',
+  '''(?i)11111111-1111-4111-8111-111111111111$''',
+  '''(?i)22222222-2222-2222-2222-222222222222$''',
+  '''(?i)22222222-2222-4222-8222-222222222222$''',
+  '''(?i)33333333-3333-4333-8333-333333333333$''',
+  '''(?i)44444444-4444-4444-4444-444444444444$''',
+]

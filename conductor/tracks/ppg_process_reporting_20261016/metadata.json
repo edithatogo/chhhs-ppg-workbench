@@ -1,0 +1,21 @@
+{
+  "track_id": "ppg_process_reporting_20261016",
+  "type": "feature",
+  "status": "completed",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "created_at": "2026-10-16",
+  "description": "Broader reporting and process measures",
+  "capability_key": "process-reporting",
+  "dependencies": [
+    "qw1_actionable_queue_20261013",
+    "ppg_assurance_readiness_20261015"
+  ],
+  "owner_role": "Review workflow lane with integration handoff",
+  "next_action": "Use current native views; refresh cross-list snapshots manually after accumulating real event history",
+  "evidence_directory": ".local/process-reporting/",
+  "implementation_started": true,
+  "updated_at": "2026-10-16",
+  "readiness": "native_verified_teams_web_manual_snapshot",
+  "native_evidence": ".local/process-reporting/completion-audit.json"
+}

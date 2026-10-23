@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/2021-05/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-19",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-6.01",
+      "code": "6.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Communication governance, risk and workforce learning",
+      "pdfPage": 60,
+      "printedPage": 56
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.02",
+      "code": "6.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Evaluate communication processes and improve them",
+      "pdfPage": 60,
+      "printedPage": 56
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.03",
+      "code": "6.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Include patients and meet information needs during high-risk care",
+      "pdfPage": 60,
+      "printedPage": 56
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.04",
+      "code": "6.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Communication during identification, transfer, discharge and changed risks",
+      "pdfPage": 60,
+      "printedPage": 56
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.05",
+      "code": "6.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Use approved patient identifiers, including on discharge records",
+      "pdfPage": 61,
+      "printedPage": 57
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.06",
+      "code": "6.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Match each patient to intended care and record the matching process",
+      "pdfPage": 61,
+      "printedPage": 57
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.07",
+      "code": "6.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Define handover content, context-specific risks and participants",
+      "pdfPage": 62,
+      "printedPage": 58
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.08",
+      "code": "6.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Prepare structured handover with patient preferences and clear accountability transfer",
+      "pdfPage": 62,
+      "printedPage": 58
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.09",
+      "code": "6.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Communicate changed critical information promptly to relevant people",
+      "pdfPage": 63,
+      "printedPage": 59
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.10",
+      "code": "6.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Enable patients and families to raise critical information",
+      "pdfPage": 63,
+      "printedPage": 59
+    },
+    {
+      "requirementId": "nsqhs-2-2021-6.11",
+      "code": "6.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-6",
+      "topic": "Record critical information, reassessment and care-plan changes promptly",
+      "pdfPage": 64,
+      "printedPage": 60
+    }
+  ]
+}

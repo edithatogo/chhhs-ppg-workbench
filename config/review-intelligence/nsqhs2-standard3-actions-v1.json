@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-3.01",
+      "code": "3.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Infection governance",
+      "pdfPage": 30,
+      "printedPage": 26
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.02",
+      "code": "3.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Workforce readiness",
+      "pdfPage": 30,
+      "printedPage": 26
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.03",
+      "code": "3.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Improvement monitoring",
+      "pdfPage": 31,
+      "printedPage": 27
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.04",
+      "code": "3.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Consumer involvement",
+      "pdfPage": 31,
+      "printedPage": 27
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.05",
+      "code": "3.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Infection surveillance",
+      "pdfPage": 31,
+      "printedPage": 27
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.06",
+      "code": "3.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Precaution policies",
+      "pdfPage": 32,
+      "printedPage": 28
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.07",
+      "code": "3.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Precaution systems",
+      "pdfPage": 32,
+      "printedPage": 28
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.08",
+      "code": "3.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Precaution application",
+      "pdfPage": 33,
+      "printedPage": 29
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.09",
+      "code": "3.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Infection communication",
+      "pdfPage": 33,
+      "printedPage": 29
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.10",
+      "code": "3.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Hand hygiene",
+      "pdfPage": 33,
+      "printedPage": 29
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.11",
+      "code": "3.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Aseptic practice",
+      "pdfPage": 34,
+      "printedPage": 30
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.12",
+      "code": "3.12",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Device management",
+      "pdfPage": 34,
+      "printedPage": 30
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.13",
+      "code": "3.13",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Environmental cleaning",
+      "pdfPage": 34,
+      "printedPage": 30
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.14",
+      "code": "3.14",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Environmental risks",
+      "pdfPage": 34,
+      "printedPage": 30
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.15",
+      "code": "3.15",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Workforce immunisation",
+      "pdfPage": 35,
+      "printedPage": 31
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.16",
+      "code": "3.16",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Workforce infections",
+      "pdfPage": 35,
+      "printedPage": 31
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.17",
+      "code": "3.17",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Reusable devices",
+      "pdfPage": 36,
+      "printedPage": 32
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.18",
+      "code": "3.18",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Stewardship systems",
+      "pdfPage": 37,
+      "printedPage": 33
+    },
+    {
+      "requirementId": "nsqhs-2-2021-3.19",
+      "code": "3.19",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-3",
+      "topic": "Stewardship monitoring",
+      "pdfPage": 37,
+      "printedPage": 33
+    }
+  ]
+}

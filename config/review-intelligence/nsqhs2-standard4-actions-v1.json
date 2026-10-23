@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-4.01",
+      "code": "4.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Govern safe medicine processes",
+      "pdfPage": 42,
+      "printedPage": 38
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.02",
+      "code": "4.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Evaluate medicine-system improvement",
+      "pdfPage": 42,
+      "printedPage": 38
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.03",
+      "code": "4.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Partner in medicine decisions",
+      "pdfPage": 42,
+      "printedPage": 38
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.04",
+      "code": "4.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Verify medicine-related clinical scope",
+      "pdfPage": 42,
+      "printedPage": 38
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.05",
+      "code": "4.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Capture baseline medicine history",
+      "pdfPage": 43,
+      "printedPage": 39
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.06",
+      "code": "4.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Resolve medicine-list discrepancies",
+      "pdfPage": 43,
+      "printedPage": 39
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.07",
+      "code": "4.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Record known medicine reactions",
+      "pdfPage": 43,
+      "printedPage": 39
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.08",
+      "code": "4.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Record reactions arising during care",
+      "pdfPage": 43,
+      "printedPage": 39
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.09",
+      "code": "4.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Report reactions to regulator",
+      "pdfPage": 43,
+      "printedPage": 39
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.10",
+      "code": "4.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Prioritise and document medicine reviews",
+      "pdfPage": 44,
+      "printedPage": 40
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.11",
+      "code": "4.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Explain individual medicine risks",
+      "pdfPage": 44,
+      "printedPage": 40
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.12",
+      "code": "4.12",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Share current medicines and changes",
+      "pdfPage": 44,
+      "printedPage": 40
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.13",
+      "code": "4.13",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Provide medicine decision resources",
+      "pdfPage": 45,
+      "printedPage": 41
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.14",
+      "code": "4.14",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Protect medicine storage and disposal",
+      "pdfPage": 45,
+      "printedPage": 41
+    },
+    {
+      "requirementId": "nsqhs-2-2021-4.15",
+      "code": "4.15",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-4",
+      "topic": "Control high-risk medicines",
+      "pdfPage": 45,
+      "printedPage": 41
+    }
+  ]
+}

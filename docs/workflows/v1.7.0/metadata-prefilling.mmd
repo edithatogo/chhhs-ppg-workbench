@@ -1,0 +1,8 @@
+flowchart TD
+  start["Operator prepares maintained template"]
+  start --> n0["Select permitted metadata"]
+  n0 --> n1["Populate supported fields"]
+  n1 --> n2["Check structure and missing values"]
+  n2 --> n3["Retain editable output and source references"]
+  n3 --> output["Draft template and structural findings"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

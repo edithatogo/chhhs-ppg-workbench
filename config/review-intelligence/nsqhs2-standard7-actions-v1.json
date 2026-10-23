@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-7.01",
+      "code": "7.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Blood governance",
+      "pdfPage": 68,
+      "printedPage": 64
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.02",
+      "code": "7.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Improvement monitoring",
+      "pdfPage": 68,
+      "printedPage": 64
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.03",
+      "code": "7.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Consumer involvement",
+      "pdfPage": 68,
+      "printedPage": 64
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.04",
+      "code": "7.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Blood conservation",
+      "pdfPage": 69,
+      "printedPage": 65
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.05",
+      "code": "7.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Transfusion documentation",
+      "pdfPage": 69,
+      "printedPage": 65
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.06",
+      "code": "7.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Appropriate transfusion",
+      "pdfPage": 69,
+      "printedPage": 65
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.07",
+      "code": "7.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Adverse-event reporting",
+      "pdfPage": 69,
+      "printedPage": 65
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.08",
+      "code": "7.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Haemovigilance participation",
+      "pdfPage": 69,
+      "printedPage": 65
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.09",
+      "code": "7.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Product traceability",
+      "pdfPage": 70,
+      "printedPage": 66
+    },
+    {
+      "requirementId": "nsqhs-2-2021-7.10",
+      "code": "7.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-7",
+      "topic": "Blood availability",
+      "pdfPage": 70,
+      "printedPage": 66
+    }
+  ]
+}

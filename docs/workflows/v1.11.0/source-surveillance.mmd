@@ -1,0 +1,10 @@
+flowchart TD
+  start["On-demand selected-page acquisition"]
+  start --> n0["Select exact source register and confirm source question/edition/scope"]
+  n0 --> n1["Acquire bounded raw responses and verify canonical URL/representation/provenance"]
+  n1 --> n2["Keep changed URL bindings and failed reads as held observations; preserve earlier evidence"]
+  n2 --> n3["Compare two immutable snapshots without automatically promoting a baseline"]
+  n3 --> n4["Use explicit standards relationships to group/deduplicate version-bound review leads"]
+  n4 --> n5["Keep missing relationships unassessed and owner notifications disabled"]
+  n5 --> output["Change candidate or visible acquisition hold"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

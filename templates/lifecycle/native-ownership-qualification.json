@@ -1,0 +1,529 @@
+{
+  "qualificationOnly": true,
+  "realPolicyEffects": false,
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "$authentication": {
+        "defaultValue": {},
+        "type": "SecureObject"
+      },
+      "$connections": {
+        "defaultValue": {},
+        "type": "Object"
+      }
+    },
+    "triggers": {
+      "manual": {
+        "type": "Request",
+        "kind": "Button",
+        "inputs": {
+          "schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "runtimeConfiguration": {
+          "concurrency": {
+            "runs": 1
+          }
+        }
+      }
+    },
+    "actions": {
+      "Read_case": {
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+            "connectionName": "shared_sharepointonline",
+            "operationId": "HttpRequest"
+          },
+          "parameters": {
+            "dataset": "${QUALIFIED_SITE_URL}",
+            "parameters/method": "GET",
+            "parameters/uri": "_api/web/lists(guid'${PRIVATE_NATIVE_ID}')/items(${PRIVATE_CASE_ITEM_ID})",
+            "parameters/headers": {
+              "Accept": "application/json;odata=nometadata"
+            }
+          }
+        },
+        "runAfter": {}
+      },
+      "Read_source": {
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+            "connectionName": "shared_sharepointonline",
+            "operationId": "HttpRequest"
+          },
+          "parameters": {
+            "dataset": "${QUALIFIED_SITE_URL}",
+            "parameters/method": "GET",
+            "parameters/uri": "_api/web/GetFileById('${PRIVATE_NATIVE_ID}')/$value",
+            "parameters/headers": {
+              "Accept": "application/json;odata=nometadata"
+            }
+          }
+        },
+        "runAfter": {
+          "Read_case": [
+            "Succeeded"
+          ]
+        }
+      },
+      "Read_source_pin": {
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+            "connectionName": "shared_sharepointonline",
+            "operationId": "HttpRequest"
+          },
+          "parameters": {
+            "dataset": "${QUALIFIED_SITE_URL}",
+            "parameters/method": "GET",
+            "parameters/uri": "_api/web/GetFileById('${PRIVATE_NATIVE_ID}')?$select=ETag,UniqueId",
+            "parameters/headers": {
+              "Accept": "application/json;odata=nometadata"
+            }
+          }
+        },
+        "runAfter": {
+          "Read_source": [
+            "Succeeded"
+          ]
+        }
+      },
+      "Source_guard": {
+        "type": "If",
+        "expression": "@and(equals(body('Read_case')?['CaseUID'],'LC-FICTIONAL-20261017-01'),equals(body('Read_case')?['sourceBaselineRef'],'fictional://ppg-lifecycle/20261017/occurrence-01'),equals(body('Read_source_pin')?['ETag'],'\"{${PRIVATE_NATIVE_ID}},1\"'),equals(if(contains(body('Read_source'),'$content'),base64ToString(body('Read_source')?['$content']),string(body('Read_source'))),'FICTIONAL policy lifecycle qualification only.\nThis source establishes no clinical advice or policy authority.\nOwnership: explicit proposal and acceptance are required in the simulation.\n'))",
+        "runAfter": {
+          "Read_source_pin": [
+            "Succeeded"
+          ]
+        },
+        "actions": {
+          "Replay_or_transition": {
+            "type": "If",
+            "expression": "@equals(body('Read_case')?['caseStatus'],'Ownership accepted \u2014 FICTIONAL')",
+            "runAfter": {},
+            "actions": {
+              "Read_retained_receipt": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                    "connectionName": "shared_sharepointonline",
+                    "operationId": "HttpRequest"
+                  },
+                  "parameters": {
+                    "dataset": "${QUALIFIED_SITE_URL}",
+                    "parameters/method": "GET",
+                    "parameters/uri": "_api/web/GetFileByServerRelativePath(decodedurl='/teams/CairnsServices-DMS/PPG Review Evidence/Templates/LC-OWN-20261017-01.json')/$value",
+                    "parameters/headers": {
+                      "Accept": "application/json;odata=nometadata"
+                    }
+                  }
+                },
+                "runAfter": {}
+              },
+              "Parse_retained_receipt": {
+                "type": "Compose",
+                "inputs": "@if(contains(body('Read_retained_receipt'),'$content'),json(base64ToString(body('Read_retained_receipt')?['$content'])),json(string(body('Read_retained_receipt'))))",
+                "runAfter": {
+                  "Read_retained_receipt": [
+                    "Succeeded"
+                  ]
+                }
+              },
+              "Verify_replay": {
+                "type": "If",
+                "expression": "@and(equals(outputs('Parse_retained_receipt')?['requestId'],'LC-OWN-20261017-01'),equals(outputs('Parse_retained_receipt')?['CaseUID'],body('Read_case')?['CaseUID']),equals(outputs('Parse_retained_receipt')?['caseETag'],outputs('Read_case')?['headers']?['ETag']),equals(body('Read_case')?['accountableRole'],'FICTIONAL owner role \u2014 simulation only'))",
+                "runAfter": {
+                  "Parse_retained_receipt": [
+                    "Succeeded"
+                  ]
+                },
+                "actions": {
+                  "Native_replay_receipt": {
+                    "type": "Compose",
+                    "inputs": "@outputs('Parse_retained_receipt')",
+                    "runAfter": {}
+                  }
+                },
+                "else": {
+                  "actions": {
+                    "Refuse_changed_replay": {
+                      "type": "Terminate",
+                      "inputs": {
+                        "runStatus": "Failed",
+                        "runError": {
+                          "code": "ChangedReplay",
+                          "message": "Retained result does not match unchanged case"
+                        }
+                      },
+                      "runAfter": {}
+                    }
+                  }
+                }
+              }
+            },
+            "else": {
+              "actions": {
+                "Transition": {
+                  "type": "If",
+                  "expression": "@and(equals(outputs('Read_case')?['headers']?['ETag'],'\"${PRIVATE_NATIVE_ID},1\"'),equals(body('Read_case')?['caseStatus'],'Initiated \u2014 FICTIONAL'))",
+                  "runAfter": {},
+                  "actions": {
+                    "Find_proposal": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                          "connectionName": "shared_sharepointonline",
+                          "operationId": "HttpRequest"
+                        },
+                        "parameters": {
+                          "dataset": "${QUALIFIED_SITE_URL}",
+                          "parameters/method": "GET",
+                          "parameters/uri": "_api/web/lists/getbytitle('PPG Consultation and Handoff Events')/items?$filter=EventUID eq 'LC-OWN-PROPOSED-20261017-01'",
+                          "parameters/headers": {
+                            "Accept": "application/json;odata=nometadata"
+                          }
+                        }
+                      },
+                      "runAfter": {}
+                    },
+                    "Ensure_proposal": {
+                      "type": "If",
+                      "expression": "@equals(length(body('Find_proposal')?['value']),0)",
+                      "runAfter": {
+                        "Find_proposal": [
+                          "Succeeded"
+                        ]
+                      },
+                      "actions": {
+                        "Create_proposal": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                              "connectionName": "shared_sharepointonline",
+                              "operationId": "HttpRequest"
+                            },
+                            "parameters": {
+                              "dataset": "${QUALIFIED_SITE_URL}",
+                              "parameters/method": "POST",
+                              "parameters/uri": "_api/web/lists/getbytitle('PPG Consultation and Handoff Events')/items",
+                              "parameters/headers": {
+                                "Accept": "application/json;odata=nometadata",
+                                "Content-Type": "application/json;odata=nometadata"
+                              },
+                              "parameters/body": "{\"CaseUID\": \"LC-FICTIONAL-20261017-01\", \"DocumentReference\": \"${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt\", \"ReviewedVersionRef\": \"sharepoint:${PRIVATE_NATIVE_ID}:\\\"{${PRIVATE_NATIVE_ID}},1\\\"\", \"DocumentSHA256\": \"1f3611ad9bc4d380d6115c0de19814881d4841c4893d8ce4d213a5fb2d1c5ab8\", \"SubjectRole\": \"FICTIONAL owner role \\u2014 simulation only\", \"FromRole\": \"FICTIONAL initiating role\", \"EventKind\": \"Ownership handoff\", \"ConditionsState\": \"None recorded\", \"ActorName\": \"Technical qualification \\u2014 no real role transfer\", \"OccurredOn\": \"2026-10-17T13:55:00Z\", \"Summary\": \"FICTIONAL LC-OWN-20261017-01; no real policy/role effect\", \"EvidenceReference\": \"${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt\", \"EventUID\": \"LC-OWN-PROPOSED-20261017-01\", \"RecordState\": \"Proposed\", \"Title\": \"FICTIONAL ownership proposal\"}"
+                            }
+                          },
+                          "runAfter": {}
+                        }
+                      },
+                      "else": {
+                        "actions": {}
+                      }
+                    },
+                    "Find_acceptance": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                          "connectionName": "shared_sharepointonline",
+                          "operationId": "HttpRequest"
+                        },
+                        "parameters": {
+                          "dataset": "${QUALIFIED_SITE_URL}",
+                          "parameters/method": "GET",
+                          "parameters/uri": "_api/web/lists/getbytitle('PPG Consultation and Handoff Events')/items?$filter=EventUID eq 'LC-OWN-ACCEPTED-20261017-01'",
+                          "parameters/headers": {
+                            "Accept": "application/json;odata=nometadata"
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Ensure_proposal": [
+                          "Succeeded"
+                        ]
+                      }
+                    },
+                    "Ensure_acceptance": {
+                      "type": "If",
+                      "expression": "@equals(length(body('Find_acceptance')?['value']),0)",
+                      "runAfter": {
+                        "Find_acceptance": [
+                          "Succeeded"
+                        ]
+                      },
+                      "actions": {
+                        "Create_acceptance": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                              "connectionName": "shared_sharepointonline",
+                              "operationId": "HttpRequest"
+                            },
+                            "parameters": {
+                              "dataset": "${QUALIFIED_SITE_URL}",
+                              "parameters/method": "POST",
+                              "parameters/uri": "_api/web/lists/getbytitle('PPG Consultation and Handoff Events')/items",
+                              "parameters/headers": {
+                                "Accept": "application/json;odata=nometadata",
+                                "Content-Type": "application/json;odata=nometadata"
+                              },
+                              "parameters/body": "{\"CaseUID\": \"LC-FICTIONAL-20261017-01\", \"DocumentReference\": \"${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt\", \"ReviewedVersionRef\": \"sharepoint:${PRIVATE_NATIVE_ID}:\\\"{${PRIVATE_NATIVE_ID}},1\\\"\", \"DocumentSHA256\": \"1f3611ad9bc4d380d6115c0de19814881d4841c4893d8ce4d213a5fb2d1c5ab8\", \"SubjectRole\": \"FICTIONAL owner role \\u2014 simulation only\", \"FromRole\": \"FICTIONAL initiating role\", \"EventKind\": \"Ownership handoff\", \"ConditionsState\": \"None recorded\", \"ActorName\": \"Technical qualification \\u2014 no real role transfer\", \"OccurredOn\": \"2026-10-17T13:55:00Z\", \"Summary\": \"FICTIONAL LC-OWN-20261017-01; no real policy/role effect\", \"EvidenceReference\": \"${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt\", \"EventUID\": \"LC-OWN-ACCEPTED-20261017-01\", \"RecordState\": \"Accepted\", \"ParentEventUID\": \"LC-OWN-PROPOSED-20261017-01\", \"Title\": \"FICTIONAL ownership acceptance\"}"
+                            }
+                          },
+                          "runAfter": {}
+                        }
+                      },
+                      "else": {
+                        "actions": {}
+                      }
+                    },
+                    "Read_events": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                          "connectionName": "shared_sharepointonline",
+                          "operationId": "HttpRequest"
+                        },
+                        "parameters": {
+                          "dataset": "${QUALIFIED_SITE_URL}",
+                          "parameters/method": "GET",
+                          "parameters/uri": "_api/web/lists/getbytitle('PPG Consultation and Handoff Events')/items?$filter=CaseUID eq 'LC-FICTIONAL-20261017-01'",
+                          "parameters/headers": {
+                            "Accept": "application/json;odata=nometadata"
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Ensure_acceptance": [
+                          "Succeeded"
+                        ]
+                      }
+                    },
+                    "Pin_proposal": {
+                      "type": "Query",
+                      "inputs": {
+                        "from": "@body('Read_events')?['value']",
+                        "where": "@and(equals(item()?['CaseUID'],'LC-FICTIONAL-20261017-01'),equals(item()?['DocumentReference'],'${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt'),equals(item()?['ReviewedVersionRef'],'sharepoint:${PRIVATE_NATIVE_ID}:\"{${PRIVATE_NATIVE_ID}},1\"'),equals(item()?['DocumentSHA256'],'1f3611ad9bc4d380d6115c0de19814881d4841c4893d8ce4d213a5fb2d1c5ab8'),equals(item()?['SubjectRole'],'FICTIONAL owner role \u2014 simulation only'),equals(item()?['FromRole'],'FICTIONAL initiating role'),equals(item()?['EventKind'],'Ownership handoff'),equals(item()?['ConditionsState'],'None recorded'),equals(item()?['ActorName'],'Technical qualification \u2014 no real role transfer'),equals(item()?['Summary'],'FICTIONAL LC-OWN-20261017-01; no real policy/role effect'),equals(item()?['EvidenceReference'],'${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt'),equals(item()?['EventUID'],'LC-OWN-PROPOSED-20261017-01'),equals(item()?['RecordState'],'Proposed'))"
+                      },
+                      "runAfter": {
+                        "Read_events": [
+                          "Succeeded"
+                        ]
+                      }
+                    },
+                    "Pin_acceptance": {
+                      "type": "Query",
+                      "inputs": {
+                        "from": "@body('Read_events')?['value']",
+                        "where": "@and(equals(item()?['CaseUID'],'LC-FICTIONAL-20261017-01'),equals(item()?['DocumentReference'],'${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt'),equals(item()?['ReviewedVersionRef'],'sharepoint:${PRIVATE_NATIVE_ID}:\"{${PRIVATE_NATIVE_ID}},1\"'),equals(item()?['DocumentSHA256'],'1f3611ad9bc4d380d6115c0de19814881d4841c4893d8ce4d213a5fb2d1c5ab8'),equals(item()?['SubjectRole'],'FICTIONAL owner role \u2014 simulation only'),equals(item()?['FromRole'],'FICTIONAL initiating role'),equals(item()?['EventKind'],'Ownership handoff'),equals(item()?['ConditionsState'],'None recorded'),equals(item()?['ActorName'],'Technical qualification \u2014 no real role transfer'),equals(item()?['Summary'],'FICTIONAL LC-OWN-20261017-01; no real policy/role effect'),equals(item()?['EvidenceReference'],'${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt'),equals(item()?['EventUID'],'LC-OWN-ACCEPTED-20261017-01'),equals(item()?['RecordState'],'Accepted'),equals(item()?['ParentEventUID'],'LC-OWN-PROPOSED-20261017-01'))"
+                      },
+                      "runAfter": {
+                        "Read_events": [
+                          "Succeeded"
+                        ]
+                      }
+                    },
+                    "Pin_guard": {
+                      "type": "If",
+                      "expression": "@and(equals(length(body('Pin_proposal')),1),equals(length(body('Pin_acceptance')),1))",
+                      "runAfter": {
+                        "Pin_proposal": [
+                          "Succeeded"
+                        ],
+                        "Pin_acceptance": [
+                          "Succeeded"
+                        ]
+                      },
+                      "actions": {
+                        "Accept_case": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                              "connectionName": "shared_sharepointonline",
+                              "operationId": "HttpRequest"
+                            },
+                            "parameters": {
+                              "dataset": "${QUALIFIED_SITE_URL}",
+                              "parameters/method": "POST",
+                              "parameters/uri": "_api/web/lists(guid'${PRIVATE_NATIVE_ID}')/items(${PRIVATE_CASE_ITEM_ID})",
+                              "parameters/headers": {
+                                "Accept": "application/json;odata=nometadata",
+                                "Content-Type": "application/json;odata=nometadata",
+                                "IF-MATCH": "\"${PRIVATE_NATIVE_ID},1\"",
+                                "X-HTTP-Method": "MERGE"
+                              },
+                              "parameters/body": "{\"accountableRole\": \"FICTIONAL owner role \\u2014 simulation only\", \"caseStatus\": \"Ownership accepted \\u2014 FICTIONAL\", \"nextAction\": \"Prepare fictional revision for consultation; no policy approval\", \"targetDate\": \"2026-10-31\"}"
+                            }
+                          },
+                          "runAfter": {}
+                        },
+                        "Read_accepted_case": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                              "connectionName": "shared_sharepointonline",
+                              "operationId": "HttpRequest"
+                            },
+                            "parameters": {
+                              "dataset": "${QUALIFIED_SITE_URL}",
+                              "parameters/method": "GET",
+                              "parameters/uri": "_api/web/lists(guid'${PRIVATE_NATIVE_ID}')/items(${PRIVATE_CASE_ITEM_ID})",
+                              "parameters/headers": {
+                                "Accept": "application/json;odata=nometadata"
+                              }
+                            }
+                          },
+                          "runAfter": {
+                            "Accept_case": [
+                              "Succeeded"
+                            ]
+                          }
+                        },
+                        "Verify_accepted_readback": {
+                          "type": "If",
+                          "expression": "@and(equals(body('Read_accepted_case')?['CaseUID'],'LC-FICTIONAL-20261017-01'),equals(body('Read_accepted_case')?['accountableRole'],'FICTIONAL owner role \u2014 simulation only'),equals(body('Read_accepted_case')?['caseStatus'],'Ownership accepted \u2014 FICTIONAL'),equals(body('Read_accepted_case')?['targetDate'],'2026-10-31'))",
+                          "runAfter": {
+                            "Read_accepted_case": [
+                              "Succeeded"
+                            ]
+                          },
+                          "actions": {
+                            "Native_ownership_receipt": {
+                              "type": "Compose",
+                              "inputs": {
+                                "requestId": "LC-OWN-20261017-01",
+                                "CaseUID": "LC-FICTIONAL-20261017-01",
+                                "occurrence": "fictional://ppg-lifecycle/20261017/occurrence-01",
+                                "DocumentReference": "${QUALIFIED_SITE_URL}/PPG Review Evidence/Templates/LC-FICTIONAL-source-20261017.txt",
+                                "ReviewedVersionRef": "sharepoint:${PRIVATE_NATIVE_ID}:\"{${PRIVATE_NATIVE_ID}},1\"",
+                                "DocumentSHA256": "1f3611ad9bc4d380d6115c0de19814881d4841c4893d8ce4d213a5fb2d1c5ab8",
+                                "proposalEventUID": "LC-OWN-PROPOSED-20261017-01",
+                                "acceptanceEventUID": "LC-OWN-ACCEPTED-20261017-01",
+                                "caseItemId": "${PRIVATE_CASE_ITEM_ID}",
+                                "result": "fictional-ownership-accepted",
+                                "caseWriteCount": 1,
+                                "asOfUtc": "@utcNow()",
+                                "runId": "@workflow()?['run']?['name']",
+                                "caseETag": "@outputs('Read_accepted_case')?['headers']?['ETag']",
+                                "actorAuthorityQualified": false,
+                                "realPolicyEffects": false
+                              },
+                              "runAfter": {}
+                            },
+                            "Store_receipt": {
+                              "type": "OpenApiConnection",
+                              "inputs": {
+                                "host": {
+                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                                  "connectionName": "shared_sharepointonline",
+                                  "operationId": "HttpRequest"
+                                },
+                                "parameters": {
+                                  "dataset": "${QUALIFIED_SITE_URL}",
+                                  "parameters/method": "POST",
+                                  "parameters/uri": "_api/web/GetFolderByServerRelativePath(decodedurl='/teams/CairnsServices-DMS/PPG Review Evidence/Templates')/Files/add(overwrite=false,url='LC-OWN-20261017-01.json')",
+                                  "parameters/headers": {
+                                    "Accept": "application/json;odata=nometadata",
+                                    "Content-Type": "application/json"
+                                  },
+                                  "parameters/body": "@string(outputs('Native_ownership_receipt'))"
+                                }
+                              },
+                              "runAfter": {
+                                "Native_ownership_receipt": [
+                                  "Succeeded"
+                                ]
+                              }
+                            }
+                          },
+                          "else": {
+                            "actions": {
+                              "Refuse_readback": {
+                                "type": "Terminate",
+                                "inputs": {
+                                  "runStatus": "Failed",
+                                  "runError": {
+                                    "code": "ReadbackMismatch",
+                                    "message": "Fictional transition refused; no real policy effects"
+                                  }
+                                },
+                                "runAfter": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "else": {
+                        "actions": {
+                          "Refuse_event_pins": {
+                            "type": "Terminate",
+                            "inputs": {
+                              "runStatus": "Failed",
+                              "runError": {
+                                "code": "EventPinMismatch",
+                                "message": "Fictional transition refused; no real policy effects"
+                              }
+                            },
+                            "runAfter": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {
+                      "Refuse_stale_case": {
+                        "type": "Terminate",
+                        "inputs": {
+                          "runStatus": "Failed",
+                          "runError": {
+                            "code": "StaleCase",
+                            "message": "Fictional transition refused; no real policy effects"
+                          }
+                        },
+                        "runAfter": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "else": {
+          "actions": {
+            "Refuse_source": {
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Failed",
+                "runError": {
+                  "code": "SourceOrCasePinMismatch",
+                  "message": "Fictional transition refused; no real policy effects"
+                }
+              },
+              "runAfter": {}
+            }
+          }
+        }
+      }
+    },
+    "outputs": {}
+  }
+}

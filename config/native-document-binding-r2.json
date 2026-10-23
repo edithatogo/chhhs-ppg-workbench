@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "bindingRevision": "native-word-v2-binding-r2",
+  "status": "native-published-stopped-current-output-qualified",
+  "logicalTemplateRef": "nativeWordTemplate",
+  "logicalFlowRef": "nativeWordFlow",
+  "templateVersion": "PPG-native-word-candidate-v2-binding-r2",
+  "templateSHA256": "682eea0021f9b34aa14ed4aa43d8ea2da00645aaf595e2b524e41e852cfb1920",
+  "uiVersion": "1.0",
+  "contentTypeSchemaVersion": "31",
+  "nativeIdentityEvidenceRef": ".local/ppg-alm/developer-binding-r2-20261022/binding-r2.native.json",
+  "inputSchema": "config/native-document-input-r2.schema.json",
+  "inputExample": "templates/native-document/operator-input-r2.example.json",
+  "priorBinding": {
+    "inputSchema": "config/native-document-input.schema.json",
+    "inputExample": "templates/native-document/operator-input.example.json",
+    "templateVersion": "PPG-native-word-candidate-v2",
+    "templateSHA256": "a95a459f3180539f71a305c1dc65078e22d432230289dbdf67f425ad51c50a1a"
+  },
+  "sourceHashAssurance": "Fixed fictional operator claim validated by Parse enum; actual source bytes are not hashed by this cloud flow",
+  "templateHashAssurance": "Expected current template hash measured externally; native Parse enum validates supplied claim, not downloaded template bytes",
+  "nativeChangeRequired": "Completed: only templateSHA256 and templateVersion Parse enums changed; saved distinct draft then native Publish. Canonical Stopped readback exactly matches candidate and original references.",
+  "recovery": "Original published definition and historical version retained. Restore prior Off state verified. Preserve raw active-runtime normalization receipts; compare canonical candidate before any separate authorised reversal. Original schema/input/receipts remain immutable.",
+  "runtimeQualification": "One unique fictional r2 run succeeded, all five actions. Actual DOCX/paired JSON receipt verified against all27 input fields; Unicode/repeating single rows/optional text retained. Native Word Viewing opened; current document bytes stable across metadata-only ETag change. Prior human-edited output/template preserved; flow restored Stopped. Original dated wider shape/edit/retry evidence remains separate; no production adoption.",
+  "operationalFallback": "Existing maintained manual/web route; historical v3 pilot evidence retained at its dated scope",
+  "nativeExecutionEvidenceRef": ".local/ppg-alm/developer-r2-native-trial-20261022/final-reconciliation.json",
+  "currentConfigurationExportEvidenceRef": ".local/ppg-alm/developer-r2-native-trial-20261022/r2-export-audit.json",
+  "configurationExportQualification": "Current published r2 independently exported unmanaged and managed at 0.1.0.0; exact definition/invoker-reference/membership parity and final Stopped readback. Import/restore and fictional DOCX/receipt remain unqualified.",
+  "runtimeEvidenceRef": ".local/ppg-alm/developer-r2-runtime-20261022/qualification-audit.json"
+}

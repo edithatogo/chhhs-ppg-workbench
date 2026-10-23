@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "discharge-review-external-references-v1",
+  "registryVersion": "1.0.0",
+  "ownerNotificationsEnabled": false,
+  "automaticBaselinePromotion": false,
+  "sources": [
+    {
+      "sourceKey": "eds-2025",
+      "canonicalUrl": "https://www.safetyandquality.gov.au/sites/default/files/resources/attachments/national-guidelines-for-presentation-of-electronic-discharge-summaries.pdf",
+      "frameworkEditionId": "ACSQHC-EDS-GUIDELINES-2025",
+      "applicability": "Electronic discharge summary presentation guidance; local applicability remains unconfirmed",
+      "authorityKind": "Guideline, distinct from NSQHS accreditation requirements"
+    },
+    {
+      "sourceKey": "qh-access",
+      "canonicalUrl": "https://www.health.qld.gov.au/system-governance/policies-standards/health-service-directives/patient-access-to-care",
+      "frameworkEditionId": "QH-HSD-025-UNVERIFIED-EDITION",
+      "applicability": "Page states HHS scope; acquisition and version/date reconciliation required",
+      "authorityKind": "Health service directive; exact operative edition unresolved"
+    }
+  ]
+}

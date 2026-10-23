@@ -1,0 +1,17 @@
+{
+  "track_id": "qw1_actionable_queue_20261013",
+  "type": "feature",
+  "status": "in_progress",
+  "created_at": "2026-10-13T08:44:08Z",
+  "updated_at": "2026-10-15T00:16:43.958237+00:00",
+  "description": "See my work and its next action",
+  "quick_win": "QW1",
+  "readiness": "ready",
+  "dependencies": [],
+  "outcomes": [
+    "O1",
+    "O2"
+  ],
+  "plan_source": "Accepted v0.6 plus current repository-setup instruction",
+  "implementation_evidence": "native_workbench_v0.5_direction_endorsement_and_operator_reviewer_handoff_verified_accepting_reviewer_capacity_date_and_content_readiness_pending"
+}

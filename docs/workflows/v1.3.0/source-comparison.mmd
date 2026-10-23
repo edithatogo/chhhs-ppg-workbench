@@ -1,0 +1,8 @@
+flowchart TD
+  start["On-demand source comparison"]
+  start --> n0["Validate snapshot identity"]
+  n0 --> n1["Compare raw recorded values"]
+  n1 --> n2["Identify linked cases"]
+  n2 --> n3["Save provenance and human follow-up candidates"]
+  n3 --> output["Source comparison report"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

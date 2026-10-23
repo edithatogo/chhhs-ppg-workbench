@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "native-five-columns-qualified",
+  "prototypeDefinition": "config/review-intelligence/role-date-validation-v1.json",
+  "prototypeSHA256": "d1f41578c0c707dff54a508766d4ff836f1cd08e5d56cfa5d30c0377ec04e054",
+  "selected": [
+    {
+      "register": "PPG Responsibility Assignments",
+      "fields": [
+        "EffectiveFrom",
+        "EffectiveUntil"
+      ]
+    },
+    {
+      "register": "PPG Role Appointments",
+      "fields": [
+        "EffectiveFrom",
+        "EffectiveUntil"
+      ]
+    },
+    {
+      "register": "PPG Responsibility Handovers",
+      "fields": [
+        "EffectiveFrom"
+      ]
+    }
+  ],
+  "scope": "Calendar validity and exact ISO date spelling; no interval ordering or cross-record authority validation",
+  "fieldETagAvailable": false,
+  "ordinaryUserAcceptanceVerified": false
+}

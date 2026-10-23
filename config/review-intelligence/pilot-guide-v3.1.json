@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "guideVersion": "3.1.0",
+  "asOf": "2026-10-21",
+  "title": "PPG review-intelligence pilot — operator guide",
+  "subject": "Discharge Summary — Completion & Distribution Procedure",
+  "notice": "Use historical V6 and the retained template candidate for the authorised development pilot. Current procedure/template verification remains open and nonblocking. This is an unapproved historical review, not a verified current-edition review.",
+  "sections": [
+    {
+      "id": "sources",
+      "title": "1. Confirm the source and preserve originals",
+      "trigger": "Start or resume the historical development review",
+      "steps": [
+        "Confirm the historical V6 source and retained template candidate shown in the pack. Current procedure, template and control-guidance authority remain unverified; continue development without treating them as current.",
+        "Use the exact-byte archive for the historical V6 original and inspection inventory; preserve tracked changes and attachments.",
+        "Read catalogue coverage before interpreting a retrieval match as a comparison."
+      ],
+      "links": [
+        {
+          "key": "sourceArchive",
+          "label": "Download preserved historical source"
+        },
+        {
+          "key": "coverage",
+          "label": "Open catalogue coverage and reference leads"
+        }
+      ],
+      "hold": "Hold current-edition conclusions and mandatory template checks until verified sources exist."
+    },
+    {
+      "id": "content",
+      "title": "2. Inspect and edit structured draft content",
+      "trigger": "Authorised draft preparation",
+      "steps": [
+        "Use Word for the web for the maintained draft and the separate linked review copy. Use Draft body modules (ReviewText and ReviewedModule) for structured proposed edits; the section map does not automatically regenerate Word.",
+        "Keep SourceText and source identities unchanged. StableSectionId needs deliberate section reconciliation.",
+        "Use the complete capture and original archive for headers, comments, tables, images and unresolved content. The conversion is an inspection aid, not verified Word parity.",
+        "A separate historical Word test DOCX supports saved editing and separate-copy recovery. It includes an explicit development marker; never adopt it as current clinical content.",
+        "Before using native conversion, inspect its reconciliation: three visible-text/field-order differences and two revision-segmentation differences remain unresolved. Preserve both representations and human edits.",
+        "The separate web revision retains the earlier development edit and adds a short tracked note and link to the complete review evidence. It is not an issued procedure or a completed template remap.",
+        "Use the native Insert Link dialog for evidence links, then inspect the saved output. Bulk input omitted a raw URL in qualification; a visible edit alone is not proof of complete saving.",
+        "Keep prior Word and structured-record revisions. A new generation proposal must be a separate revision; reconcile human edits before promotion. Desktop Word and cached DOCX page-count refresh are not required."
+      ],
+      "links": [
+        {
+          "key": "bodyModules",
+          "label": "Edit draft body modules"
+        },
+        {
+          "key": "completeCapture",
+          "label": "Inspect complete historical capture"
+        },
+        {
+          "key": "wordTest",
+          "label": "Inspect historical Word test copy — development only"
+        },
+        {
+          "key": "wordRecovery",
+          "label": "Read verified separate-copy recovery instructions"
+        },
+        {
+          "key": "wordConversion",
+          "label": "Inspect unresolved native conversion differences"
+        },
+        {
+          "key": "linkedWebWord",
+          "label": "Open separate historical review copy in Word for the web"
+        },
+        {
+          "key": "webRevisionProof",
+          "label": "Read saved web revision and recovery evidence"
+        },
+        {
+          "key": "sectionNavigation",
+          "label": "Find source sections in maintained Word"
+        }
+      ],
+      "hold": "Do not regenerate over human edits or treat proposed modules as approved mandatory rules."
+    },
+    {
+      "id": "findings",
+      "title": "3. Review evidence-backed suggestions",
+      "trigger": "Review preparation",
+      "steps": [
+        "Open the latest historical review pack and its preserved passage citations.",
+        "Use the criteria register as an advisory checklist, recording missing evidence explicitly.",
+        "Snapshot:985 catalogue entries accounted,76 provisional source comparisons and908 metadata-only. A separate companion contains24 source-only reviews; these do not establish catalogue identity or current-edition review.",
+        "Pack11 consolidates all76 provisional pairs/163 findings plus24 source-only reviews/60 findings. The version-bound notes retain14 subject annotations/15 histories; qualification fixtures are separate.",
+        "Read the recorded next actions, evidence, inference and unknowns. Record your decision separately; no substantive policy decision is supplied by generation."
+      ],
+      "links": [
+        {
+          "key": "reviewPack",
+          "label": "Read review pack and limitations"
+        },
+        {
+          "key": "criteria",
+          "label": "Open review criteria"
+        },
+        {
+          "key": "sourceOnlyCompanion",
+          "label": "Read deferred-identity source-review companion"
+        },
+        {
+          "key": "reviewNotes",
+          "label": "Read all version-bound review notes and evidence references"
+        },
+        {
+          "key": "readableFindings",
+          "label": "Read all223 findings and passage citations in the web view"
+        }
+      ],
+      "hold": "No finding establishes current-policy deficiency, compliance or an authorised decision."
+    },
+    {
+      "id": "manual-preparation",
+      "title": "4. Prepared checklist modules",
+      "trigger": "Prepare a traceable manual assessment on the authorised interim basis",
+      "steps": [
+        "Open the seven prepared module records and the versioned draft checklists alongside pack11, source passages and current annotations.",
+        "Each new record is prepared, not executed. Module assessments remain unknown; existing223 findings keep their original provenance and are not reclassified as fresh model outputs.",
+        "Four historical held runs remain unchanged. Seven new prepared records bind document/template/criteria/prompt/pack versions and hashes without repinning those runs.",
+        "Record substantive responses and decisions separately through the maintained draft/annotation and owning decision processes. Preparation does not approve prompts, resolve authority, invoke native AI or make clinical decisions.",
+        "Preserve exact preparation files for retry. New or changed evidence needs a separate successor and reconciled source/version/section context."
+      ],
+      "links": [
+        {
+          "key": "manualPreparation",
+          "label": "Read interim manual preparation and recovery instructions"
+        },
+        {
+          "key": "manualRuns",
+          "label": "Open all seven prepared records and four preserved held runs"
+        }
+      ],
+      "hold": "Do not interpret prepared as reviewed, completed, approved or current. Prompt production approval, native AI and human disposition remain unverified."
+    },
+    {
+      "id": "annotations",
+      "title": "5. Capture suggestions and reconcile versions",
+      "trigger": "Out-of-session contribution or review",
+      "steps": [
+        "Add a suggestion to the annotation register with document version, section locator where known and evidence.",
+        "Keep original wording. Use append-only additions and a rationale when recording disposition.",
+        "Received, Triaged, Deferred and Accepted remain unresolved until incorporated or otherwise disposed of. Reconcile historical annotations to the current edition before incorporation.",
+        "The notes are a snapshot, not a second writable annotation register. Add contributions in the existing register; a changed snapshot requires reconciliation and a separate successor."
+      ],
+      "links": [
+        {
+          "key": "annotations",
+          "label": "Open unresolved review suggestions"
+        }
+      ],
+      "hold": "Suggestion acceptance is separate from clinical approval, publication and role assignment."
+    },
+    {
+      "id": "standards",
+      "title": "6. Review standards and document links",
+      "trigger": "Standards or dependency review",
+      "steps": [
+        "Keep second edition and third-edition draft mappings distinct. Draft material is not a current obligation.",
+        "Inspect proposed mappings and reference targets against actual passages and applicable editions.",
+        "Inspect proposed relationships and edition-specific standards mappings; title matches alone establish neither identity nor duplication. The requirement index covers the recorded NSQHS2 actions; applicability remains a review question."
+      ],
+      "links": [
+        {
+          "key": "frameworks",
+          "label": "Open framework editions"
+        },
+        {
+          "key": "requirements",
+          "label": "Open requirements"
+        },
+        {
+          "key": "mappings",
+          "label": "Open proposed standards mappings"
+        },
+        {
+          "key": "relationships",
+          "label": "Check proposed document references"
+        },
+        {
+          "key": "relationshipReport",
+          "label": "Read relationship evidence and uncertainty"
+        }
+      ],
+      "hold": "Accepted hierarchy and supersession history are distinct; preserve evidence and reject circular authority links."
+    },
+    {
+      "id": "roles",
+      "title": "7. Maintain role responsibilities and dated output",
+      "trigger": "Confirmed organisational role change",
+      "steps": [
+        "Keep stable roles separate from assignments and effective-dated appointments. Preserve earlier holders and decisions.",
+        "Record acting appointments, delegation scope, vacancies and accepted handovers with evidence. A portfolio transfer is a separate action.",
+        "Dated output refresh is on demand. Select one run and inspect its as-of date/source identity. Current native examples are fictional technical data only.",
+        "Use the role-refresh web guide to run once with an explicit as-of date. Inspect the exact run, completed Report_projection state, RunKey and expected row count before using the dated output.",
+        "Current qualification appointments and snapshots are fictional; record real responsibility confirmations separately. The flow never appoints people, applies portfolio transfers or grants access/clinical authority.",
+        "Existing-row conflicts preserve wording; changed sources/saved rows hold completion. The owned flow failure-alert subscription is off; account-wide platform digests remain separate."
+      ],
+      "links": [
+        {
+          "key": "roleInputs",
+          "label": "Open organisational role records"
+        },
+        {
+          "key": "assignments",
+          "label": "Open responsibility assignments"
+        },
+        {
+          "key": "appointments",
+          "label": "Open role appointments"
+        },
+        {
+          "key": "handovers",
+          "label": "Open handover records"
+        },
+        {
+          "key": "responsibilities",
+          "label": "Inspect dated responsibility output"
+        },
+        {
+          "key": "roleWebGuide",
+          "label": "Open the web role-refresh operator guide"
+        }
+      ],
+      "hold": "Role records grant neither SharePoint access nor clinical authority; a stored snapshot is not a live owner service."
+    },
+    {
+      "id": "surveillance",
+      "title": "8. Inspect quiet source surveillance",
+      "trigger": "On-demand selected-source review",
+      "steps": [
+        "Read the source register and exact capture comparison. Two selected NSQHS sources were unchanged in the qualified pair.",
+        "Changed bytes may be formatting; failed reads are exceptions, not no-change results. Missing relationships leave affected scope unassessed.",
+        "The bridge prepares deduplicated review leads through recorded standards relationships. No schedule, owner alert or automatic baseline promotion is enabled.",
+        "Changed-signal storage has fictional native qualification: two mapping paths produce one Received annotation and replay creates zero. The fictional record is a development fixture, not an actual official change or real policy recommendation.",
+        "SV-05 eligibility assessment retains on-demand capture. The selected PDF/HTML URLs have no qualified scheduled acquisition/feed route and real-change usefulness is unmeasured; no schedule was created."
+      ],
+      "links": [
+        {
+          "key": "surveillance",
+          "label": "Open source register, captures and signals"
+        },
+        {
+          "key": "quietChangeProof",
+          "label": "Inspect fictional changed-signal qualification"
+        }
+      ],
+      "hold": "No monitoring result determines applicability, changes policy content or notifies an owner automatically."
+    },
+    {
+      "id": "decisions",
+      "title": "9. Record the human next action",
+      "trigger": "Authorised review decision",
+      "steps": [
+        "Use the decision vocabulary to consider retain, revise, consolidate, split, adopt/adapt, change type, pathway placement, supersede, withdraw or further evidence.",
+        "Record the authorised human decision and evidence in the existing case process; the vocabulary register itself records no decisions.",
+        "Keep review progress, document lifecycle, suggestion state, approval, publication and responsibility separate. Preserve issued history."
+      ],
+      "links": [
+        {
+          "key": "decisionOptions",
+          "label": "Inspect decision options"
+        },
+        {
+          "key": "workspace",
+          "label": "Return to existing PPG workspace"
+        },
+        {
+          "key": "workflowGuide",
+          "label": "Open workflow register/diagrams and recovery guide1.7.0"
+        }
+      ],
+      "hold": "This guide issues no policy, assigns no person, changes no access and enables no AI or stopped pilot."
+    }
+  ],
+  "clinicalApproval": false,
+  "notificationsEnabled": false
+}

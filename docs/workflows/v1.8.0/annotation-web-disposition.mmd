@@ -1,0 +1,12 @@
+flowchart TD
+  start["Authorised reviewer records a suggestion disposition"]
+  start --> n0["Open the existing annotation in the SharePoint web form; inspect its document/version and original history"]
+  n0 --> n1["Preserve document identity and original contributions; reconcile changed sections before disposition"]
+  n1 --> n2["Add a meaningful transition note in Suggestion and additions, retaining prior append-only history"]
+  n2 --> n3["Select the suggestion state and enter a short Disposition summary; use Decision rationale for detailed discussion"]
+  n3 --> n4["For Incorporated also enter the actual document version; suggestion disposition does not approve or issue a policy"]
+  n4 --> n5["Save once; native validation refuses missing summary beyond Received or missing incorporation version"]
+  n5 --> n6["Inspect the saved item/version history; on a refusal correct the explicit error without recreating the annotation"]
+  n6 --> n7["Carry unresolved annotations and historical context into the next review pack using the existing supported manual preparation route"]
+  n7 --> output["Versioned suggestion disposition and reason, separate from clinical decision authority"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

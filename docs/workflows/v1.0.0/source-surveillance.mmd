@@ -1,0 +1,9 @@
+flowchart TD
+  start["On-demand selected-page acquisition"]
+  start --> n0["Acquire and preserve raw source"]
+  n0 --> n1["Verify bytes and provenance"]
+  n1 --> n2["Compare against retained baseline"]
+  n2 --> n3["Expose acquisition failure"]
+  n3 --> n4["Request human applicability assessment"]
+  n4 --> output["Change candidate or visible acquisition hold"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

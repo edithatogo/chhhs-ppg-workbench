@@ -1,0 +1,9 @@
+flowchart TD
+  start["Commit push or explicit publication preparation"]
+  start --> n0["Scan staged or publication files"]
+  n0 --> n1["Run Gitleaks and binding checks"]
+  n1 --> n2["Refuse forbidden data or missing scanner"]
+  n2 --> n3["Verify setup and release scope"]
+  n3 --> n4["Publish only through explicit authorised route"]
+  n4 --> output["Protected local commit or blocked release"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

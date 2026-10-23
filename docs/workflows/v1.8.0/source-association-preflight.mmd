@@ -1,0 +1,11 @@
+flowchart TD
+  start["A retained source has conflicting printed title or identifier evidence"]
+  start --> n0["Read the latest additive ledger and preserve earlier catalogue/retrieval assertions"]
+  n0 --> n1["Check printed title and identifier against exact original/text hashes; do not infer identity from code stem alone"]
+  n1 --> n2["Record the conflict as an unresolved hold for the specific catalogue row and original hash"]
+  n2 --> n3["Run the qualified pair validator; refuse the held original before interpretation or comparison counting"]
+  n3 --> n4["Continue other eligible sources and show held coverage separately"]
+  n4 --> n5["Store a new evidence companion with readback and duplicate-free replay; preserve prior packs and human edits"]
+  n5 --> n6["Resolve only through separately evidenced current identity/version authority; never silently rename or rewrite source records"]
+  n6 --> output["Traceable unresolved source-association hold; no false catalogue comparison or source-register correction"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

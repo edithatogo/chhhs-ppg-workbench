@@ -1,0 +1,8 @@
+flowchart TD
+  start["Reference lookup"]
+  start --> n0["Search index"]
+  n0 --> n1["Check canonical identity and capture provenance"]
+  n1 --> n2["Open preserved reference"]
+  n2 --> n3["Check authority and edition evidence"]
+  n3 --> output["Reference copy with explicit currency limits"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

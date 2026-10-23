@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "release": "1.2.0",
+  "asOf": "2026-10-19",
+  "scope": "All27 workspace capabilities and12 lifecycle references. Qualified bounded review-intelligence records and manual routes are documented; full current-source review remains incomplete. The separately published pilot operator supplement does not deploy this full release.",
+  "preferredDocumentRoute": "Evaluate SharePoint structured generation for the actual shape. Current PPG template, route-specific entitlement and complete content fidelity remain unverified. Qualified scalar-cover persistence is not complete policy-body generation; maintained Word/structured metadata and a native reading-page supplement remain supported.",
+  "workflows": [
+    {
+      "id": "workspace",
+      "version": "1.2.0",
+      "title": "Find and open PPG work",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Operator opens Start Here",
+      "inputs": "Policy or case reference",
+      "steps": [
+        "Choose a task",
+        "Open canonical resource",
+        "Check identity and evidence",
+        "Continue in the owning workflow"
+      ],
+      "output": "Correct workspace or visible missing information",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native hub saved/read back; ordinary-user access unverified",
+      "instructions": "docs/guided-workspace.md",
+      "sourcePaths": [
+        "config/workspace-manifest.json",
+        "config/workspace.schema.json",
+        "scripts/ppg_workspace.py",
+        "scripts/build_workspace_status_flow.py"
+      ],
+      "diagram": "docs/workflows/v1.2.0/workspace.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "catalogue",
+      "version": "1.2.0",
+      "title": "Find source facts",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Policy lookup",
+      "inputs": "Recorded title or persistent document identity",
+      "steps": [
+        "Search catalogue",
+        "Confirm DocumentUID",
+        "Read source baseline and freshness",
+        "Open retained source"
+      ],
+      "output": "Source facts with provenance",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native catalogue delivered; source currency requires checking",
+      "instructions": "docs/current-baseline.md",
+      "sourcePaths": [
+        "config/mvp-layout.json",
+        "config/source-field-map.csv",
+        "docs/source-ingestion.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/catalogue.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "review-workflow",
+      "version": "1.2.0",
+      "title": "Prepare an editable review package",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Authorised package preparation",
+      "inputs": "Source snapshot and maintained template",
+      "steps": [
+        "Select recorded metadata",
+        "Populate draft template",
+        "Retain source and output revision",
+        "Open and edit draft",
+        "Record missing review inputs",
+        "For review intelligence verify source and template before substantive comparison",
+        "Account for every catalogue item and preserve unmapped content",
+        "Carry unresolved annotations with full retained history and version reconciliation",
+        "Store a new preparation revision with hash readback; hold missing evidence",
+        "Inspect historical source content through source/reviewer-separated modules; preserve the original archive and unsupported elements",
+        "Read provisional passage-backed findings and proposed next actions without promoting historical observations to the requested edition",
+        "Use the versioned operator supplement to navigate qualified records and evidence"
+      ],
+      "output": "Editable unapproved draft package",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native historical capture171 elements/21 parts;985 catalogue entries accounted with273 retained text sources screened, not complete semantic comparison. Three provisional findings and three native annotations retained; current V7/template authority and Word parity remain held.",
+      "instructions": "docs/review-intelligence-operator-guide.md",
+      "sourcePaths": [
+        "templates/review-package.md",
+        "docs/operator-reviewer-handoff.md",
+        "scripts/ppg_review_pack.py",
+        "scripts/ppg_annotation_adapter.py",
+        "docs/review-annotations.md",
+        "scripts/ppg_passage_findings.py",
+        "scripts/ppg_structured_content.py",
+        "docs/structured-content-capture.md",
+        "docs/passage-backed-review-findings.md",
+        "config/review-intelligence/pilot-guide-v1.json",
+        "scripts/ppg_pilot_guide.py"
+      ],
+      "diagram": "docs/workflows/v1.2.0/review-workflow.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "source-sync",
+      "version": "1.2.0",
+      "title": "Refresh the source catalogue",
+      "mode": "native-scheduled",
+      "owner": "Existing sole source-sync writer",
+      "trigger": "Existing hourly check and daily/on-change processing",
+      "inputs": "Read-only central source and last committed checkpoint",
+      "steps": [
+        "Read source into isolated snapshot",
+        "Validate headers identity and aliases",
+        "Compare importer-owned fields",
+        "Apply guarded changes and preserve local work",
+        "Read back before checkpoint commit"
+      ],
+      "output": "Verified catalogue checkpoint or held exception",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Scheduled route qualified previously; present execution not re-observed",
+      "instructions": "docs/source-ingestion.md",
+      "sourcePaths": [
+        "scripts/ppg_source_sync.py",
+        "scripts/ppg_identity_flow.py",
+        "docs/source-ingestion.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/source-sync.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "captured-archive",
+      "version": "1.2.0",
+      "title": "Find a preserved reference",
+      "mode": "native-interactive",
+      "owner": "Existing archive/edition writer",
+      "trigger": "Reference lookup",
+      "inputs": "Archive index and captured document",
+      "steps": [
+        "Search index",
+        "Check canonical identity and capture provenance",
+        "Open preserved reference",
+        "Check authority and edition evidence"
+      ],
+      "output": "Reference copy with explicit currency limits",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Captured corpus retained; completeness and currency are separate",
+      "instructions": "docs/archive-reconciliation.md",
+      "sourcePaths": [
+        "config/archive-capture-fields.json",
+        "config/archive-capture-views.json",
+        "tools/archive-capture",
+        "docs/archive-reconciliation.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/captured-archive.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "monthly-reporting",
+      "version": "1.2.0",
+      "title": "Prepare monthly due reports",
+      "mode": "native-scheduled",
+      "owner": "Integration",
+      "trigger": "First day at 08:00 Brisbane",
+      "inputs": "Last verified catalogue source and checkpoint",
+      "steps": [
+        "Validate counts identity and source values",
+        "Classify month dates and exceptions",
+        "Group recorded roles",
+        "Save CSV and summary",
+        "Verify output and show freshness"
+      ],
+      "output": "Monthly working report and exceptions",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Qualified output; scheduled first November execution unobserved",
+      "instructions": "docs/monthly-reporting.md",
+      "sourcePaths": [
+        "scripts/ppg_monthly_report.py",
+        "scripts/verify_monthly_report.py",
+        "docs/monthly-reporting.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/monthly-reporting.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "submission-assembly",
+      "version": "1.2.0",
+      "title": "Assemble a draft submission ZIP",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Operator runs downloaded assembler",
+      "inputs": "Recorded metadata and selected attachments",
+      "steps": [
+        "Select case and files",
+        "Build attachment index",
+        "Report missing items",
+        "Create new DRAFT ZIP",
+        "Inspect output before human submission route"
+      ],
+      "output": "Unsubmitted draft package",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Local/manual delivered; no submission action",
+      "instructions": "docs/submission-package-assembly.md",
+      "sourcePaths": [
+        "tools/submission-package",
+        "scripts/build_submission_assembler.py",
+        "docs/submission-package-assembly.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/submission-assembly.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "metadata-prefilling",
+      "version": "1.2.0",
+      "title": "Prefill and check review metadata",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Operator prepares maintained template",
+      "inputs": "Authoritative recorded values and template",
+      "steps": [
+        "Select permitted metadata",
+        "Populate supported fields",
+        "Check structure and missing values",
+        "Retain editable output and source references"
+      ],
+      "output": "Draft template and structural findings",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Manual route delivered; checks are not content review",
+      "instructions": "docs/metadata-prefilling.md",
+      "sourcePaths": [
+        "tools/submission-package/prefill.js",
+        "docs/metadata-prefilling.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/metadata-prefilling.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "evidence-navigation",
+      "version": "1.2.0",
+      "title": "Navigate case evidence",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Operator follows case or hub links",
+      "inputs": "CaseUID and linked evidence",
+      "steps": [
+        "Open case",
+        "Follow filtered history links",
+        "Check document version and provenance",
+        "Inspect retained package or missing evidence"
+      ],
+      "output": "Case-scoped evidence context",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native navigation delivered; another user access unverified",
+      "instructions": "docs/evidence-navigation.md",
+      "sourcePaths": [
+        "config/evidence-navigation.json",
+        "docs/evidence-navigation.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/evidence-navigation.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "identity-triage",
+      "version": "1.2.0",
+      "title": "Resolve source identity exceptions",
+      "mode": "native-scheduled",
+      "owner": "Existing sole source-sync writer",
+      "trigger": "Importer holds an unresolved source identity",
+      "inputs": "Frozen source and exception evidence",
+      "steps": [
+        "Inspect alias or new identity candidate",
+        "Record human accept or reject",
+        "Prepare guarded application package",
+        "Apply through sole importer",
+        "Reconcile and retain absent records"
+      ],
+      "output": "Explicit identity decision and verified application",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native application qualified; business adjudication remains operational",
+      "instructions": "docs/identity-triage.md",
+      "sourcePaths": [
+        "scripts/ppg_identity_triage.py",
+        "scripts/ppg_identity_application.py",
+        "config/identity-application-fields.json",
+        "docs/identity-triage.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/identity-triage.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "human-readiness",
+      "version": "1.2.0",
+      "title": "Record human readiness findings",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Human records a finding",
+      "inputs": "Exact case document version and evidence",
+      "steps": [
+        "Check reviewed version",
+        "Record finding and evidence",
+        "Retain conditions and next action",
+        "Reopen history and verify scope"
+      ],
+      "output": "Version-specific readiness assertion",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native recording delivered; no automated content judgement",
+      "instructions": "docs/human-readiness-recording.md",
+      "sourcePaths": [
+        "config/readiness-recording.json",
+        "scripts/ppg_readiness.py",
+        "tools/readiness",
+        "docs/human-readiness-recording.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/human-readiness.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "assurance-readiness",
+      "version": "1.2.0",
+      "title": "Record decision and implementation assurance",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Human records decision or subsequent evidence",
+      "inputs": "Exact document scope and supporting evidence",
+      "steps": [
+        "Record decision and conditions",
+        "Link publication representation",
+        "Record implementation",
+        "Record independent verification",
+        "Retain history and unresolved findings"
+      ],
+      "output": "Version-linked assurance history",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native recording delivered; real clinical authority separate",
+      "instructions": "docs/decision-implementation-assurance.md",
+      "sourcePaths": [
+        "config/assurance-recording.json",
+        "scripts/ppg_assurance.py",
+        "tools/assurance",
+        "docs/decision-implementation-assurance.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/assurance-readiness.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "source-comparison",
+      "version": "1.2.0",
+      "title": "Compare source snapshots",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "On-demand source comparison",
+      "inputs": "Preserved previous and current source snapshots",
+      "steps": [
+        "Validate snapshot identity",
+        "Compare raw recorded values",
+        "Identify linked cases",
+        "Save provenance and human follow-up candidates"
+      ],
+      "output": "Source comparison report",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Manual route qualified; no automatic policy judgement",
+      "instructions": "docs/source-change-comparison.md",
+      "sourcePaths": [
+        "tools/source-comparison",
+        "docs/source-change-comparison.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/source-comparison.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "process-reporting",
+      "version": "1.2.0",
+      "title": "Measure recorded process state",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Operator prepares process report",
+      "inputs": "Case and event exports",
+      "steps": [
+        "Validate identity and event scope",
+        "Count recorded states and gaps",
+        "Calculate only supported timings",
+        "Expose missing history and denominators",
+        "Save private report"
+      ],
+      "output": "Evidence-bound process measures",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Manual outputs qualified; missing history remains unmeasurable",
+      "instructions": "docs/process-reporting.md",
+      "sourcePaths": [
+        "config/process-measures.json",
+        "scripts/ppg_process_measures.py",
+        "tools/process-reporting",
+        "docs/process-reporting.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/process-reporting.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "consultation-handoff",
+      "version": "1.2.0",
+      "title": "Record consultation and ownership assertions",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Human records request response or handoff",
+      "inputs": "Case document version role and evidence",
+      "steps": [
+        "Record proposed handoff or consultation request",
+        "Record explicit response",
+        "Preserve parent and supersession links",
+        "Check exact version and open conditions",
+        "For organisational succession record a stable role and separate effective-dated appointments",
+        "Record handover evidence without rewriting historical actors",
+        "Use manual dated projection; resolve overlap or delegation scope gaps before relying on ownership"
+      ],
+      "output": "Append-only assertions distinct from case projection",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native recording qualified; no invitations or automatic assignment; four separate role registers and fictional dated succession verified; joined native view and transfer application remain open",
+      "instructions": "docs/consultation-handoff.md",
+      "sourcePaths": [
+        "config/consultation-handoff.json",
+        "scripts/ppg_consultation.py",
+        "tools/consultation",
+        "docs/consultation-handoff.md",
+        "config/role-registers.json",
+        "scripts/ppg_role_projection.py",
+        "docs/role-succession.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/consultation-handoff.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "policy-editions",
+      "version": "1.2.0",
+      "title": "Maintain edition and authority evidence",
+      "mode": "native-interactive",
+      "owner": "Existing archive/edition writer",
+      "trigger": "New capture or human currency finding",
+      "inputs": "Document identity source edition and evidence",
+      "steps": [
+        "Retain source-stated edition",
+        "Distinguish native file revision",
+        "Record authority or currency evidence",
+        "Show current historical and unresolved views",
+        "Keep published and draft standards editions distinct",
+        "Record version-bound proposed requirement mappings and typed document relationships",
+        "Validate references and hierarchy before accepting mappings; native form enforcement remains open",
+        "Keep NSQHS editions and proposed mappings separate from source assertions",
+        "Inspect proposed version-bound reference links; unknown targets remain unresolved",
+        "Traverse accepted governance links separately from supersession history; proposed links do not establish current applicability"
+      ],
+      "output": "Edition and currency history",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native fields/views qualified; no inferred authority; five standards registers and two framework editions/eleven headings stored; action-level mappings remain open; bounded standards records include11 Standard6 action topics/three Proposed historical mappings, six Proposed reference candidates/one unresolved target; native readback/replay verified, full acceptance/form enforcement open",
+      "instructions": "docs/policy-editions.md",
+      "sourcePaths": [
+        "config/policy-edition-fields.json",
+        "config/policy-edition-views.json",
+        "tools/policy-editions/maintain.js",
+        "scripts/ppg_edition_history.py",
+        "docs/policy-editions.md",
+        "config/standards-registers.json",
+        "scripts/ppg_standards_contract.py",
+        "docs/standards-registers.md",
+        "docs/standards-registers.md",
+        "docs/document-relationship-review.md",
+        "scripts/ppg_relationship_context.py"
+      ],
+      "diagram": "docs/workflows/v1.2.0/policy-editions.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "source-surveillance",
+      "version": "1.2.0",
+      "title": "Compare selected public sources",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "On-demand selected-page acquisition",
+      "inputs": "Two selected source URLs and prior captures",
+      "steps": [
+        "Select exact source register and confirm source question/edition/scope",
+        "Acquire bounded raw responses and verify canonical URL/representation/provenance",
+        "Keep changed URL bindings and failed reads as held observations; preserve earlier evidence",
+        "Compare two immutable snapshots without automatically promoting a baseline",
+        "Use explicit standards relationships to group/deduplicate version-bound review leads",
+        "Keep missing relationships unassessed and owner notifications disabled"
+      ],
+      "output": "Change candidate or visible acquisition hold",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Original two-page pilot retained. NSQHS extension: two sources freshly captured twice unchanged; PDF relocation qualified with identical edition bytes. Three Proposed mappings identify one historical document-version lead; draft-edition scope unassessed. Six native files, archive/readback/replay verified; zero new annotations. Scheduling and native changed-event insertion remain open.",
+      "instructions": "docs/source-surveillance.md",
+      "sourcePaths": [
+        "scripts/ppg_source_surveillance.py",
+        "tools/source-surveillance",
+        "docs/source-surveillance.md",
+        "config/review-intelligence/surveillance-sources-v1.json",
+        "scripts/ppg_surveillance_annotations.py"
+      ],
+      "diagram": "docs/workflows/v1.2.0/source-surveillance.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "native-document-generation",
+      "version": "1.2.0",
+      "title": "Generate a fictional Word draft",
+      "mode": "native-interactive",
+      "owner": "Existing native-document-generation writer",
+      "trigger": "Explicit Developer pilot operation",
+      "inputs": "Maintained Word template and fictional structured inputs",
+      "steps": [
+        "Check qualified pilot connection",
+        "Populate template",
+        "Retain input template and output identities",
+        "Open and inspect editable output",
+        "Preserve human edits"
+      ],
+      "output": "Fictional editable DRAFT and generation receipt",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Developer pilot delivered Off; production route unqualified",
+      "instructions": "docs/native-document-generation.md",
+      "sourcePaths": [
+        "config/native-document-pilot.json",
+        "config/native-document-input.schema.json",
+        "docs/native-document-generation.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/native-document-generation.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "autofill-suggestions",
+      "version": "1.2.0",
+      "title": "Suggest separate metadata",
+      "mode": "native-interactive",
+      "owner": "Existing autofill-suggestions writer",
+      "trigger": "Explicit fictional Autofill pilot",
+      "inputs": "Fictional document and separate suggestion fields",
+      "steps": [
+        "Preserve raw content",
+        "Generate candidate metadata",
+        "Review suggestions separately",
+        "Apply only accepted correction with guards",
+        "Retain retry and recovery evidence"
+      ],
+      "output": "Separate suggestions and reviewed metadata",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Pilot Off; raw corrections unsafe; production unqualified",
+      "instructions": "docs/autofill-suggestions.md",
+      "sourcePaths": [
+        "scripts/ppg_autofill_review.py",
+        "docs/autofill-suggestions.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/autofill-suggestions.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "guided-workspace",
+      "version": "1.2.0",
+      "title": "Walk through the PPG example",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Operator opens completed fictional walkthrough",
+      "inputs": "Existing closed review and separate next occurrence",
+      "steps": [
+        "Open completed fictional review",
+        "Inspect edited draft and filtered evidence",
+        "Inspect decision implementation and verification",
+        "Open separate next review"
+      ],
+      "output": "Connected example understood without changing it",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native page version30 read back; current-account rendering reported",
+      "instructions": "docs/guided-workspace.md",
+      "sourcePaths": [
+        "config/guided-workspace.json",
+        "config/guided-workspace-form.json",
+        "scripts/ppg_guided_workspace.py",
+        "docs/guided-workspace.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/guided-workspace.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "status-clarity",
+      "version": "1.2.0",
+      "title": "Read operational freshness and capability status",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Open hub or status view",
+      "inputs": "Latest observed check attempt baseline and qualification receipts",
+      "steps": [
+        "Read reconciliation state",
+        "Separate display freshness from source success",
+        "Read execution mode and dated evidence",
+        "Follow owning failure instructions"
+      ],
+      "output": "Honest status and next action",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native status presentation delivered; not live guarantee of every flow",
+      "instructions": "docs/status-clarity.md",
+      "sourcePaths": [
+        "config/status-clarity.json",
+        "docs/status-clarity.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/status-clarity.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "review-followup",
+      "version": "1.2.0",
+      "title": "Inspect next actions and preview follow-up",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Operator reviews queue or runs local preview",
+      "inputs": "Case context version-linked handoffs and local follow-up events",
+      "steps": [
+        "Inspect action role and date views",
+        "Append dated local follow-up assertion",
+        "Validate version ownership recipient and freshness",
+        "Suppress closed or unresolved candidates",
+        "Compare unchanged repeated preview",
+        "Capture version-bound review annotations and retain original wording",
+        "Carry unresolved suggestions and require reconciliation after section changes",
+        "Keep evidence, inference, unknowns and human decisions separate",
+        "Use eight advisory criteria and eleven decision options; vocabulary records are not human decisions",
+        "Carry three historical native annotations with their originals and current-edition reconciliation flags"
+      ],
+      "output": "Private manual digest preview and exceptions",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Native criteria and decision vocabulary stored/read back; three historical annotations plus fictional proof retain full history. Exact replay creates zero. Digest remains manual/local; no sending or automatic clinical decision.",
+      "instructions": "docs/followup-digest-preview.md",
+      "sourcePaths": [
+        "config/followup-views.json",
+        "scripts/ppg_followup_views.py",
+        "docs/followup-views.md",
+        "scripts/ppg_followup_digest.py",
+        "templates/followup/fictional-preview.json",
+        "docs/followup-digest-preview.md",
+        "config/review-annotations.json",
+        "config/review-intelligence/criteria-v1.json",
+        "docs/review-annotations.md",
+        "scripts/ppg_findings_annotations.py",
+        "docs/review-criteria-register.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/review-followup.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "records-continuity",
+      "version": "1.2.0",
+      "title": "Navigate and recover retained artefacts",
+      "mode": "native-interactive",
+      "owner": "Integration",
+      "trigger": "Operator locates draft reference or recovery target",
+      "inputs": "Manifest snapshots exports and recovery instructions",
+      "steps": [
+        "Identify exact artefact and owner",
+        "Retain preimage and human edits",
+        "Recover copied target from verified export",
+        "Check identity hashes and links",
+        "Reconcile before native reapplication"
+      ],
+      "output": "Recovery evidence and preserved originals",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Local recovery exercise qualified; general native restoration unqualified",
+      "instructions": "docs/artefact-inventory-recovery.md",
+      "sourcePaths": [
+        "config/document-navigation.json",
+        "scripts/ppg_document_navigation.py",
+        "docs/document-control-navigation.md",
+        "docs/artefact-inventory-recovery.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/records-continuity.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "operator-observation",
+      "version": "1.2.0",
+      "title": "Observe usability and benefit",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Authorised operator observation",
+      "inputs": "Blank observation sheet task definitions and paired inputs",
+      "steps": [
+        "Record actual task outcome and timing",
+        "Retain failures missing values and help",
+        "Validate comparable baseline pairs",
+        "Calculate supported per-task measures",
+        "Separate fictional from operational observations"
+      ],
+      "output": "Observation report with honest denominators",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Fictional kit qualified; participant benefit not measured",
+      "instructions": "docs/operator-usability-observation.md",
+      "sourcePaths": [
+        "config/observation-measures.json",
+        "scripts/ppg_observation_measures.py",
+        "templates/operator-usability",
+        "docs/operator-usability-observation.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/operator-observation.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "repository-protection",
+      "version": "1.2.0",
+      "title": "Check and release repository artefacts",
+      "mode": "local-manual",
+      "owner": "Integration",
+      "trigger": "Commit push or explicit publication preparation",
+      "inputs": "Explicit publication scope and current Git history",
+      "steps": [
+        "Scan staged or publication files",
+        "Run Gitleaks and binding checks",
+        "Refuse forbidden data or missing scanner",
+        "Verify setup and release scope",
+        "Publish only through explicit authorised route"
+      ],
+      "output": "Protected local commit or blocked release",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Local hooks/gates verified; hosted publication separate",
+      "instructions": "docs/publication-protection.md",
+      "sourcePaths": [
+        ".gitleaks.toml",
+        ".gitleaksignore",
+        ".githooks",
+        "scripts/check_publication.py",
+        "scripts/ppg_artefact_inventory.py",
+        "docs/publication-protection.md",
+        "scripts/ppg_workspace.py",
+        "config/workspace.schema.json",
+        "tests/test_artefact_inventory.py",
+        "templates/recovery/fictional-record.json",
+        "templates/recovery/draft-v1.txt",
+        "templates/recovery/draft-v2.txt",
+        "templates/recovery/reference.txt"
+      ],
+      "diagram": "docs/workflows/v1.2.0/repository-protection.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "policy-lifecycle",
+      "version": "1.2.0",
+      "title": "Run the connected fictional PPG lifecycle",
+      "mode": "native-interactive",
+      "owner": "Existing policy-lifecycle writer",
+      "trigger": "Authorised fictional occurrence initiation",
+      "inputs": "Source identity unique occurrence and stage evidence",
+      "steps": [
+        "Initiate a separate occurrence from known source identity",
+        "Validate current case and source context",
+        "Record ownership offer and explicit response",
+        "Apply accepted ownership with conditional case projection",
+        "Prepare and edit a separately versioned Word draft",
+        "Record exact-version consultation request and response",
+        "Check readiness and retain the human finding",
+        "Record purpose-specific decision evidence",
+        "Retain fictional publication representation and independent byte proof",
+        "Record implementation evidence",
+        "Record independent verification against its selected parent",
+        "Close the review through the dedicated connected closure operation",
+        "Initiate a separate next review from the closure trace",
+        "Inspect role responsibility records and a selected dated projection run separately; do not rewrite historical lifecycle actors or infer permissions"
+      ],
+      "output": "Closed fictional occurrence and linked new occurrence",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Connected fictional cycle and replay qualified; ordinary-user and second configuration unqualified; separate dated role joins verified on three fictional snapshots with unchanged four-register inputs; not a live owner service or real assignment",
+      "instructions": "docs/guided-workspace.md",
+      "sourcePaths": [
+        "tools/lifecycle",
+        "templates/lifecycle",
+        "docs/policy-lifecycle-native-qualification.md",
+        "docs/role-succession.md",
+        "scripts/ppg_responsibility_snapshots.py"
+      ],
+      "diagram": "docs/workflows/v1.2.0/policy-lifecycle.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    },
+    {
+      "id": "unattended-packages",
+      "version": "1.2.0",
+      "title": "Qualify unattended package creation",
+      "mode": "native-interactive",
+      "owner": "Existing unattended-packages writer",
+      "trigger": "Explicit stopped qualification flow trial",
+      "inputs": "Frozen case selection inputs and generation contract",
+      "steps": [
+        "Validate identity and operation",
+        "Create protected draft package",
+        "Verify stored bytes and record receipt",
+        "Refuse stale inputs or human-edit overwrite",
+        "Reconcile uncertain effects before replay"
+      ],
+      "output": "Qualified fictional output or held recovery",
+      "hold": "Stop only this operation; preserve inputs, prior output and operation identity. Reconcile actual effects before retry; never invent a decision or overwrite human edits.",
+      "qualification": "Qualification routes stopped; unattended production Word path unqualified",
+      "instructions": "docs/unattended-package-generation.md",
+      "sourcePaths": [
+        "tools/unattended-package",
+        "scripts/ppg_package_selection.py",
+        "docs/unattended-package-generation.md"
+      ],
+      "diagram": "docs/workflows/v1.2.0/unattended-packages.mmd",
+      "deployedDefinitionSHA256": null,
+      "deployedVersionStatus": "Not re-read for this documentation release; use owner-scoped private native receipts."
+    }
+  ],
+  "lifecycleOperations": [
+    {
+      "id": "initiation",
+      "instructions": "docs/lifecycle-operator-initiation.md",
+      "purpose": "Unique occurrence request to separate case",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "context",
+      "instructions": "docs/lifecycle-selected-case-context.md",
+      "purpose": "Read current case/source identity and refuse ambiguous context",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "ownership-offer",
+      "instructions": "docs/lifecycle-selected-ownership-offer.md",
+      "purpose": "Proposed role assertion",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "ownership-response",
+      "instructions": "docs/lifecycle-selected-ownership-response.md",
+      "purpose": "Explicit Accepted or Declined response",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "ownership-projection",
+      "instructions": "docs/lifecycle-selected-ownership-projection.md",
+      "purpose": "Conditional case projection distinct from recorded acceptance",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "prepared-draft",
+      "instructions": "docs/lifecycle-editable-preparation.md",
+      "purpose": "Maintained template and edited draft revision with proof",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "consultation",
+      "instructions": "docs/lifecycle-manual-consultation-guide.md",
+      "purpose": "Version-linked request and response",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "readiness",
+      "instructions": "docs/lifecycle-prepared-readiness-check.md",
+      "purpose": "Recompute version-specific evidence and finding coverage",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "purpose-decision",
+      "instructions": "docs/lifecycle-prepared-decision-contract.md",
+      "purpose": "Purpose-specific human decision evidence",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "publication-proof",
+      "instructions": "docs/lifecycle-binary-publication-preparation.md",
+      "purpose": "Fictional representation and independent document-byte proof",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "implementation-verification",
+      "instructions": "docs/lifecycle-implementation-verification.md",
+      "purpose": "Implementation evidence and selected independent verification",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    },
+    {
+      "id": "closure-next-review",
+      "instructions": "docs/guided-workspace.md",
+      "purpose": "Guarded closure and separate trace-linked next occurrence",
+      "diagram": "docs/workflows/v1.0.0/policy-lifecycle.mmd"
+    }
+  ],
+  "conditional": [
+    {
+      "id": "cited-evidence",
+      "instructions": "docs/cited-evidence-entitlement-recheck.md",
+      "status": "Retrieval/publication unqualified; no active production workflow"
+    },
+    {
+      "id": "dataverse-migration",
+      "instructions": "docs/dataverse-migration.md",
+      "status": "Offline preparation only; target/migration unqualified"
+    },
+    {
+      "id": "atlas-adapter",
+      "instructions": "docs/careops-atlas-adapters.md",
+      "status": "Fictional local adapter; hosted/real-data integration unqualified"
+    }
+  ]
+}

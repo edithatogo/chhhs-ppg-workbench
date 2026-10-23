@@ -1,0 +1,22 @@
+{
+  "track_id": "qw3_safe_source_sync_20261013",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-13T08:44:08Z",
+  "updated_at": "2026-10-15T03:22:14.300446+00:00",
+  "description": "Refresh without losing local work",
+  "quick_win": "QW3",
+  "readiness": "ready_with_target",
+  "dependencies": [],
+  "outcomes": [
+    "O3",
+    "O7"
+  ],
+  "plan_source": "Accepted v0.6 plus current repository-setup instruction",
+  "implementation_evidence": "native_acquisition_extraction_identity_daily_reconciliation_failure_recovery_changed_copy_and_first_automatic_hourly_run_verified",
+  "operational_state": "enabled_source_refresh_held_for_unqualified_alias",
+  "completion_audit": "current_native_hourly_definition_seven_successful_polls_and_real_changed_source_identity_guard_verified",
+  "elapsed_24h_observation": "verified_24_hourly_runs_identity_held_no_ordinary_writes_checkpoint_preserved",
+  "elapsed_24h_evidence": ".local/source-sync/observation-20261017/observation-summary.json",
+  "successful_daily_reconciliation_observed": false
+}

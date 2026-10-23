@@ -1,0 +1,2366 @@
+{
+  "schemaVersion": 1,
+  "principles": [
+    "canonical-resources",
+    "explicit-authority",
+    "source-review-separation",
+    "honest-execution-mode",
+    "quiet-operation",
+    "record-driven-extension"
+  ],
+  "capabilities": [
+    {
+      "key": "workspace",
+      "purpose": "Find PPG work, reference material and operational status",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "hub",
+        "status",
+        "evidence",
+        "workspace-status-flow"
+      ],
+      "dependencies": [
+        "catalogue",
+        "review-workflow",
+        "source-sync",
+        "captured-archive",
+        "monthly-reporting"
+      ],
+      "acceptanceCriteria": [
+        "Native resource readback",
+        "No inferred business approval",
+        "Existing access preserved"
+      ]
+    },
+    {
+      "key": "catalogue",
+      "purpose": "Read source register with persistent identities and provenance",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "catalogue"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Native resource readback",
+        "No inferred business approval",
+        "Existing access preserved"
+      ]
+    },
+    {
+      "key": "review-workflow",
+      "purpose": "Prepare editable DRAFT packages for later responsible review",
+      "lifecycle": "live",
+      "executionMode": "local-manual",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "queue",
+        "template",
+        "operator-guide",
+        "review-standards-registers",
+        "review-role-registers",
+        "review-content-register",
+        "review-annotation-register",
+        "review-criteria-registers",
+        "review-prompt-kit",
+        "review-historical-pack",
+        "review-web-word-revision",
+        "review-role-web-flow",
+        "review-standards-web-flow",
+        "review-role-script",
+        "review-standards-script",
+        "review-runtime-hosts",
+        "review-intelligence-guides",
+        "change-impact-register",
+        "doctor-guide-draft",
+        "change-impact-summary",
+        "review-web-reconciliation-flow"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Native resource readback",
+        "No inferred business approval",
+        "Existing access preserved"
+      ]
+    },
+    {
+      "key": "source-sync",
+      "purpose": "Refresh source fields without changing local review work",
+      "lifecycle": "live",
+      "executionMode": "native-scheduled",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "source-sync-evidence",
+        "source-importer-flow"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Native resource readback",
+        "No inferred business approval",
+        "Existing access preserved"
+      ]
+    },
+    {
+      "key": "captured-archive",
+      "purpose": "Find preserved captured sources without implying current authority",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "archive"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Native resource readback",
+        "No inferred business approval",
+        "Existing access preserved"
+      ]
+    },
+    {
+      "key": "monthly-reporting",
+      "purpose": "Prepare monthly due/overdue working reports from the last verified catalogue, with explicit freshness warnings",
+      "lifecycle": "live",
+      "executionMode": "native-scheduled",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "monthly-reports",
+        "monthly-report-flow"
+      ],
+      "dependencies": [
+        "catalogue",
+        "source-sync"
+      ],
+      "acceptanceCriteria": [
+        "Existing report flow and output readback verified",
+        "No automatic distribution",
+        "Source freshness warning retained"
+      ]
+    },
+    {
+      "key": "submission-assembly",
+      "purpose": "Assemble a draft submission ZIP, attachment index and missing-items report",
+      "lifecycle": "live",
+      "executionMode": "local-manual",
+      "responsibleRole": "Custodian / coordinator preparing a submission",
+      "resources": [
+        "submission-assembler",
+        "submission-guide",
+        "submission-example"
+      ],
+      "dependencies": [
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Hosted bytes match maintained tool",
+        "Browser-generated ZIP preserves original attachments",
+        "Missing evidence stays visible and human checks remain required",
+        "No source/case updates or automatic submission"
+      ]
+    },
+    {
+      "key": "metadata-prefilling",
+      "purpose": "Prefill recorded metadata and check the existing review template structure",
+      "lifecycle": "live",
+      "executionMode": "local-manual",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "submission-assembler",
+        "metadata-prefill-guide",
+        "metadata-prefill-example"
+      ],
+      "dependencies": [
+        "submission-assembly"
+      ],
+      "acceptanceCriteria": [
+        "Conflicting local metadata preserved",
+        "Blank human decision fields",
+        "Actual downloaded tool and ZIP readback",
+        "Structural pass does not imply content review"
+      ]
+    },
+    {
+      "key": "evidence-navigation",
+      "purpose": "Find captured references, the DRAFT example package, reusable template and source-sync evidence",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "archive",
+        "submission-example",
+        "template",
+        "archive-index",
+        "source-sync-evidence-view"
+      ],
+      "dependencies": [
+        "workspace",
+        "captured-archive",
+        "review-workflow",
+        "submission-assembly",
+        "source-sync"
+      ],
+      "acceptanceCriteria": [
+        "Four tasks reachable from Start Here through canonical resources",
+        "Archive all-files and CMO subset preserved",
+        "Search gaps exposed with verified index/download fallback",
+        "Native save/readback and repeat-safe navigation; no new tabs or permissions"
+      ]
+    },
+    {
+      "key": "identity-triage",
+      "purpose": "Prepare evidenced alias/new-UID decisions and explicit source-absence acknowledgements; apply through the sole guarded importer while retaining absent records unchanged",
+      "lifecycle": "live",
+      "executionMode": "native-scheduled",
+      "responsibleRole": "Source-sync operator records identity decisions; existing sole importer applies accepted packages",
+      "resources": [
+        "identity-triage-tool",
+        "identity-triage-example",
+        "identity-operator-guide",
+        "identity-application-control",
+        "identity-application-builder"
+      ],
+      "dependencies": [
+        "source-sync",
+        "workspace"
+      ],
+      "acceptanceCriteria": [
+        "Current source/contract fingerprints, exact aliases, explicit decisions and new-UID authorisation are checked before writes",
+        "Native existing-UID continuity, authorised creation, failure/checkpoint recovery, zero-write replay and preserved local edits verified",
+        "Stale-source/contract and UID-collision packages rejected before native writes",
+        "Active identity contract is committed with the success checkpoint; missing source rows never trigger retirement",
+        "No source-register, case, clinical-review, permission or notification changes",
+        "Source-bound retained absences require explicit authority; active-source and total catalogue identity sets remain distinct",
+        "17 October real-source recovery and committed-package replay verified complete readback, unchanged retained-item values/ETags and zero repeated writes",
+        "Normal hourly configuration restored and metadata-only execution verified; other consumers require separate retained-absence compatibility qualification"
+      ]
+    },
+    {
+      "key": "human-readiness",
+      "purpose": "Record human findings for an exact case/document/version without performing assessment or approval",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Operator records actual assessor and evidence; substantive finding remains human",
+      "resources": [
+        "human-readiness-events",
+        "human-readiness-guide"
+      ],
+      "dependencies": [
+        "workspace",
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Native form save/reopen and prior versions verified",
+        "Repeated findings retained and later document version not automatically assessed",
+        "Required evidence and repeat-safe schema/views verified",
+        "Existing cases, permissions and business decisions preserved"
+      ]
+    },
+    {
+      "key": "assurance-readiness",
+      "purpose": "Record version-specific decisions, conditions and publication/implementation/verification evidence; optional local validation never performs those actions",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Operator records actual decision/action actors and evidence; existing roles and authority remain",
+      "resources": [
+        "assurance-events",
+        "assurance-guide",
+        "assurance-validator",
+        "assurance-missing-evidence-view",
+        "assurance-conditions-view",
+        "assurance-publication-view",
+        "assurance-implementation-view",
+        "assurance-verification-view",
+        "assurance-decision-history-view"
+      ],
+      "dependencies": [
+        "workspace",
+        "review-workflow",
+        "human-readiness",
+        "submission-assembly"
+      ],
+      "acceptanceCriteria": [
+        "Native form save/reopen, event history and focused views verified",
+        "Two decisions retained; changed version remains pending/not assessed",
+        "Missing evidence, duplicate keys and stage/condition validation fail closed",
+        "Reapply adds no fields/views/events; existing cases and permissions preserved",
+        "Canonical Teams links and guide/tool downloads read back; fictional fixtures recycled"
+      ]
+    },
+    {
+      "key": "source-comparison",
+      "purpose": "Compare preserved source values and identify linked cases for human attention",
+      "lifecycle": "live",
+      "executionMode": "local-manual",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "source-comparison-tool",
+        "source-comparison-guide",
+        "source-comparison-report",
+        "source-comparison-data"
+      ],
+      "dependencies": [
+        "source-sync",
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Exact DocumentUID comparison with raw before/after values",
+        "Identity holds and unresolved case links remain explicit",
+        "No source, case, identity or checkpoint writes",
+        "Native baseline parity, hosted byte readback and existing Teams navigation verified; refresh remains manual"
+      ]
+    },
+    {
+      "key": "process-reporting",
+      "purpose": "See recorded portfolio/follow-up gaps and evidence-bound process measures beyond monthly source due reports",
+      "lifecycle": "live",
+      "executionMode": "local-manual",
+      "responsibleRole": "Workbench operator; existing human reviewers retain decisions",
+      "resources": [
+        "process-portfolio-view",
+        "process-age-view",
+        "process-history-view",
+        "process-tool",
+        "process-guide",
+        "process-dictionary",
+        "process-snapshot",
+        "process-data",
+        "process-csv"
+      ],
+      "dependencies": [
+        "review-workflow",
+        "human-readiness",
+        "assurance-readiness"
+      ],
+      "acceptanceCriteria": [
+        "Three native non-default views and query/readback verified",
+        "Complete repeated native exports and explicit version-linked event timing",
+        "No history remains not measurable; denominators/exclusions retained",
+        "Hosted bytes and actual download execution; Teams web links; repeat-safe deployment",
+        "No case/event/source/checkpoint/access/notification changes; snapshots remain manual"
+      ]
+    },
+    {
+      "key": "consultation-handoff",
+      "purpose": "Record multiple version-linked consultation responses, conditions and ownership offers/acceptances without sending requests or assigning roles",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Operator records actual respondent/receiving-role evidence; existing authority and capacity decisions remain human",
+      "resources": [
+        "consultation-events",
+        "consultation-guide",
+        "consultation-validator",
+        "consultation-pending-view",
+        "consultation-handoff-view",
+        "consultation-conditions-view",
+        "consultation-history-view"
+      ],
+      "dependencies": [
+        "workspace",
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Native form save/reopen and event history verified",
+        "Pending/responded and proposed/accepted/declined states preserved; changed version does not inherit acceptance",
+        "Native missing evidence, wrong kind/state, missing accepted proposal and duplicate identity rejected",
+        "Repeated provisioning adds no fields/views/records; seven fictional fixtures archived/recycled and existing case unchanged",
+        "Canonical guide/tool links, actual downloads and shared hub/manifest repeat verified; no messages, assignments, source/case or permission writes"
+      ]
+    },
+    {
+      "key": "policy-editions",
+      "purpose": "Record source-stated editions and human authority/currency evidence with native version history",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Existing document-control/review roles; operator records evidenced findings",
+      "resources": [
+        "policy-editions-all",
+        "policy-editions-unconfirmed",
+        "policy-editions-current",
+        "policy-editions-historical",
+        "policy-editions-guide",
+        "policy-editions-contract",
+        "policy-editions-maintenance"
+      ],
+      "dependencies": [
+        "captured-archive",
+        "catalogue"
+      ],
+      "acceptanceCriteria": [
+        "Seven native optional fields and four canonical scoped views adopted",
+        "Blank currency stays Unconfirmed; no inferred policy identity or current authority",
+        "Native version-history proof and captured-byte spot check retained with settings unchanged",
+        "Archive memberships, original metadata, native navigation and hosted bytes read back",
+        "Read-only repeat maintenance; no archive/case/source/approval/access changes"
+      ]
+    },
+    {
+      "key": "source-surveillance",
+      "purpose": "Preserve and compare two explicitly selected public source pages with visible acquisition failures",
+      "lifecycle": "pilot",
+      "executionMode": "local-manual",
+      "responsibleRole": "Workbench operator; authority and case links require explicit human evidence",
+      "resources": [
+        "source-surveillance-report",
+        "source-surveillance-data",
+        "source-surveillance-tool",
+        "source-surveillance-guide"
+      ],
+      "dependencies": [
+        "source-comparison"
+      ],
+      "acceptanceCriteria": [
+        "Exact raw public-source captures and receipt hashes retained",
+        "Failure candidate has no stale body/version and cannot promote baseline",
+        "Immutable native output/downloaded-tool reproduction and no-overwrite repeat verified",
+        "No inferred authority, zero-affected-cases, source/case/checkpoint writes or schedule"
+      ]
+    },
+    {
+      "key": "native-document-generation",
+      "purpose": "Generate editable fictional DRAFT Word packages with retained inputs and output identity in an existing Developer environment",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator; fictional development/testing only",
+      "resources": [
+        "native-word-flow",
+        "native-word-template",
+        "native-word-guide",
+        "native-word-input",
+        "native-word-schema"
+      ],
+      "dependencies": [
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Native form input, schema validation, Word/file/receipt run and downloaded bytes verified",
+        "Empty/one/many groups, multiline Unicode and optional text checked",
+        "Native edit/save/reopen and distinct resubmission preserve earlier bytes",
+        "Missing technical identity fails before Word and produces no output/receipt",
+        "Template hashes, exact owner/connections and final Off state preserved",
+        "No production entitlement, cutover or human content approval inferred"
+      ]
+    },
+    {
+      "key": "autofill-suggestions",
+      "purpose": "Suggest separate metadata from fictional documents using native SharePoint Autofill",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator; human validation before any production adoption",
+      "resources": [
+        "autofill-pilot-view",
+        "autofill-pilot-guide",
+        "autofill-pilot-bundle",
+        "autofill-reviewed-view"
+      ],
+      "dependencies": [
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Raw Suggested fields remain machine-owned; distinct reviewed/provenance fields have no Autofill configuration",
+        "Settled fictional reprocessing preserves reviewed corrections and provenance",
+        "Exact-item-ETag apply refuses stale snapshots; native409 competing update and412 staleETag preserve winner",
+        "Uncertain-response recovery verifies the same operation read-only without another write",
+        "Six original byte hashes, native identities and history preserved; final raw prompts Off",
+        "Operator guide, kit, views and shared hub readback verified; no production or policy approval inferred"
+      ]
+    },
+    {
+      "key": "guided-workspace",
+      "purpose": "Find policies, open cases, prepare drafts, record human findings and resolve exceptions through existing resources",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "guided-case-view",
+        "guided-missing-inputs",
+        "guided-target-checks",
+        "guided-workspace-guide",
+        "guided-retained-case-navigation",
+        "guided-policy-view",
+        "guided-operator-guide"
+      ],
+      "dependencies": [
+        "workspace",
+        "catalogue",
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Five native task routes and labelled manual preparation",
+        "Grouped case form and CaseUID-filtered histories",
+        "Native date/missing-state rendering and preserved original case",
+        "Repeat-safe navigation with existing permissions"
+      ]
+    },
+    {
+      "key": "status-clarity",
+      "purpose": "Read reconciliation, display freshness and dated capability execution modes separately",
+      "lifecycle": "live",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Workbench operator",
+      "resources": [
+        "status",
+        "status-clarity-guide",
+        "status-clarity-mapping"
+      ],
+      "dependencies": [
+        "workspace",
+        "source-sync"
+      ],
+      "acceptanceCriteria": [
+        "Three explicit AEST clocks read back against native receipt values",
+        "Independent freshness and retained hold/failure detail",
+        "Native held display plus local healthy/failed/stale/unknown/boundary fixtures",
+        "No status-row, importer, flow, cadence or permission changes"
+      ]
+    },
+    {
+      "key": "review-followup",
+      "purpose": "Existing-field action, role and date-check navigation",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "followup-action-view",
+        "followup-role-view",
+        "followup-date-view",
+        "review-followup-flow"
+      ],
+      "dependencies": [
+        "review-workflow"
+      ],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    },
+    {
+      "key": "records-continuity",
+      "purpose": "Draft/reference/issued-source navigation; recovery instructions",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "draft-navigation",
+        "reference-navigation",
+        "recovery-runbook"
+      ],
+      "dependencies": [
+        "policy-editions",
+        "review-followup"
+      ],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    },
+    {
+      "key": "operator-observation",
+      "purpose": "Local matched baseline observation kit",
+      "lifecycle": "pilot",
+      "executionMode": "local-manual",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "observation-capture",
+        "observation-dictionary",
+        "observation-command",
+        "review-outcome-evidence",
+        "technical-usability-result"
+      ],
+      "dependencies": [
+        "process-reporting"
+      ],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    },
+    {
+      "key": "repository-protection",
+      "purpose": "Local publication gate and recovery inventory",
+      "lifecycle": "pilot",
+      "executionMode": "local-manual",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "publication-gate",
+        "artefact-inventory"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    },
+    {
+      "key": "policy-lifecycle",
+      "purpose": "Existing bounded lifecycle route; runtime state remains separately evidenced",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "lifecycle-flow"
+      ],
+      "dependencies": [
+        "review-workflow",
+        "consultation-handoff",
+        "assurance-readiness"
+      ],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    },
+    {
+      "key": "unattended-packages",
+      "purpose": "Existing stopped qualification route; no new production trigger",
+      "lifecycle": "pilot",
+      "executionMode": "native-interactive",
+      "responsibleRole": "Existing implementation owner; no business-role assignment",
+      "resources": [
+        "unattended-package-flow"
+      ],
+      "dependencies": [
+        "review-workflow",
+        "native-document-generation"
+      ],
+      "acceptanceCriteria": [
+        "Exact native or local evidence scope retained",
+        "No inferred business approval or restored originals"
+      ]
+    }
+  ],
+  "artefacts": [
+    {
+      "key": "hub",
+      "capabilityKey": "workspace",
+      "type": "page",
+      "resourceRef": "hubPage",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "navigation-only"
+    },
+    {
+      "key": "status",
+      "capabilityKey": "workspace",
+      "type": "list",
+      "resourceRef": "statusList",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "presentation-only"
+    },
+    {
+      "key": "evidence",
+      "capabilityKey": "workspace",
+      "type": "library",
+      "resourceRef": "evidenceLibrary",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "mixed-explicitly-labelled"
+    },
+    {
+      "key": "catalogue",
+      "capabilityKey": "catalogue",
+      "type": "list",
+      "resourceRef": "catalogueList",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "source-reported"
+    },
+    {
+      "key": "queue",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "reviewQueueList",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "business-decisions-unperformed"
+    },
+    {
+      "key": "template",
+      "capabilityKey": "review-workflow",
+      "type": "template",
+      "resourceRef": "reviewTemplate",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "draft-template"
+    },
+    {
+      "key": "operator-guide",
+      "capabilityKey": "review-workflow",
+      "type": "guide",
+      "resourceRef": "operatorGuide",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "instructions-only"
+    },
+    {
+      "key": "source-sync-evidence",
+      "capabilityKey": "source-sync",
+      "type": "receipts",
+      "resourceRef": "sourceSyncEvidence",
+      "location": "hosted",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "technical-evidence-only"
+    },
+    {
+      "key": "archive",
+      "capabilityKey": "captured-archive",
+      "type": "archive",
+      "resourceRef": "capturedArchive",
+      "location": "archive",
+      "provenanceRef": "existing-preserved-source-and-deployment-receipts",
+      "contentStatus": "captured-current-authority-unconfirmed"
+    },
+    {
+      "key": "monthly-reports",
+      "capabilityKey": "monthly-reporting",
+      "type": "view",
+      "resourceRef": "monthlyReportsView",
+      "location": "hosted",
+      "provenanceRef": "existing-monthly-report-completion-receipt",
+      "contentStatus": "operational-report-source-currency-unconfirmed"
+    },
+    {
+      "key": "submission-assembler",
+      "capabilityKey": "submission-assembly",
+      "type": "downloadable-tool",
+      "resourceRef": "submissionAssembler",
+      "location": "hosted",
+      "provenanceRef": "submission-package-build-and-browser-receipts",
+      "contentStatus": "preparation-only-local-manual"
+    },
+    {
+      "key": "submission-guide",
+      "capabilityKey": "submission-assembly",
+      "type": "guide",
+      "resourceRef": "submissionGuide",
+      "location": "hosted",
+      "provenanceRef": "submission-package-build-and-browser-receipts",
+      "contentStatus": "instructions-only"
+    },
+    {
+      "key": "submission-example",
+      "capabilityKey": "submission-assembly",
+      "type": "example-package",
+      "resourceRef": "submissionExample",
+      "location": "hosted",
+      "provenanceRef": "submission-package-build-and-browser-receipts",
+      "contentStatus": "draft-example-six-missing-items"
+    },
+    {
+      "key": "metadata-prefill-guide",
+      "capabilityKey": "metadata-prefilling",
+      "type": "guide",
+      "resourceRef": "metadataPrefillGuide",
+      "location": "hosted",
+      "provenanceRef": "metadata-prefill-native-and-browser-receipts",
+      "contentStatus": "instructions-only"
+    },
+    {
+      "key": "metadata-prefill-example",
+      "capabilityKey": "metadata-prefilling",
+      "type": "example-package",
+      "resourceRef": "metadataPrefillExample",
+      "location": "hosted",
+      "provenanceRef": "metadata-prefill-native-and-browser-receipts",
+      "contentStatus": "draft-human-check-required"
+    },
+    {
+      "key": "archive-index",
+      "capabilityKey": "evidence-navigation",
+      "type": "index",
+      "resourceRef": "capturedArchiveIndex",
+      "location": "hosted",
+      "provenanceRef": "existing-archive-manifest-and-download-readback",
+      "contentStatus": "captured-current-authority-unconfirmed"
+    },
+    {
+      "key": "source-sync-evidence-view",
+      "capabilityKey": "evidence-navigation",
+      "type": "view",
+      "resourceRef": "sourceSyncEvidenceView",
+      "location": "hosted",
+      "provenanceRef": "native-source-sync-view-readback",
+      "contentStatus": "technical-evidence-only"
+    },
+    {
+      "key": "identity-triage-tool",
+      "capabilityKey": "identity-triage",
+      "type": "manual-tool",
+      "resourceRef": "identityTriageTool",
+      "location": "hosted",
+      "provenanceRef": "identity-native-source-absence-qualification-20261017",
+      "contentStatus": "technical-operator-tool-source-absence-qualified"
+    },
+    {
+      "key": "identity-triage-example",
+      "capabilityKey": "identity-triage",
+      "type": "fictional-example",
+      "resourceRef": "identityTriageExample",
+      "location": "hosted",
+      "provenanceRef": "templates/identity-resolution",
+      "contentStatus": "fictional-unresolved-no-real-decision"
+    },
+    {
+      "key": "human-readiness-events",
+      "capabilityKey": "human-readiness",
+      "type": "list",
+      "resourceRef": "humanReadinessEvents",
+      "location": "hosted",
+      "provenanceRef": "readiness-native-form-history-repeat-cleanup-receipts",
+      "contentStatus": "human-assertions-for-recorded-version-only"
+    },
+    {
+      "key": "human-readiness-guide",
+      "capabilityKey": "human-readiness",
+      "type": "operator-guide",
+      "resourceRef": "humanReadinessGuide",
+      "location": "hosted",
+      "provenanceRef": "readiness-guide-native-byte-readback",
+      "contentStatus": "recording-instructions-not-content-assessment"
+    },
+    {
+      "key": "assurance-events",
+      "capabilityKey": "assurance-readiness",
+      "type": "list",
+      "resourceRef": "assuranceEvents",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-guide",
+      "capabilityKey": "assurance-readiness",
+      "type": "operator-guide",
+      "resourceRef": "assuranceGuide",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-validator",
+      "capabilityKey": "assurance-readiness",
+      "type": "optional-local-manual-tool",
+      "resourceRef": "assuranceValidator",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-missing-evidence-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assuranceMissingEvidenceView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-conditions-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assuranceConditionsView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-publication-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assurancePublicationView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-implementation-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assuranceImplementationView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-verification-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assuranceVerificationView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "assurance-decision-history-view",
+      "capabilityKey": "assurance-readiness",
+      "type": "view",
+      "resourceRef": "assuranceDecisionHistoryView",
+      "location": "hosted",
+      "provenanceRef": "assurance-native-form-history-views-download-and-cleanup-receipts",
+      "contentStatus": "recording-and-validation-only-not-business-approval"
+    },
+    {
+      "key": "source-comparison-tool",
+      "capabilityKey": "source-comparison",
+      "type": "manual-tool",
+      "resourceRef": "sourceComparisonTool",
+      "location": "hosted",
+      "provenanceRef": "retained-consumers-20261017-v3-downloaded-reproduction",
+      "contentStatus": "technical-comparison-only-manual-refresh"
+    },
+    {
+      "key": "source-comparison-guide",
+      "capabilityKey": "source-comparison",
+      "type": "guide",
+      "resourceRef": "sourceComparisonGuide",
+      "location": "hosted",
+      "provenanceRef": "retained-consumers-20261017-v3-downloaded-reproduction",
+      "contentStatus": "technical-comparison-only-manual-refresh"
+    },
+    {
+      "key": "source-comparison-report",
+      "capabilityKey": "source-comparison",
+      "type": "frozen-report",
+      "resourceRef": "sourceComparisonReport",
+      "location": "hosted",
+      "provenanceRef": "retained-consumers-20261017-native-parity-and-hosted-readback",
+      "contentStatus": "source-metadata-only-active-plus-acknowledged-retained-absence-not-policy-authority"
+    },
+    {
+      "key": "source-comparison-data",
+      "capabilityKey": "source-comparison",
+      "type": "technical-evidence",
+      "resourceRef": "sourceComparisonData",
+      "location": "hosted",
+      "provenanceRef": "retained-consumers-20261017-native-parity-and-hosted-readback",
+      "contentStatus": "source-metadata-only-active-plus-acknowledged-retained-absence-not-policy-authority"
+    },
+    {
+      "key": "identity-operator-guide",
+      "capabilityKey": "identity-triage",
+      "type": "operator-guide",
+      "resourceRef": "identityTriageGuide",
+      "location": "hosted",
+      "provenanceRef": "docs/identity-triage.md",
+      "contentStatus": "technical-operation-not-policy-approval"
+    },
+    {
+      "key": "identity-application-control",
+      "capabilityKey": "identity-triage",
+      "type": "control-file",
+      "resourceRef": "identityApplicationControl",
+      "location": "hosted",
+      "provenanceRef": "identity-native-application-qualification",
+      "contentStatus": "explicit-identity-decision-controlled-applications"
+    },
+    {
+      "key": "identity-application-builder",
+      "capabilityKey": "identity-triage",
+      "type": "native-script",
+      "resourceRef": "identityApplicationBuilder",
+      "location": "hosted",
+      "provenanceRef": "identity-native-source-absence-qualification-20261017",
+      "contentStatus": "qualified-source-only-importer-with-explicit-absence-retention"
+    },
+    {
+      "key": "process-portfolio-view",
+      "capabilityKey": "process-reporting",
+      "type": "view",
+      "resourceRef": "processPortfolioView",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-age-view",
+      "capabilityKey": "process-reporting",
+      "type": "view",
+      "resourceRef": "processAgeView",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-history-view",
+      "capabilityKey": "process-reporting",
+      "type": "view",
+      "resourceRef": "processHistoryView",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-tool",
+      "capabilityKey": "process-reporting",
+      "type": "manual-tool",
+      "resourceRef": "processMeasuresTool",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-guide",
+      "capabilityKey": "process-reporting",
+      "type": "guide",
+      "resourceRef": "processMeasuresGuide",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-dictionary",
+      "capabilityKey": "process-reporting",
+      "type": "metric-dictionary",
+      "resourceRef": "processMeasuresDictionary",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-snapshot",
+      "capabilityKey": "process-reporting",
+      "type": "frozen-technical-projection",
+      "resourceRef": "processMeasuresSnapshot",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-data",
+      "capabilityKey": "process-reporting",
+      "type": "technical-evidence",
+      "resourceRef": "processMeasuresData",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "process-csv",
+      "capabilityKey": "process-reporting",
+      "type": "technical-evidence",
+      "resourceRef": "processMeasuresCSV",
+      "location": "hosted",
+      "provenanceRef": "process-reporting-native-export-view-download-and-repeat-receipts",
+      "contentStatus": "recorded-assertions-only-no-business-approval"
+    },
+    {
+      "key": "consultation-events",
+      "capabilityKey": "consultation-handoff",
+      "type": "list",
+      "resourceRef": "consultationEvents",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-guide",
+      "capabilityKey": "consultation-handoff",
+      "type": "operator-guide",
+      "resourceRef": "consultationGuide",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-validator",
+      "capabilityKey": "consultation-handoff",
+      "type": "optional-local-manual-tool",
+      "resourceRef": "consultationValidator",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-pending-view",
+      "capabilityKey": "consultation-handoff",
+      "type": "view",
+      "resourceRef": "consultationPendingView",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-handoff-view",
+      "capabilityKey": "consultation-handoff",
+      "type": "view",
+      "resourceRef": "consultationHandoffView",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-conditions-view",
+      "capabilityKey": "consultation-handoff",
+      "type": "view",
+      "resourceRef": "consultationConditionsView",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "consultation-history-view",
+      "capabilityKey": "consultation-handoff",
+      "type": "view",
+      "resourceRef": "consultationHistoryView",
+      "location": "hosted",
+      "provenanceRef": "consultation-native-form-state-history-views-rejections-and-cleanup",
+      "contentStatus": "human-recording-only-no-notification-assignment-or-transfer"
+    },
+    {
+      "key": "policy-editions-all",
+      "capabilityKey": "policy-editions",
+      "type": "view",
+      "resourceRef": "policyEditionsAll",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-unconfirmed",
+      "capabilityKey": "policy-editions",
+      "type": "view",
+      "resourceRef": "policyEditionsUnconfirmed",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-current",
+      "capabilityKey": "policy-editions",
+      "type": "view",
+      "resourceRef": "policyEditionsCurrent",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-historical",
+      "capabilityKey": "policy-editions",
+      "type": "view",
+      "resourceRef": "policyEditionsHistorical",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-guide",
+      "capabilityKey": "policy-editions",
+      "type": "guide",
+      "resourceRef": "policyEditionsGuide",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-contract",
+      "capabilityKey": "policy-editions",
+      "type": "field-contract",
+      "resourceRef": "policyEditionsContract",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "policy-editions-maintenance",
+      "capabilityKey": "policy-editions",
+      "type": "optional-read-only-maintenance-tool",
+      "resourceRef": "policyEditionsMaintenance",
+      "location": "hosted",
+      "provenanceRef": "policy-versions-native-revalidation-and-retained-version-history-proof",
+      "contentStatus": "recorded-human-evidence-only-current-authority-unconfirmed"
+    },
+    {
+      "key": "source-surveillance-report",
+      "capabilityKey": "source-surveillance",
+      "type": "frozen-report",
+      "resourceRef": "sourceSurveillanceReport",
+      "location": "hosted",
+      "provenanceRef": "source-surveillance-native-capture-download-repeat-20261016",
+      "contentStatus": "manual-two-source-pilot-acquisition-error-held-impact-unassessed"
+    },
+    {
+      "key": "source-surveillance-data",
+      "capabilityKey": "source-surveillance",
+      "type": "technical-evidence",
+      "resourceRef": "sourceSurveillanceData",
+      "location": "hosted",
+      "provenanceRef": "source-surveillance-native-capture-download-repeat-20261016",
+      "contentStatus": "manual-two-source-pilot-acquisition-error-held-impact-unassessed"
+    },
+    {
+      "key": "source-surveillance-tool",
+      "capabilityKey": "source-surveillance",
+      "type": "manual-tool",
+      "resourceRef": "sourceSurveillanceTool",
+      "location": "hosted",
+      "provenanceRef": "source-surveillance-native-capture-download-repeat-20261016",
+      "contentStatus": "manual-two-source-pilot-acquisition-error-held-impact-unassessed"
+    },
+    {
+      "key": "source-surveillance-guide",
+      "capabilityKey": "source-surveillance",
+      "type": "guide",
+      "resourceRef": "sourceSurveillanceGuide",
+      "location": "hosted",
+      "provenanceRef": "source-surveillance-native-capture-download-repeat-20261016",
+      "contentStatus": "manual-two-source-pilot-acquisition-error-held-impact-unassessed"
+    },
+    {
+      "key": "native-word-flow",
+      "capabilityKey": "native-document-generation",
+      "type": "native-flow",
+      "resourceRef": "nativeWordFlow",
+      "location": "hosted",
+      "provenanceRef": "native-word-developer-pilot-v3-20261016",
+      "contentStatus": "fictional-developer-pilot-verified-off-no-production-adoption"
+    },
+    {
+      "key": "native-word-template",
+      "capabilityKey": "native-document-generation",
+      "type": "maintained-template",
+      "resourceRef": "nativeWordTemplate",
+      "location": "hosted",
+      "provenanceRef": "native-word-developer-pilot-v3-20261016",
+      "contentStatus": "fictional-developer-pilot-verified-off-no-production-adoption"
+    },
+    {
+      "key": "native-word-guide",
+      "capabilityKey": "native-document-generation",
+      "type": "guide",
+      "resourceRef": "nativeWordGuide",
+      "location": "hosted",
+      "provenanceRef": "native-word-developer-pilot-v3-20261016",
+      "contentStatus": "fictional-developer-pilot-verified-off-no-production-adoption"
+    },
+    {
+      "key": "native-word-input",
+      "capabilityKey": "native-document-generation",
+      "type": "fictional-input",
+      "resourceRef": "nativeWordInputExample",
+      "location": "hosted",
+      "provenanceRef": "native-word-developer-pilot-v3-20261016",
+      "contentStatus": "fictional-developer-pilot-verified-off-no-production-adoption"
+    },
+    {
+      "key": "native-word-schema",
+      "capabilityKey": "native-document-generation",
+      "type": "input-contract",
+      "resourceRef": "nativeWordInputSchema",
+      "location": "hosted",
+      "provenanceRef": "native-word-developer-pilot-v3-20261016",
+      "contentStatus": "fictional-developer-pilot-verified-off-no-production-adoption"
+    },
+    {
+      "key": "autofill-pilot-view",
+      "capabilityKey": "autofill-suggestions",
+      "type": "native-view",
+      "resourceRef": "autofillPilotView",
+      "location": "hosted",
+      "provenanceRef": "autofill-reviewed-separation-20261017",
+      "contentStatus": "fictional-pilot-off-raw-reviewed-separation-not-production"
+    },
+    {
+      "key": "autofill-pilot-guide",
+      "capabilityKey": "autofill-suggestions",
+      "type": "guide",
+      "resourceRef": "autofillPilotGuide",
+      "location": "hosted",
+      "provenanceRef": "autofill-reviewed-separation-20261017",
+      "contentStatus": "fictional-pilot-off-raw-reviewed-separation-not-production"
+    },
+    {
+      "key": "autofill-pilot-bundle",
+      "capabilityKey": "autofill-suggestions",
+      "type": "manual-tool-and-fixtures",
+      "resourceRef": "autofillPilotBundle",
+      "location": "hosted",
+      "provenanceRef": "autofill-reviewed-separation-20261017",
+      "contentStatus": "fictional-pilot-off-raw-reviewed-separation-not-production"
+    },
+    {
+      "key": "autofill-reviewed-view",
+      "capabilityKey": "autofill-suggestions",
+      "type": "native-view",
+      "resourceRef": "autofillReviewedView",
+      "location": "hosted",
+      "provenanceRef": "autofill-reviewed-separation-20261017",
+      "contentStatus": "fictional-pilot-off-raw-reviewed-separation-not-production"
+    },
+    {
+      "key": "guided-case-view",
+      "capabilityKey": "guided-workspace",
+      "type": "view",
+      "resourceRef": "guidedCaseView",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "recording-navigation-only"
+    },
+    {
+      "key": "guided-missing-inputs",
+      "capabilityKey": "guided-workspace",
+      "type": "view",
+      "resourceRef": "guidedMissingInputsView",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "recording-navigation-only"
+    },
+    {
+      "key": "guided-target-checks",
+      "capabilityKey": "guided-workspace",
+      "type": "view",
+      "resourceRef": "guidedTargetChecksView",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "recording-navigation-only"
+    },
+    {
+      "key": "guided-workspace-guide",
+      "capabilityKey": "guided-workspace",
+      "type": "file",
+      "resourceRef": "guidedWorkspaceGuide",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "dated-navigation-not-approval"
+    },
+    {
+      "key": "guided-retained-case-navigation",
+      "capabilityKey": "guided-workspace",
+      "type": "file",
+      "resourceRef": "guidedRetainedCaseNavigation",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "dated-navigation-not-approval"
+    },
+    {
+      "key": "guided-policy-view",
+      "capabilityKey": "guided-workspace",
+      "type": "view",
+      "resourceRef": "guidedPolicyView",
+      "location": "hosted",
+      "provenanceRef": "guided-workspace-native-readback",
+      "contentStatus": "imported-source-facts"
+    },
+    {
+      "key": "guided-operator-guide",
+      "capabilityKey": "guided-workspace",
+      "type": "file",
+      "resourceRef": "guidedOperatorGuide",
+      "location": "hosted",
+      "provenanceRef": "operator-usability-native-download-readback",
+      "contentStatus": "operator-instructions-not-approval"
+    },
+    {
+      "key": "status-clarity-guide",
+      "capabilityKey": "status-clarity",
+      "type": "file",
+      "resourceRef": "statusClarityGuide",
+      "location": "hosted",
+      "provenanceRef": "status-clarity-native-readback-20261017",
+      "contentStatus": "operator-guidance-not-approval"
+    },
+    {
+      "key": "status-clarity-mapping",
+      "capabilityKey": "status-clarity",
+      "type": "file",
+      "resourceRef": "statusClarityMapping",
+      "location": "hosted",
+      "provenanceRef": "status-clarity-native-readback-20261017",
+      "contentStatus": "operator-guidance-not-approval"
+    },
+    {
+      "key": "followup-action-view",
+      "capabilityKey": "review-followup",
+      "type": "view",
+      "resourceRef": "followupActionView",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "followup-role-view",
+      "capabilityKey": "review-followup",
+      "type": "view",
+      "resourceRef": "followupRoleView",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "followup-date-view",
+      "capabilityKey": "review-followup",
+      "type": "view",
+      "resourceRef": "followupDateView",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "draft-navigation",
+      "capabilityKey": "records-continuity",
+      "type": "view",
+      "resourceRef": "draftNavigationView",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "reference-navigation",
+      "capabilityKey": "records-continuity",
+      "type": "view",
+      "resourceRef": "referenceNavigationView",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "recovery-runbook",
+      "capabilityKey": "records-continuity",
+      "type": "guide",
+      "resourceRef": "recoveryRunbook",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "observation-capture",
+      "capabilityKey": "operator-observation",
+      "type": "template",
+      "resourceRef": "observationCapture",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "observation-dictionary",
+      "capabilityKey": "operator-observation",
+      "type": "metric-dictionary",
+      "resourceRef": "observationDictionary",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "observation-command",
+      "capabilityKey": "operator-observation",
+      "type": "manual-tool",
+      "resourceRef": "observationCommand",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "publication-gate",
+      "capabilityKey": "repository-protection",
+      "type": "manual-tool",
+      "resourceRef": "publicationGate",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "artefact-inventory",
+      "capabilityKey": "repository-protection",
+      "type": "manual-tool",
+      "resourceRef": "artefactInventory",
+      "location": "local-only",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "lifecycle-flow",
+      "capabilityKey": "policy-lifecycle",
+      "type": "native-flow",
+      "resourceRef": "lifecycleFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "unattended-package-flow",
+      "capabilityKey": "unattended-packages",
+      "type": "native-flow",
+      "resourceRef": "unattendedPackageFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "technical-implementation-only-no-business-approval"
+    },
+    {
+      "key": "source-importer-flow",
+      "capabilityKey": "source-sync",
+      "type": "native-flow",
+      "resourceRef": "sourceImporterFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "existing-native-runtime-not-refreshed-by-local-inventory"
+    },
+    {
+      "key": "monthly-report-flow",
+      "capabilityKey": "monthly-reporting",
+      "type": "native-flow",
+      "resourceRef": "monthlyReportFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "existing-native-runtime-not-refreshed-by-local-inventory"
+    },
+    {
+      "key": "workspace-status-flow",
+      "capabilityKey": "workspace",
+      "type": "native-flow",
+      "resourceRef": "workspaceStatusFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "existing-native-runtime-not-refreshed-by-local-inventory"
+    },
+    {
+      "key": "workflow-operator-guide",
+      "capabilityKey": "guided-workspace",
+      "type": "operator-guide",
+      "resourceRef": "workflowOperatorGuide",
+      "location": "hosted",
+      "provenanceRef": "docs/workflow-documentation.md",
+      "contentStatus": "versioned-operator-documentation-not-clinical-approval"
+    },
+    {
+      "key": "workflow-register",
+      "capabilityKey": "guided-workspace",
+      "type": "file",
+      "resourceRef": "workflowRegister",
+      "location": "hosted",
+      "provenanceRef": "docs/workflow-documentation.md",
+      "contentStatus": "versioned-operator-documentation-not-clinical-approval"
+    },
+    {
+      "key": "workflow-diagrams",
+      "capabilityKey": "guided-workspace",
+      "type": "file",
+      "resourceRef": "workflowDiagrams",
+      "location": "hosted",
+      "provenanceRef": "docs/workflow-documentation.md",
+      "contentStatus": "versioned-operator-documentation-not-clinical-approval"
+    },
+    {
+      "key": "review-standards-registers",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "standardsRegisters",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "versioned-registers-proposals-not-clinical-acceptance"
+    },
+    {
+      "key": "review-role-registers",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "roleRegisters",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "fictional-role-inputs-and-dated-snapshots"
+    },
+    {
+      "key": "review-content-register",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "structuredContentRegister",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "historical-source-and-reviewer-fields-preserved"
+    },
+    {
+      "key": "review-annotation-register",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "reviewAnnotations",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "versioned-originals-dispositions-and-history"
+    },
+    {
+      "key": "review-criteria-registers",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "reviewCriteriaRegisters",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "advisory-criteria-and-decision-options"
+    },
+    {
+      "key": "review-prompt-kit",
+      "capabilityKey": "review-workflow",
+      "type": "file",
+      "resourceRef": "reviewPromptKit",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "seven-draft-modules-seven-prepared-runs-no-ai-execution"
+    },
+    {
+      "key": "review-historical-pack",
+      "capabilityKey": "review-workflow",
+      "type": "file",
+      "resourceRef": "reviewHistoricalPack",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "complete-interim-evidence-current-authority-unverified"
+    },
+    {
+      "key": "review-web-word-revision",
+      "capabilityKey": "review-workflow",
+      "type": "file",
+      "resourceRef": "reviewWebWordRevision",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "manual-linked-web-revision-not-structured-regeneration"
+    },
+    {
+      "key": "review-role-web-flow",
+      "capabilityKey": "review-workflow",
+      "type": "native-flow",
+      "resourceRef": "reviewRoleWebFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "on-demand-qualified-no-notifications"
+    },
+    {
+      "key": "review-standards-web-flow",
+      "capabilityKey": "review-workflow",
+      "type": "native-flow",
+      "resourceRef": "reviewStandardsWebFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "on-demand-qualified-read-only-no-notifications"
+    },
+    {
+      "key": "review-role-script",
+      "capabilityKey": "review-workflow",
+      "type": "native-script",
+      "resourceRef": "reviewRoleScript",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "qualified-pure-computation-existing-standard-connectors"
+    },
+    {
+      "key": "review-standards-script",
+      "capabilityKey": "review-workflow",
+      "type": "native-script",
+      "resourceRef": "reviewStandardsScript",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "qualified-current-row-check-not-direct-form-enforcement"
+    },
+    {
+      "key": "review-runtime-hosts",
+      "capabilityKey": "review-workflow",
+      "type": "file",
+      "resourceRef": "reviewRuntimeHosts",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "separately-pinned-technical-workbooks"
+    },
+    {
+      "key": "review-intelligence-guides",
+      "capabilityKey": "review-workflow",
+      "type": "guide",
+      "resourceRef": "reviewIntelligenceGuides",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md",
+      "contentStatus": "published-web-instructions-no-clinical-authority"
+    },
+    {
+      "key": "review-outcome-evidence",
+      "capabilityKey": "operator-observation",
+      "type": "technical-evidence",
+      "resourceRef": "reviewOutcomeEvidence",
+      "location": "hosted",
+      "provenanceRef": "docs/operator-usability-observation.md",
+      "contentStatus": "blank-and-fictional-instrumentation-real-benefits-not-measured"
+    },
+    {
+      "key": "change-impact-register",
+      "capabilityKey": "review-workflow",
+      "type": "list",
+      "resourceRef": "changeImpactRegister",
+      "location": "hosted",
+      "provenanceRef": "docs/change-impact-record.md",
+      "contentStatus": "draft-unapproved"
+    },
+    {
+      "key": "doctor-guide-draft",
+      "capabilityKey": "review-workflow",
+      "type": "page",
+      "resourceRef": "doctorGuideDraft",
+      "location": "hosted",
+      "provenanceRef": "docs/change-impact-record.md",
+      "contentStatus": "draft-unapproved"
+    },
+    {
+      "key": "change-impact-summary",
+      "capabilityKey": "review-workflow",
+      "type": "page",
+      "resourceRef": "changeImpactSummary",
+      "location": "hosted",
+      "provenanceRef": "docs/change-impact-record.md",
+      "contentStatus": "draft-unapproved"
+    },
+    {
+      "key": "technical-usability-result",
+      "capabilityKey": "operator-observation",
+      "type": "page",
+      "resourceRef": "technicalUsabilityResult",
+      "location": "hosted",
+      "provenanceRef": "docs/recovery-qualification-20261021.md",
+      "contentStatus": "published-fictional-technical-results-real-benefits-not-measured"
+    },
+    {
+      "key": "review-web-reconciliation-flow",
+      "capabilityKey": "review-workflow",
+      "type": "native-flow",
+      "resourceRef": "reviewWebReconciliationFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md#helper-flow-manifest-coverage-correction",
+      "contentStatus": "existing-on-demand-qualified-no-notifications-source-only-inventory-update"
+    },
+    {
+      "key": "review-followup-flow",
+      "capabilityKey": "review-followup",
+      "type": "native-flow",
+      "resourceRef": "reviewFollowupFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/artefact-inventory-recovery.md#helper-flow-manifest-coverage-correction",
+      "contentStatus": "existing-on-demand-qualified-no-notifications-source-only-inventory-update"
+    },
+    {
+      "key": "review-followup-timing-qualification-flow",
+      "capabilityKey": "review-followup",
+      "type": "native-flow",
+      "resourceRef": "reviewFollowupTimingQualificationFlow",
+      "location": "hosted",
+      "provenanceRef": "docs/followup-alm-handback.md",
+      "contentStatus": "fictional-qualification-only-stopped-not-a-maintained-runtime-or-claimed-solution-member"
+    }
+  ],
+  "surfaces": [
+    {
+      "key": "start",
+      "label": "Start Here",
+      "type": "page",
+      "resourceRef": "hub",
+      "placement": 1,
+      "accessBoundary": "existing-parent-site-permissions"
+    },
+    {
+      "key": "review",
+      "label": "Review Queue",
+      "type": "list",
+      "resourceRef": "queue",
+      "placement": 2,
+      "accessBoundary": "existing-parent-site-permissions"
+    },
+    {
+      "key": "catalogue",
+      "label": "Catalogue",
+      "type": "list",
+      "resourceRef": "catalogue",
+      "placement": 3,
+      "accessBoundary": "existing-parent-site-permissions"
+    },
+    {
+      "key": "evidence",
+      "label": "Evidence & Templates",
+      "type": "library",
+      "resourceRef": "evidence",
+      "placement": 4,
+      "accessBoundary": "existing-parent-site-permissions"
+    }
+  ],
+  "statusPolicy": {
+    "intervalMinutes": 15,
+    "staleAfterMinutes": 30,
+    "sourceOverdueAfterMinutes": 90,
+    "notifications": false,
+    "sourceOfTruth": "existing-source-state-checkpoint-and-run-receipts"
+  },
+  "management": [
+    {
+      "capabilityKey": "workspace",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/workspace-manifest.json",
+        "config/workspace.schema.json",
+        "scripts/ppg_workspace.py",
+        "scripts/build_workspace_status_flow.py"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [
+        ".local/workspace"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "catalogue",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/mvp-layout.json",
+        "config/source-field-map.csv",
+        "docs/source-ingestion.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "sharepoint-records",
+      "receiptRoots": [],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "review-workflow",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "templates/review-package.md",
+        "docs/operator-reviewer-handoff.md",
+        "config/review-intelligence",
+        "config/standards-registers.json",
+        "config/role-registers.json",
+        "tools/roles",
+        "tools/standards",
+        "tools/review-intelligence",
+        "scripts/ppg_role_web_flow.py",
+        "scripts/ppg_standards_web_flow.py",
+        "scripts/ppg_role_projection.py",
+        "scripts/ppg_role_recovery.py",
+        "scripts/ppg_standards_contract.py",
+        "scripts/ppg_standards_recovery.py",
+        "scripts/ppg_native_standards.py",
+        "scripts/ppg_source_standards.py",
+        "scripts/ppg_source_roles.py",
+        "scripts/ppg_review_criteria.py",
+        "scripts/ppg_annotation_adapter.py",
+        "scripts/ppg_annotation_disposition.py",
+        "scripts/ppg_structured_content.py",
+        "scripts/ppg_content_inventory.py",
+        "scripts/ppg_content_requirements.py",
+        "scripts/ppg_native_content_bridge.py",
+        "docs/role-web-operator-guide.md",
+        "docs/standards-web-operator-guide.md",
+        "docs/manual-checklist-preparation.md",
+        "docs/consolidated-historical-review.md",
+        "docs/manual-review-notes-web.md",
+        "config/review-annotations.json",
+        "config/structured-content-register.json",
+        "config/responsibility-snapshots-register.json",
+        "config/review-annotation-web-validation.json",
+        "config/review-criteria-registers.json",
+        "config/ppg-content-modules-v1.json",
+        "scripts/ppg_manual_run_preparation.py",
+        "scripts",
+        "config/change-impact-register.json",
+        "scripts/ppg_change_impact.py",
+        "docs/change-impact-record.md",
+        "docs/discharge-guide-and-consolidation.md",
+        "tools/guide-reconciliation/build.py",
+        "config/guide-web-reconciliation.json",
+        "docs/web-guide-reconciliation.md"
+      ],
+      "deploymentMethod": "Existing qualified native owner/route only; exact private identities and current pins/readback required before replay",
+      "recoverySection": "local-tools",
+      "receiptRoots": [
+        ".local/review-intelligence",
+        ".local/review-intelligence/20261021/change-impact-v1",
+        ".local/review-intelligence/20261021/web-reconciliation-v1"
+      ],
+      "runtimeState": "Manual/web review pilot and two on-demand Standard-connector checks qualified; current authority, AI, regeneration and ordinary-user adoption unverified",
+      "connectionDependencies": [
+        "Existing qualified Standard SharePoint and Excel pair for owned web checks; exact IDs remain private"
+      ]
+    },
+    {
+      "capabilityKey": "source-sync",
+      "maintainerLane": "Existing sole source-sync writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "scripts/ppg_source_sync.py",
+        "scripts/ppg_identity_flow.py",
+        "docs/source-ingestion.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "source-sync",
+      "receiptRoots": [
+        ".local/source-sync"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "captured-archive",
+      "maintainerLane": "Existing archive/edition writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/archive-capture-fields.json",
+        "config/archive-capture-views.json",
+        "tools/archive-capture",
+        "docs/archive-reconciliation.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "archive",
+      "receiptRoots": [
+        ".local/archive-reconciliation"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "monthly-reporting",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "scripts/ppg_monthly_report.py",
+        "scripts/verify_monthly_report.py",
+        "docs/monthly-reporting.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "scheduled-reports",
+      "receiptRoots": [
+        ".local/monthly-report",
+        ".local/workspace"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "submission-assembly",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "tools/submission-package",
+        "scripts/build_submission_assembler.py",
+        "docs/submission-package-assembly.md"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "metadata-prefilling",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "tools/submission-package/prefill.js",
+        "docs/metadata-prefilling.md"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "evidence-navigation",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/evidence-navigation.json",
+        "docs/evidence-navigation.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "identity-triage",
+      "maintainerLane": "Existing sole source-sync writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "scripts/ppg_identity_triage.py",
+        "scripts/ppg_identity_application.py",
+        "config/identity-application-fields.json",
+        "docs/identity-triage.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "source-sync",
+      "receiptRoots": [
+        ".local/identity-triage"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "human-readiness",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/readiness-recording.json",
+        "scripts/ppg_readiness.py",
+        "tools/readiness",
+        "docs/human-readiness-recording.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "sharepoint-records",
+      "receiptRoots": [
+        ".local/assurance-readiness"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "assurance-readiness",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/assurance-recording.json",
+        "scripts/ppg_assurance.py",
+        "tools/assurance",
+        "docs/decision-implementation-assurance.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "sharepoint-records",
+      "receiptRoots": [
+        ".local/assurance-readiness"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "source-comparison",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "tools/source-comparison",
+        "docs/source-change-comparison.md"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "process-reporting",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/process-measures.json",
+        "scripts/ppg_process_measures.py",
+        "tools/process-reporting",
+        "docs/process-reporting.md"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [
+        ".local/process-reporting"
+      ],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "consultation-handoff",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/consultation-handoff.json",
+        "scripts/ppg_consultation.py",
+        "tools/consultation",
+        "docs/consultation-handoff.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "sharepoint-records",
+      "receiptRoots": [
+        ".local/consultation-handoff"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "policy-editions",
+      "maintainerLane": "Existing archive/edition writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/policy-edition-fields.json",
+        "config/policy-edition-views.json",
+        "tools/policy-editions/maintain.js",
+        "scripts/ppg_edition_history.py",
+        "docs/policy-editions.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "archive",
+      "receiptRoots": [
+        ".local/policy-versions"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "source-surveillance",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "scripts/ppg_source_surveillance.py",
+        "tools/source-surveillance",
+        "docs/source-surveillance.md",
+        "scripts/ppg_surveillance_annotations.py",
+        "docs/surveillance-schedule-eligibility.md"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "native-document-generation",
+      "maintainerLane": "Existing native-document-generation writer",
+      "environmentAlias": "existing-developer-pilot",
+      "sourcePaths": [
+        "config/native-document-pilot.json",
+        "config/native-document-input.schema.json",
+        "docs/native-document-generation.md",
+        "templates/review-package.md",
+        "templates/native-document/operator-input.example.json",
+        "templates/native-document/fictional-inputs.json",
+        "tools/native-document-template",
+        "docs/native-document-operator-guide.md",
+        "config/native-document-binding-r2.json",
+        "config/native-document-input-r2.schema.json",
+        "templates/native-document/operator-input-r2.example.json",
+        "tools/native-document-template/global.json"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "native-pilots",
+      "receiptRoots": [
+        ".local/native-document-generation",
+        ".local/ppg-alm/developer-word-packaging-20261022",
+        ".local/ppg-alm/developer-external-dependencies-20261022",
+        ".local/ppg-alm/developer-onedrive-20261022",
+        ".local/ppg-alm/developer-binding-r2-20261022"
+      ],
+      "runtimeState": "Current Draft graph/refs preserved. Stable current template binding r2 prepared separately; local input/schema consistency, four refusals and exact forward/reverse patch recovery pass. Native old hash/version are Parse enums; source/template hashes are operator claims, not cloud byte hashing. Existing native details/Run page blank after bounded check; no binding save/activation/run. Candidate unapplied; original inputs/receipts and manual fallback retained. Production/external restore unqualified.",
+      "connectionDependencies": [
+        "Existing Word reference selects same SharePoint v2 UID. Stable observed current whole-file representation after content-type metadata synchronization; all22ZIPmembers match across three current snapshots and schema31 stable before/after. Preserve old accepted hash and both representations; prepare distinct versioned binding correction then qualify before a new adoption, without automatic repin/restore",
+        "Existing OneDrive reference: selected output folder native ID/drive and retained recovery DOCX/JSON parent identity reconciled; DOCX ID/ETag/size/time match retained receipt; both returned histories contain matching version1.0. Fresh metadata/hash values recorded, not a new byte-download or restore trial",
+        "Accepted input and schema retain fictional source identity, included records, template version/hash and output revision; sourceSHA256 is a fixed fixture claim, not newly independently verified source bytes"
+      ]
+    },
+    {
+      "capabilityKey": "autofill-suggestions",
+      "maintainerLane": "Existing autofill-suggestions writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "scripts/ppg_autofill_review.py",
+        "docs/autofill-suggestions.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "native-pilots",
+      "receiptRoots": [
+        ".local/autofill"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "guided-workspace",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/guided-workspace.json",
+        "config/guided-workspace-form.json",
+        "scripts/ppg_guided_workspace.py",
+        "docs/guided-workspace.md",
+        "docs/workflow-documentation.md",
+        "docs/workflows/v1.0.0",
+        "scripts/ppg_workflow_docs.py"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "status-clarity",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/status-clarity.json",
+        "docs/status-clarity.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "review-followup",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/followup-views.json",
+        "scripts/ppg_followup_views.py",
+        "docs/followup-views.md",
+        "scripts/ppg_followup_digest.py",
+        "templates/followup/fictional-preview.json",
+        "docs/followup-digest-preview.md",
+        "scripts/ppg_followup_web_flow.py",
+        "scripts/ppg_role_web_flow.py",
+        "tools/followup/followup.ts",
+        "config/followup-native-registers.json",
+        "config/followup-native-views.json",
+        "docs/followup-native-web.md",
+        "docs/followup-alm-handback.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [
+        ".local/review-followup",
+        ".local/review-followup/20261021/native-v1",
+        ".local/review-followup/closeout-20261023"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "records-continuity",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/document-navigation.json",
+        "scripts/ppg_document_navigation.py",
+        "docs/document-control-navigation.md",
+        "docs/artefact-inventory-recovery.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "navigation",
+      "receiptRoots": [
+        ".local/records-navigation"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "operator-observation",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "config/observation-measures.json",
+        "scripts/ppg_observation_measures.py",
+        "templates/operator-usability",
+        "docs/operator-usability-observation.md",
+        "scripts/ppg_review_outcomes.py",
+        "scripts/ppg_technical_usability.py",
+        "tests/test_technical_usability.py",
+        "docs/recovery-qualification-20261021.md"
+      ],
+      "deploymentMethod": "Existing local observation/report CLI plus qualified native secondary-page publication; preserve published version/content and Start Here",
+      "recoverySection": "local-tools",
+      "receiptRoots": [
+        ".local/observation-kit",
+        ".local/artefact-recovery/20261021-native"
+      ],
+      "runtimeState": "Manual compiler; native technical page published/read back 1.0. Real benefits unmeasured; no persistent report runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "repository-protection",
+      "maintainerLane": "Integration",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        ".gitleaks.toml",
+        ".gitleaksignore",
+        ".githooks",
+        "scripts/check_publication.py",
+        "scripts/ppg_artefact_inventory.py",
+        "docs/publication-protection.md",
+        "scripts/ppg_workspace.py",
+        "config/workspace.schema.json",
+        "tests/test_artefact_inventory.py",
+        "templates/recovery/fictional-record.json",
+        "templates/recovery/draft-v1.txt",
+        "templates/recovery/draft-v2.txt",
+        "templates/recovery/reference.txt"
+      ],
+      "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
+      "recoverySection": "local-tools",
+      "receiptRoots": [
+        ".local/history-remediation-20261018"
+      ],
+      "runtimeState": "local-manual; no persistent runtime",
+      "connectionDependencies": []
+    },
+    {
+      "capabilityKey": "policy-lifecycle",
+      "maintainerLane": "Existing policy-lifecycle writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "tools/lifecycle",
+        "templates/lifecycle",
+        "docs/policy-lifecycle-native-qualification.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "native-pilots",
+      "receiptRoots": [
+        ".local/policy-lifecycle"
+      ],
+      "runtimeState": "Both complete fictional r6 lifecycle cycles qualified 2/2:72 distinct native first/replay cycle runs /18,600 complete actions, plus 6 safe refusal runs /1,503 actions. All replays skip writers. Closure:one conditional status patch and 3 immutable journals per first; replay zero writes. Next review:one distinct unaccepted case and 3 byte-verified request/intent/receipt files per first; replay zero writes. Counts 23/117/71/20. Fresh all 9 definitions/connections/modification times exact and Started; 0 active native runs. Twenty artifact metadata frames, both original sources and edited/issued whole bytes preserved. No flow management save, new permission/consent/connection/licence, real policy effects or notifications. Unknown/mixed/stale source and retained-conflict exact frozen predicates evaluated locally; fresh conflicting request held earlier on stale artifact, historical direct conflict-branch proof separate. Word 3.0 / issued 1.0 / logical revision 1; native generation unqualified, existing maintained-template fallback retained. Third-party testing user-deferred; solution membership unresolved, raw exports not solution export. Private terminal handback r6-terminal-native-manifest-handback.json SHA25680209d2ea6b0c0a5d888f2b2f8c95221f9a27cc2e93dee5c8f349b0854f4993b.",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    },
+    {
+      "capabilityKey": "unattended-packages",
+      "maintainerLane": "Existing unattended-packages writer",
+      "environmentAlias": "existing-PPG-workspace-or-local",
+      "sourcePaths": [
+        "tools/unattended-package",
+        "scripts/ppg_package_selection.py",
+        "docs/unattended-package-generation.md"
+      ],
+      "deploymentMethod": "Existing qualified owner/route only; compare current native state before reapply",
+      "recoverySection": "native-pilots",
+      "receiptRoots": [
+        ".local/unattended-package"
+      ],
+      "runtimeState": "not-refreshed; inspect exact target before recovery",
+      "connectionDependencies": [
+        "Existing target connection(s); exact identity/owner/binding must be read back by native owner"
+      ]
+    }
+  ]
+}

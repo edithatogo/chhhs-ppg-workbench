@@ -1,0 +1,8 @@
+flowchart TD
+  start["Operator follows case or hub links"]
+  start --> n0["Open case"]
+  n0 --> n1["Follow filtered history links"]
+  n1 --> n2["Check document version and provenance"]
+  n2 --> n3["Inspect retained package or missing evidence"]
+  n3 --> output["Case-scoped evidence context"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

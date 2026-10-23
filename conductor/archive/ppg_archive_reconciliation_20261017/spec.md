@@ -1,0 +1,7 @@
+# Complete archive reconciliation and distinct-content preservation
+
+User commissioned17October2026. Reconcile both DM internet/intranet archives, upload missing documents and preserve every distinct version. Existing expanded533-file corpus remains included. Use retained copies while original media unavailable, but do not claim full original-archive acceptance until original inventories and bytes are accounted for.
+
+Use existing SharePoint evidence library and current permissions, no new app/access/licensing/consent, notifications or schedules. Workbench owns shared registry, hub and manifest; this lane owns captured archive and edition-specific objects. Preserve original bytes, catalogue identities, case state and history. Identical bytes may share one stored capture with all source occurrences retained; different bytes must remain separately stored even when URL/title matches. Capture/version evidence does not establish current authority. Do not assign clinical currency or policy approval.
+
+Acceptance requires documented scope and per-entry accounting for both archives; hash-verified native coverage of all distinct document bytes; no overwrite or omitted distinct editions; actual supported native edition navigation; readback and repeat/preservation evidence; maintained operator instructions and explicit unresolved identity/edition cases. Evidence with operational IDs/content stays private. Technical completion is separate from substantive review.

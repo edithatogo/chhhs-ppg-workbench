@@ -1,0 +1,9 @@
+flowchart TD
+  start["Explicit stopped qualification flow trial"]
+  start --> n0["Validate identity and operation"]
+  n0 --> n1["Create protected draft package"]
+  n1 --> n2["Verify stored bytes and record receipt"]
+  n2 --> n3["Refuse stale inputs or human-edit overwrite"]
+  n3 --> n4["Reconcile uncertain effects before replay"]
+  n4 --> output["Qualified fictional output or held recovery"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

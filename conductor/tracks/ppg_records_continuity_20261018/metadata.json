@@ -1,0 +1,76 @@
+{
+  "track_id": "ppg_records_continuity_20261018",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-18T00:00:00+10:00",
+  "description": "Local document-control continuity and recovery",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "ppg_policy_editions_20261016",
+    "ppg_evidence_navigation_20261015"
+  ],
+  "owner_role": "Integration owns navigation/runbook; archive, edition, source and lifecycle writers keep their objects",
+  "next_action": "Retain qualified document-control and copied-fixture recovery. Apply the restart guide when needed; external custodian acceptance, operational support and tenant retention policy remain explicit gaps, not implicit grants. Continue separate ALM release/import qualification.",
+  "native_qualified": true,
+  "full_track_acceptance_achieved": true,
+  "priority_rank": 2,
+  "task_slice_priority": {
+    "RC-01": 2,
+    "RC-02a": 2,
+    "RC-02b": 6,
+    "RC-03": 9,
+    "RC-04": 5,
+    "RC-05": 5
+  },
+  "capability_evidence": "docs/maturity-capability-plan-20261018.md",
+  "execution_route": "Existing qualified M365 CLI; scoped native fallback only where needed",
+  "dispatch_order": 3,
+  "readiness_scope": "First local/read-only preparation; native mutation requires current exact-target check and existing writer availability",
+  "fallback_next_action": "Prepare local link mappings from retained evidence; missing media or native auth holds only that proof, then continue OA-01/OA-03.",
+  "slice_acceptance": "Draft/reference/issued/unknown navigation verified at its actual local/native scope; no inferred currency.",
+  "navigation_slice": {
+    "implementation_status": "completed",
+    "native_configuration_verified": true,
+    "repeat_view_writes": 0,
+    "item_writes": 0,
+    "visual_acceptance": "unverified",
+    "ordinary_user_acceptance": "unverified",
+    "guide": "docs/document-control-navigation.md",
+    "review": "conductor/tracks/ppg_records_continuity_20261018/reviews/20261018-document-navigation-review.md"
+  },
+  "recovery_slice": {
+    "implementation_status": "completed-native-copied-fixtures",
+    "inventory_artefacts": 98,
+    "copied_fictional_recovery_verified": true,
+    "native_restore_performed": true,
+    "tests_passed": 23,
+    "guide": "docs/recovery-qualification-20261021.md",
+    "review": "conductor/tracks/ppg_records_continuity_20261018/reviews/20261018-inventory-recovery-review.md",
+    "native_record_copy_verified": true,
+    "metadata_stale_refusal_status": 412,
+    "binary_content_conditional_update_qualified": false,
+    "read_only_resume_additional_writes": 0,
+    "current_nine_profiles_exact_started": true,
+    "distinct_existing_sharepoint_connections": 1
+  },
+  "continuity_slice": {
+    "native_existing_fields_verified": true,
+    "upstream_pending_explicit": true,
+    "unsent_handoff_native_bytes_verified": true,
+    "role_accepted": false,
+    "source_register_writes": 0
+  },
+  "visible_controls_slice": {
+    "inspection_completed": true,
+    "version_limits": {
+      "cases": 50,
+      "evidence": 500
+    },
+    "inherited_permissions": true,
+    "tenant_retention_policy": "not established",
+    "configuration_changes": 0
+  },
+  "acceptance_scope": "RC specification technical capability: navigation, upstream-pending continuity, accessible controls, native copied-fixture recovery and current dependencies/runbook; excludes operational adoption and retention guarantees",
+  "operational_support_accepted": false
+}

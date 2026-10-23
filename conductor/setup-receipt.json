@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-13T08:44:08Z",
+  "project_context": "scaffolded_from_verified_pinned_artifact_protocol",
+  "interactive_setup_command_run": false,
+  "user_brief_already_supplied": true,
+  "track_count": 4,
+  "mvp_implementation": "not_started",
+  "remote_repository": "not_created",
+  "submodule_pin": "verified_by_release_and_tag",
+  "submodule_checkout": "not_materialised",
+  "checks": "Run scripts/check_setup.py; independent delivery verification is supplied outside the Git working tree."
+}

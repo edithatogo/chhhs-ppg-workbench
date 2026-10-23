@@ -1,0 +1,27 @@
+{
+  "track_id": "ppg_autofill_20261016",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-16T06:05:11.750758+00:00",
+  "updated_at": "2026-10-16T20:45:32.567028+00:00",
+  "description": "Suggested metadata using Autofill",
+  "capability_key": "autofill-suggestions",
+  "phase": "follow_on",
+  "execution_eligibility": "eligibility_required",
+  "dependencies": [
+    "qw2_checked_review_20261013"
+  ],
+  "owner_role": "Workbench integration; isolated derived-metadata pilot",
+  "next_action": "Retain prompts Off. Use distinct reviewed fields and version-bound operator apply for fictional pilot; any other file shape or production processing requires its own qualification and existing entitlement.",
+  "evidence_directory": ".local/autofill/separation-20261017/",
+  "implementation_started": true,
+  "native_autofill_deployed": true,
+  "eligibility_gap": "Actual CLI configuration and fictional processing succeeded despite absent Copilot UI. Tenant billing configuration not audited; no billing/licence/settings changes made.",
+  "implementation_evidence": "AF06: native settled AF02 reprocessing preserved separate reviewed fields/provenance; native race409/stale412; one-commit response-loss read-only recovery; six original hashes/identities/history;3raw promptsOff; v0.4 assets/hub/native manifest and unchanged readback repeat verified.",
+  "native_processing_enabled": false,
+  "prompt_version": "0.3.0",
+  "review": "reviews/20261017-separation.md",
+  "pilot_lifecycle": "fictional_raw_reviewed_separation_verified_off",
+  "review_contract_version": "1.0.0",
+  "reviewed_separation_qualified": true
+}

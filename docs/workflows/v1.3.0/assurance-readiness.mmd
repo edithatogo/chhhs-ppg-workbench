@@ -1,0 +1,9 @@
+flowchart TD
+  start["Human records decision or subsequent evidence"]
+  start --> n0["Record decision and conditions"]
+  n0 --> n1["Link publication representation"]
+  n1 --> n2["Record implementation"]
+  n2 --> n3["Record independent verification"]
+  n3 --> n4["Retain history and unresolved findings"]
+  n4 --> output["Version-linked assurance history"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

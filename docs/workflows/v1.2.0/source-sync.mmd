@@ -1,0 +1,9 @@
+flowchart TD
+  start["Existing hourly check and daily/on-change processing"]
+  start --> n0["Read source into isolated snapshot"]
+  n0 --> n1["Validate headers identity and aliases"]
+  n1 --> n2["Compare importer-owned fields"]
+  n2 --> n3["Apply guarded changes and preserve local work"]
+  n3 --> n4["Read back before checkpoint commit"]
+  n4 --> output["Verified catalogue checkpoint or held exception"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

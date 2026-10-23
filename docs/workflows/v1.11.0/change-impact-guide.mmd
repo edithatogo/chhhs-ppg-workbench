@@ -1,0 +1,10 @@
+flowchart TD
+  start["Explicit document review or no-change review"]
+  start --> n0["Open the change-and-impact List and search the stable revision key"]
+  n0 --> n1["Create or edit a draft with triggers, magnitude and urgency recorded separately"]
+  n1 --> n2["Describe proposed major/minor changes, evidence, interactions, implementation and unknowns"]
+  n2 --> n3["Save and reopen the native record; inspect version history"]
+  n3 --> n4["Read the version-labelled summary and guide; reconcile source changes before guide use"]
+  n4 --> n5["Record actual authorised decision evidence separately; preserve previous editions and human edits"]
+  n5 --> output["Versioned draft change record and companion guide; no policy issuance"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

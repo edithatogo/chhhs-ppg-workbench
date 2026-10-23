@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-5.01",
+      "code": "5.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Care governance",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.02",
+      "code": "5.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Improvement monitoring",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.03",
+      "code": "5.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Consumer involvement",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.04",
+      "code": "5.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Care systems",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.05",
+      "code": "5.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Team responsibilities",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.06",
+      "code": "5.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Collaborative delivery",
+      "pdfPage": 51,
+      "printedPage": 47
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.07",
+      "code": "5.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Integrated screening",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.08",
+      "code": "5.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Indigenous identification",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.09",
+      "code": "5.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Advance planning",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.10",
+      "code": "5.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Risk screening",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.11",
+      "code": "5.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Clinical assessment",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.12",
+      "code": "5.12",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Assessment documentation",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.13",
+      "code": "5.13",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Individualised planning",
+      "pdfPage": 52,
+      "printedPage": 48
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.14",
+      "code": "5.14",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Plan review",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.15",
+      "code": "5.15",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Dying recognition",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.16",
+      "code": "5.16",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Palliative advice",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.17",
+      "code": "5.17",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Advance-plan records",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.18",
+      "code": "5.18",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Workforce support",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.19",
+      "code": "5.19",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "End-of-life evaluation",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.20",
+      "code": "5.20",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Shared decisions",
+      "pdfPage": 53,
+      "printedPage": 49
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.21",
+      "code": "5.21",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Pressure-injury systems",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.22",
+      "code": "5.22",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Skin inspection",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.23",
+      "code": "5.23",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Pressure-injury support",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.24",
+      "code": "5.24",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Falls systems",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.25",
+      "code": "5.25",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Mobility equipment",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.26",
+      "code": "5.26",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Falls information",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.27",
+      "code": "5.27",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Nutrition systems",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.28",
+      "code": "5.28",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Nutrition support",
+      "pdfPage": 54,
+      "printedPage": 50
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.29",
+      "code": "5.29",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Cognition systems",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.30",
+      "code": "5.30",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Individualised cognition-care",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.31",
+      "code": "5.31",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Self-harm systems",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.32",
+      "code": "5.32",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Follow-up arrangements",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.33",
+      "code": "5.33",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Aggression prevention",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.34",
+      "code": "5.34",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Collaborative de-escalation",
+      "pdfPage": 55,
+      "printedPage": 51
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.35",
+      "code": "5.35",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Restraint minimisation",
+      "pdfPage": 56,
+      "printedPage": 52
+    },
+    {
+      "requirementId": "nsqhs-2-2021-5.36",
+      "code": "5.36",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-5",
+      "topic": "Seclusion minimisation",
+      "pdfPage": 56,
+      "printedPage": 52
+    }
+  ]
+}

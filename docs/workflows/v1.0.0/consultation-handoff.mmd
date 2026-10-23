@@ -1,0 +1,8 @@
+flowchart TD
+  start["Human records request response or handoff"]
+  start --> n0["Record proposed handoff or consultation request"]
+  n0 --> n1["Record explicit response"]
+  n1 --> n2["Preserve parent and supersession links"]
+  n2 --> n3["Check exact version and open conditions"]
+  n3 --> output["Append-only assertions distinct from case projection"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

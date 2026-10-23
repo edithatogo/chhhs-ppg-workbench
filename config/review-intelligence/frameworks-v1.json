@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "frameworks": [
+    {
+      "frameworkEditionId": "nsqhs-2-2021",
+      "framework": "NSQHS",
+      "issuer": "Australian Commission on Safety and Quality in Health Care",
+      "edition": "Second edition, updated May 2021",
+      "status": "published",
+      "source": "https://www.safetyandquality.gov.au/resources/national-safety-and-quality-health-service-standards-second-edition",
+      "sourceCheckedOn": "2026-10-18",
+      "requirements": [
+        {
+          "requirementId": "nsqhs-2-2021-1",
+          "code": "1",
+          "title": "Clinical Governance",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-2",
+          "code": "2",
+          "title": "Partnering with Consumers",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-3",
+          "code": "3",
+          "title": "Preventing and Controlling Infections",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-4",
+          "code": "4",
+          "title": "Medication Safety",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-5",
+          "code": "5",
+          "title": "Comprehensive Care",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-6",
+          "code": "6",
+          "title": "Communicating for Safety",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-7",
+          "code": "7",
+          "title": "Blood Management",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-2-2021-8",
+          "code": "8",
+          "title": "Recognising and Responding to Acute Deterioration",
+          "kind": "standard",
+          "parentRequirementId": null
+        }
+      ],
+      "actionLevelCoverage": "not_loaded"
+    },
+    {
+      "frameworkEditionId": "nsqhs-3-initial-draft-2026",
+      "framework": "NSQHS",
+      "issuer": "Australian Commission on Safety and Quality in Health Care",
+      "edition": "Third edition initial draft, 2026",
+      "status": "draft",
+      "source": "https://www.safetyandquality.gov.au/national-standards/third-edition-engagement-hub",
+      "sourceCheckedOn": "2026-10-18",
+      "requirements": [
+        {
+          "requirementId": "nsqhs-3-initial-draft-2026-clinical-governance",
+          "code": "clinical-governance",
+          "title": "Clinical Governance",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-3-initial-draft-2026-person-centred-practice",
+          "code": "person-centred-practice",
+          "title": "Person-Centred Practice",
+          "kind": "standard",
+          "parentRequirementId": null
+        },
+        {
+          "requirementId": "nsqhs-3-initial-draft-2026-safe-clinical-systems",
+          "code": "safe-clinical-systems",
+          "title": "Safe Clinical Systems",
+          "kind": "standard",
+          "parentRequirementId": null
+        }
+      ],
+      "codeMeaning": "Local identifiers, not official action numbering",
+      "actionLevelCoverage": "not_loaded",
+      "currentAccreditationObligation": false
+    }
+  ],
+  "crosswalks": [],
+  "crosswalkStatus": "No equivalence inferred from titles or consolidation"
+}

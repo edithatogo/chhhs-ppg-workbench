@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-1.01",
+      "code": "1.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Board leadership and assurance",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.02",
+      "code": "1.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "First Nations governance priorities",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.03",
+      "code": "1.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Organisational governance framework",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.04",
+      "code": "1.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "First Nations improvement strategies",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.05",
+      "code": "1.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Safety in business choices",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.06",
+      "code": "1.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Clinician governance leadership",
+      "pdfPage": 10,
+      "printedPage": 6
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.07",
+      "code": "1.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Policy currency and adherence",
+      "pdfPage": 11,
+      "printedPage": 7
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.08",
+      "code": "1.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Organisation-wide improvement measurement",
+      "pdfPage": 11,
+      "printedPage": 7
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.09",
+      "code": "1.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Timely performance reporting",
+      "pdfPage": 11,
+      "printedPage": 7
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.10",
+      "code": "1.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Organisational risk controls",
+      "pdfPage": 11,
+      "printedPage": 7
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.11",
+      "code": "1.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Learning from incidents",
+      "pdfPage": 12,
+      "printedPage": 8
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.12",
+      "code": "1.12",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Review disclosure arrangements",
+      "pdfPage": 12,
+      "printedPage": 8
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.13",
+      "code": "1.13",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Gather and use feedback",
+      "pdfPage": 12,
+      "printedPage": 8
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.14",
+      "code": "1.14",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Resolve complaints and learn",
+      "pdfPage": 12,
+      "printedPage": 8
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.15",
+      "code": "1.15",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Plan for diverse populations",
+      "pdfPage": 13,
+      "printedPage": 9
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.16",
+      "code": "1.16",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Reliable clinical record systems",
+      "pdfPage": 13,
+      "printedPage": 9
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.17",
+      "code": "1.17",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "National record interoperability",
+      "pdfPage": 13,
+      "printedPage": 9
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.18",
+      "code": "1.18",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "National record access controls",
+      "pdfPage": 13,
+      "printedPage": 9
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.19",
+      "code": "1.19",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Orient people to governance",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.20",
+      "code": "1.20",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Assess and deliver training",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.21",
+      "code": "1.21",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "First Nations cultural capability",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.22",
+      "code": "1.22",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Workforce performance development",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.23",
+      "code": "1.23",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Define and review scope",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.24",
+      "code": "1.24",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Check clinical credentials",
+      "pdfPage": 14,
+      "printedPage": 10
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.25",
+      "code": "1.25",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Allocate workforce responsibilities",
+      "pdfPage": 15,
+      "printedPage": 11
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.26",
+      "code": "1.26",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Provide clinical supervision",
+      "pdfPage": 15,
+      "printedPage": 11
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.27",
+      "code": "1.27",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Access and use evidence",
+      "pdfPage": 15,
+      "printedPage": 11
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.28",
+      "code": "1.28",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Investigate unexplained practice variation",
+      "pdfPage": 15,
+      "printedPage": 11
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.29",
+      "code": "1.29",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Safe physical infrastructure",
+      "pdfPage": 16,
+      "printedPage": 12
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.30",
+      "code": "1.30",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Manage environment-related behavioural risks",
+      "pdfPage": 16,
+      "printedPage": 12
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.31",
+      "code": "1.31",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Clear wayfinding",
+      "pdfPage": 16,
+      "printedPage": 12
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.32",
+      "code": "1.32",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Safe visiting flexibility",
+      "pdfPage": 16,
+      "printedPage": 12
+    },
+    {
+      "requirementId": "nsqhs-2-2021-1.33",
+      "code": "1.33",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-1",
+      "topic": "Culturally welcoming spaces",
+      "pdfPage": 16,
+      "printedPage": 12
+    }
+  ]
+}

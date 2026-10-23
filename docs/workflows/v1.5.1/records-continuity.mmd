@@ -1,0 +1,9 @@
+flowchart TD
+  start["Operator locates draft reference or recovery target"]
+  start --> n0["Identify exact artefact and owner"]
+  n0 --> n1["Retain preimage and human edits"]
+  n1 --> n2["Recover copied target from verified export"]
+  n2 --> n3["Check identity hashes and links"]
+  n3 --> n4["Reconcile before native reapplication"]
+  n4 --> output["Recovery evidence and preserved originals"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

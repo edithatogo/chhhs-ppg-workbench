@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-isolated-prototype",
+  "scope": "ISO calendar date column validation only; working role registers unchanged",
+  "definition": {
+    "title": "PPG Qualification Role Dates",
+    "description": "Fictional isolated qualification of native ISO calendar-date validation. No role assignment or authority.",
+    "fields": [
+      {
+        "name": "QualificationKey",
+        "type": "Text",
+        "required": true,
+        "unique": true,
+        "schemaXml": "<Field Type=\"Text\" Name=\"QualificationKey\" StaticName=\"QualificationKey\" DisplayName=\"QualificationKey\" Required=\"TRUE\" Indexed=\"TRUE\" EnforceUniqueValues=\"TRUE\"></Field>"
+      },
+      {
+        "name": "EffectiveFrom",
+        "type": "Text",
+        "required": true,
+        "unique": false,
+        "schemaXml": "<Field Type=\"Text\" Name=\"EffectiveFrom\" StaticName=\"EffectiveFrom\" DisplayName=\"EffectiveFrom\" Required=\"TRUE\"><Validation Message=\"Use a real calendar date in YYYY-MM-DD format.\">=AND(LEN([EffectiveFrom])=10,MID([EffectiveFrom],5,1)=&quot;-&quot;,MID([EffectiveFrom],8,1)=&quot;-&quot;,LEFT([EffectiveFrom],4)=TEXT(VALUE(LEFT([EffectiveFrom],4)),&quot;0000&quot;),MID([EffectiveFrom],6,2)=TEXT(VALUE(MID([EffectiveFrom],6,2)),&quot;00&quot;),RIGHT([EffectiveFrom],2)=TEXT(VALUE(RIGHT([EffectiveFrom],2)),&quot;00&quot;),VALUE(LEFT([EffectiveFrom],4))&gt;=1,VALUE(MID([EffectiveFrom],6,2))&gt;=1,VALUE(MID([EffectiveFrom],6,2))&lt;=12,VALUE(RIGHT([EffectiveFrom],2))&gt;=1,VALUE(RIGHT([EffectiveFrom],2))&lt;=CHOOSE(VALUE(MID([EffectiveFrom],6,2)),31,IF(OR(MOD(VALUE(LEFT([EffectiveFrom],4)),400)=0,AND(MOD(VALUE(LEFT([EffectiveFrom],4)),4)=0,MOD(VALUE(LEFT([EffectiveFrom],4)),100)&lt;&gt;0)),29,28),31,30,31,30,31,31,30,31,30,31))</Validation></Field>",
+        "validationFormula": "=AND(LEN([EffectiveFrom])=10,MID([EffectiveFrom],5,1)=\"-\",MID([EffectiveFrom],8,1)=\"-\",LEFT([EffectiveFrom],4)=TEXT(VALUE(LEFT([EffectiveFrom],4)),\"0000\"),MID([EffectiveFrom],6,2)=TEXT(VALUE(MID([EffectiveFrom],6,2)),\"00\"),RIGHT([EffectiveFrom],2)=TEXT(VALUE(RIGHT([EffectiveFrom],2)),\"00\"),VALUE(LEFT([EffectiveFrom],4))>=1,VALUE(MID([EffectiveFrom],6,2))>=1,VALUE(MID([EffectiveFrom],6,2))<=12,VALUE(RIGHT([EffectiveFrom],2))>=1,VALUE(RIGHT([EffectiveFrom],2))<=CHOOSE(VALUE(MID([EffectiveFrom],6,2)),31,IF(OR(MOD(VALUE(LEFT([EffectiveFrom],4)),400)=0,AND(MOD(VALUE(LEFT([EffectiveFrom],4)),4)=0,MOD(VALUE(LEFT([EffectiveFrom],4)),100)<>0)),29,28),31,30,31,30,31,31,30,31,30,31))",
+        "validationMessage": "Use a real calendar date in YYYY-MM-DD format."
+      },
+      {
+        "name": "EffectiveUntil",
+        "type": "Text",
+        "required": false,
+        "unique": false,
+        "schemaXml": "<Field Type=\"Text\" Name=\"EffectiveUntil\" StaticName=\"EffectiveUntil\" DisplayName=\"EffectiveUntil\" Required=\"FALSE\"><Validation Message=\"Use a real calendar date in YYYY-MM-DD format; blank is allowed.\">=IF([EffectiveUntil]=&quot;&quot;,TRUE,AND(LEN([EffectiveUntil])=10,MID([EffectiveUntil],5,1)=&quot;-&quot;,MID([EffectiveUntil],8,1)=&quot;-&quot;,LEFT([EffectiveUntil],4)=TEXT(VALUE(LEFT([EffectiveUntil],4)),&quot;0000&quot;),MID([EffectiveUntil],6,2)=TEXT(VALUE(MID([EffectiveUntil],6,2)),&quot;00&quot;),RIGHT([EffectiveUntil],2)=TEXT(VALUE(RIGHT([EffectiveUntil],2)),&quot;00&quot;),VALUE(LEFT([EffectiveUntil],4))&gt;=1,VALUE(MID([EffectiveUntil],6,2))&gt;=1,VALUE(MID([EffectiveUntil],6,2))&lt;=12,VALUE(RIGHT([EffectiveUntil],2))&gt;=1,VALUE(RIGHT([EffectiveUntil],2))&lt;=CHOOSE(VALUE(MID([EffectiveUntil],6,2)),31,IF(OR(MOD(VALUE(LEFT([EffectiveUntil],4)),400)=0,AND(MOD(VALUE(LEFT([EffectiveUntil],4)),4)=0,MOD(VALUE(LEFT([EffectiveUntil],4)),100)&lt;&gt;0)),29,28),31,30,31,30,31,31,30,31,30,31)))</Validation></Field>",
+        "validationFormula": "=IF([EffectiveUntil]=\"\",TRUE,AND(LEN([EffectiveUntil])=10,MID([EffectiveUntil],5,1)=\"-\",MID([EffectiveUntil],8,1)=\"-\",LEFT([EffectiveUntil],4)=TEXT(VALUE(LEFT([EffectiveUntil],4)),\"0000\"),MID([EffectiveUntil],6,2)=TEXT(VALUE(MID([EffectiveUntil],6,2)),\"00\"),RIGHT([EffectiveUntil],2)=TEXT(VALUE(RIGHT([EffectiveUntil],2)),\"00\"),VALUE(LEFT([EffectiveUntil],4))>=1,VALUE(MID([EffectiveUntil],6,2))>=1,VALUE(MID([EffectiveUntil],6,2))<=12,VALUE(RIGHT([EffectiveUntil],2))>=1,VALUE(RIGHT([EffectiveUntil],2))<=CHOOSE(VALUE(MID([EffectiveUntil],6,2)),31,IF(OR(MOD(VALUE(LEFT([EffectiveUntil],4)),400)=0,AND(MOD(VALUE(LEFT([EffectiveUntil],4)),4)=0,MOD(VALUE(LEFT([EffectiveUntil],4)),100)<>0)),29,28),31,30,31,30,31,31,30,31,30,31)))",
+        "validationMessage": "Use a real calendar date in YYYY-MM-DD format; blank is allowed."
+      }
+    ]
+  }
+}

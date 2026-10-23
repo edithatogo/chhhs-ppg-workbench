@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-20",
+  "route": "Existing qualified M365 CLI connection; Microsoft Search driveItem and site plus direct Graph/SharePoint metadata reads",
+  "successfulSearchRequests": 24,
+  "returnedMetadataHits": 1700,
+  "uniqueUrlsReturned": 1458,
+  "personalDriveUrlsReturned": 344,
+  "searches": [
+    {
+      "queryClass": "personal-discharge-names",
+      "returned": 2,
+      "moreResults": false
+    },
+    {
+      "queryClass": "exact-procedure-name",
+      "returned": 21,
+      "moreResults": false
+    },
+    {
+      "queryClass": "local-blank-template",
+      "returned": 0,
+      "moreResults": false
+    },
+    {
+      "queryClass": "personal-procedure-title",
+      "returned": 0,
+      "moreResults": false
+    },
+    {
+      "queryClass": "blank-template-names",
+      "returned": 1,
+      "moreResults": false
+    },
+    {
+      "queryClass": "completion-distribution",
+      "returned": 100,
+      "moreResults": true
+    },
+    {
+      "queryClass": "edms-procedure",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "regional-templates",
+      "returned": 9,
+      "moreResults": false
+    },
+    {
+      "queryClass": "local-control-guidance",
+      "returned": 100,
+      "moreResults": true
+    },
+    {
+      "queryClass": "local-discharge-simple",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "edms-procedure-page2",
+      "returned": 69,
+      "moreResults": false
+    },
+    {
+      "queryClass": "split-identifier",
+      "returned": 31,
+      "moreResults": false
+    },
+    {
+      "queryClass": "governance-documents",
+      "returned": 0,
+      "moreResults": false
+    },
+    {
+      "queryClass": "procedure-template-title",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "template-local-phrase",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "exact-identifiers",
+      "returned": 0,
+      "moreResults": false
+    },
+    {
+      "queryClass": "exact-title",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "template-file-local",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "regional-discharge",
+      "returned": 5,
+      "moreResults": false
+    },
+    {
+      "queryClass": "ppg-template",
+      "returned": 100,
+      "moreResults": true
+    },
+    {
+      "queryClass": "onedrive-discharge",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "onedrive-ppg-templates",
+      "returned": 150,
+      "moreResults": true
+    },
+    {
+      "queryClass": "cairns-governance-sites",
+      "returned": 2,
+      "moreResults": false
+    },
+    {
+      "queryClass": "personal-policy-names",
+      "returned": 60,
+      "moreResults": false
+    }
+  ],
+  "directOneDrive": {
+    "rootEntries": 37,
+    "rootListingComplete": true,
+    "downloadsEntries": 377,
+    "downloadsListingComplete": true,
+    "customOfficeTemplatesEntries": 0,
+    "additionalTemplateNamedFolders": "15 PNG reading aids; no Word template"
+  },
+  "directRegionalChecks": {
+    "localGovernanceDocuments": "one folder item; no document files",
+    "localGovernanceFormTemplates": "empty",
+    "twoRegionalTemplateFolders": "no direct files; nested descendants not exhaustively enumerated",
+    "legacyTemplateFolder": "HTTP403; not bypassed"
+  },
+  "sourceVerified": false,
+  "currentTemplateVerified": false,
+  "underlyingDocumentFilesDownloaded": 0,
+  "nativeRecordWrites": 0,
+  "permissionsChanged": false,
+  "rawResultsStorage": "Private .local only; indexed summaries can include unrelated sensitive material",
+  "limitations": [
+    "Search indexing/ranking and returned metadata do not establish absence, source identity or currency.",
+    "Broad result sets remain bounded; no tenant-wide exhaustive search claimed.",
+    "Recent template filenames in other HHS sites were not adopted as local templates.",
+    "The indexed local blank-template filename match is the previously retained historical copy."
+  ]
+}

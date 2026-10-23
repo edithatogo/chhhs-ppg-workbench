@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-23",
+  "taskStates": [
+    {
+      "task": "SP-01",
+      "state": "partial",
+      "scope": "Current procedure/template/control authority and complete current-template mapping unresolved."
+    },
+    {
+      "task": "SP-01a",
+      "state": "complete",
+      "scope": "User-authorised V6/candidate interim basis; not current authority."
+    },
+    {
+      "task": "SP-01b",
+      "state": "open",
+      "scope": "Matching V7/control copies recovered; verified controlled provenance and intended readable current local template missing."
+    },
+    {
+      "task": "SP-02",
+      "state": "complete",
+      "scope": "985 retained catalogue identities accounted; provisional/metadata-only/held distinctions preserved."
+    },
+    {
+      "task": "SP-03",
+      "state": "complete",
+      "scope": "Historical manual pack/modules and unresolved annotations retained."
+    },
+    {
+      "task": "SP-03a",
+      "state": "complete",
+      "scope": "Hash-bound interim supplement;171 source/158 candidate elements retained."
+    },
+    {
+      "task": "SP-03b",
+      "state": "complete",
+      "scope": "Versioned consolidated historical/native-state pack delivered."
+    },
+    {
+      "task": "SP-03c",
+      "state": "complete",
+      "scope": "171 source/180 maintained elements accounted; three conversion differences retained."
+    },
+    {
+      "task": "SP-04",
+      "state": "complete",
+      "scope": "Accepted maintained Word/manual-web fallback; automated structured regeneration remains unqualified."
+    },
+    {
+      "task": "SP-04a",
+      "state": "complete",
+      "scope": "Retained element/section-map fallback, with fidelity limits."
+    },
+    {
+      "task": "SP-04b",
+      "state": "complete",
+      "scope": "Dated historical native PDF inspection and repeat-render proof."
+    },
+    {
+      "task": "SP-04c1",
+      "state": "complete",
+      "scope": "Dated native historical template derivative/PDF/edit preservation."
+    },
+    {
+      "task": "SP-04c2",
+      "state": "complete",
+      "scope": "158 prior/70 native candidate elements accounted; mappings remain proposed."
+    },
+    {
+      "task": "SP-04c3",
+      "state": "complete",
+      "scope": "Qualified manual separate linked revision; not automatic Word regeneration."
+    },
+    {
+      "task": "SP-05",
+      "state": "complete",
+      "scope": "Seven-section draft doctor guide delivered."
+    },
+    {
+      "task": "SP-06",
+      "state": "complete",
+      "scope": "Consolidation assessed; merger/retirement not enacted."
+    },
+    {
+      "task": "SP-07a",
+      "state": "complete",
+      "scope": "17-section historical simplification proposal with source accounting."
+    },
+    {
+      "task": "SP-07b",
+      "state": "partial",
+      "scope": "17-section/seven-guide recovered-V7 comparison prepared. Verified-authority/current-template reconciliation remains here; actual third-party decisions transferred to OA-07."
+    },
+    {
+      "task": "SP-07c",
+      "state": "complete",
+      "scope": "Fictional browser edit, stale refusal and separate successor qualification."
+    },
+    {
+      "task": "SP-07d",
+      "state": "transferred_unperformed",
+      "scope": "Final adoption track OA-02; user-deferred, not passed."
+    },
+    {
+      "task": "SP-07e",
+      "state": "complete",
+      "scope": "Dated Standard SharePoint web Capture/Reconcile/replay/stale-source controls."
+    },
+    {
+      "task": "SP-08",
+      "state": "complete",
+      "scope": "Unapproved evidence-backed walkthrough, change record and prioritised questions."
+    }
+  ],
+  "allOriginalTasksImplemented": false,
+  "allTaskDispositionsReviewed": true,
+  "fullTrackAcceptanceAchieved": false,
+  "archived": true,
+  "thirdPartyDestination": "ppg_operational_adoption_20261018",
+  "currentSourceAuthorityVerified": false,
+  "currentTemplateVerified": false,
+  "structuredRegenerationQualified": false,
+  "focusedTestsPassed": 29,
+  "freshNativeWrites": 0,
+  "freshNativeTemplateReadSucceeded": false,
+  "preservationRecoveryPacketsReverified": 2,
+  "countingNote": "Original parent/subtask IDs overlap; do not treat counts as an independent workload percentage."
+}

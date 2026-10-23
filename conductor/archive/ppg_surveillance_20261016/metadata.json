@@ -1,0 +1,98 @@
+{
+  "track_id": "ppg_surveillance_20261016",
+  "type": "feature",
+  "status": "in_progress",
+  "created_at": "2026-10-16T06:15:33.960689+00:00",
+  "updated_at": "2026-10-23",
+  "description": "Broader source surveillance",
+  "capability_key": "source-surveillance",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "ppg_source_comparison_20261016"
+  ],
+  "owner_role": "Workbench integration; bounded selected-source capture/comparison",
+  "next_action": "Use qualified on-demand route when a new comparison is required. Resume SV-05 only after useful real change/applicability evidence and supported scheduled acquisition/recovery qualify; schedule, notifications and automatic baseline promotion remain disabled.",
+  "evidence_directory": ".local/source-surveillance/",
+  "implementation_started": true,
+  "native_surveillance_deployed": true,
+  "scheduled_operation": false,
+  "selection_pending": false,
+  "readiness": "native_verified_on_demand_two_source_pilot",
+  "native_source_baseline_qualified": true,
+  "native_output_download_repeat_qualified": true,
+  "latest_candidate_status": "both_unchanged_at_retained_20261023_capture",
+  "case_impact": "unassessed-no-verified-existing-links",
+  "completed_at": "2026-10-16T09:06:37.257092+00:00",
+  "shared_hub_integration_qualified": true,
+  "technical_blockers": [],
+  "review_intelligence_extension": {
+    "status": "on_demand_complete_schedule_conditional",
+    "tasks": [
+      "SV-04",
+      "SV-05"
+    ],
+    "plan": "conductor/ppg-review-intelligence.md",
+    "native_qualified": true,
+    "qualification_scope": "Stored selected-source captures and fictional changed-signal annotation/replay. No accepted real change/applicability, schedule, alert or automatic baseline promotion.",
+    "on_demand_extension_complete": true,
+    "schedule_assessment_complete": true,
+    "scheduled_execution_qualified": false,
+    "review": "conductor/review-intelligence-extensions-review-20261021.md"
+  },
+  "prior_scope_status": "completed",
+  "schedule_decision_20261022": {
+    "enabled": false,
+    "decision": "Retain on-demand; selected pilot has no accepted real change/applicability evidence to satisfy the usefulness gate",
+    "existing_technical_recovery": "qualified on-demand at retained dated scope",
+    "owner_notifications": false,
+    "scheduled_execution_qualified": false,
+    "new_source_acquisition_claimed": false,
+    "fresh_selected_source_check": {
+      "both_exact_urls_captured": true,
+      "pdf_bytes_and_aligned_etag_unchanged": true,
+      "development_raw_html_changed": true,
+      "article_text_and_links_unchanged": true,
+      "article_markup_only_two_generated_accordion_ids_changed": true,
+      "real_useful_change_demonstrated": false,
+      "baseline_promoted": false,
+      "schedule_or_notifications_enabled": false,
+      "evidence": ".local/source-surveillance/current-20261022/qualification-audit.json"
+    }
+  },
+  "on_demand_recheck_20261023": {
+    "scope": "Existing selected Queensland Health patient-safety directive and clinical-incident guideline; exact same-family baseline retained",
+    "both_sources_unchanged": true,
+    "copied_candidate_cli_replay_identical": true,
+    "candidate_snapshot_receipt_sha256": "c413289947f36cc69ba12f498cc627de8372627795b0febb067561665859472c",
+    "real_useful_change_demonstrated": false,
+    "case_impact": "unassessed-no-explicit-case-links",
+    "human_applicability": "not_assessed",
+    "baseline_promoted": false,
+    "schedule_enabled": false,
+    "notifications_enabled": false,
+    "evidence": ".local/source-surveillance/current-20261023/qualification-audit.json"
+  },
+  "archived_at": "2026-10-23",
+  "archive_disposition": "reviewed_original_scope_complete_conditional_schedule_unperformed",
+  "full_track_acceptance_achieved": false,
+  "historical_candidate_status_20261016": "partial-held-acquisition-error",
+  "closeout_20261023": {
+    "report": "docs/surveillance-closeout-20261023.md",
+    "originalTasksCompleted": 5,
+    "allSevenDispositionsReviewed": true,
+    "extensionDelivered": [
+      "SV-04"
+    ],
+    "extensionConditionalUnperformed": [
+      "SV-05"
+    ],
+    "testsPassed": 20,
+    "retainedEvidenceHashesVerified": 9,
+    "copiedSnapshotReplayIdentical": true,
+    "newSourceAcquisition": false,
+    "nativeWrites": 0,
+    "realUsefulChangeDemonstrated": false,
+    "scheduleEnabled": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "frameworkEditionId": "nsqhs-2-2021",
+  "sourceURL": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+  "sourceSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97",
+  "sourceCheckedOn": "2026-10-20",
+  "representation": "Non-normative topic index; consult the linked official action including all subclauses. Not a compliance checklist.",
+  "requirements": [
+    {
+      "requirementId": "nsqhs-2-2021-8.01",
+      "code": "8.01",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Deterioration governance",
+      "pdfPage": 74,
+      "printedPage": 70
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.02",
+      "code": "8.02",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Improvement monitoring",
+      "pdfPage": 74,
+      "printedPage": 70
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.03",
+      "code": "8.03",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Consumer involvement",
+      "pdfPage": 74,
+      "printedPage": 70
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.04",
+      "code": "8.04",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Physiological monitoring",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.05",
+      "code": "8.05",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Mental-state monitoring",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.06",
+      "code": "8.06",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Escalation criteria",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.07",
+      "code": "8.07",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Consumer escalation",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.08",
+      "code": "8.08",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Workforce escalation",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.09",
+      "code": "8.09",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Escalation use",
+      "pdfPage": 75,
+      "printedPage": 71
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.10",
+      "code": "8.10",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Timely response",
+      "pdfPage": 76,
+      "printedPage": 72
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.11",
+      "code": "8.11",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Resuscitation access",
+      "pdfPage": 76,
+      "printedPage": 72
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.12",
+      "code": "8.12",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Mental-health referral",
+      "pdfPage": 76,
+      "printedPage": 72
+    },
+    {
+      "requirementId": "nsqhs-2-2021-8.13",
+      "code": "8.13",
+      "kind": "action",
+      "parentRequirementId": "nsqhs-2-2021-8",
+      "topic": "Definitive treatment",
+      "pdfPage": 76,
+      "printedPage": 72
+    }
+  ]
+}

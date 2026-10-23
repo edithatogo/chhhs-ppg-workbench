@@ -1,0 +1,8 @@
+flowchart TD
+  start["Human records a finding"]
+  start --> n0["Check reviewed version"]
+  n0 --> n1["Record finding and evidence"]
+  n1 --> n2["Retain conditions and next action"]
+  n2 --> n3["Reopen history and verify scope"]
+  n3 --> output["Version-specific readiness assertion"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

@@ -1,0 +1,62 @@
+{
+  "version": "0.1.0",
+  "checked_at": "2026-10-13T08:44:08Z",
+  "sources": [
+    {
+      "id": "S1",
+      "artifact_name": "CHHHS_PPG_Value_First_Roadmap_and_Outcomes_v0.6.zip",
+      "sha256": "ef8cde9e3dabcdc2a6e70f4980fc0be40dbb5ad828256ddba276772b8eb13112",
+      "role": "Accepted quick wins, outcomes, WIP limits and progressive delivery.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    },
+    {
+      "id": "S2",
+      "artifact_name": "CHHHS_PPG_Source_Synchronisation_Update_v0.4.zip",
+      "sha256": "b6b69a880707524c88fc7e5ab93b1a13d41747a106b2c66dd92ee74b506fca9b",
+      "role": "Retained XLSB ingestion, source/local separation and reconciliation controls.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    },
+    {
+      "id": "S3",
+      "artifact_name": "CHHHS_PPG_CMO_Pilot_Design_v0.3.zip",
+      "sha256": "9eb10cc4876abf03f970322a5e721261e353bbec41eb4870b9ed5d7f53828ef6",
+      "role": "Historical wider metadata design; not an instruction to build all entities.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    },
+    {
+      "id": "S4",
+      "artifact_name": "CHHHS_PPG_Bottom_Up_Roadmap_v0.5.zip",
+      "sha256": "43a83cc8c53844e5e61a498eaa79f301861f36eb2739503ed6de14111ec1bb43",
+      "role": "Layer reference; serial gating superseded by v0.6.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    },
+    {
+      "id": "S5",
+      "artifact_name": "Copy of MASTER Procedure Register SEP 2026.xlsb",
+      "sha256": "f09716b1eda1b080c1d66d8adb129151cabc36a7b54b11010eb6c7fa786ca69c",
+      "role": "Private source snapshot; not copied to Git.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    },
+    {
+      "id": "S6",
+      "artifact_name": "CHHHS_PPG_CareOps_Alignment_20261012.md",
+      "sha256": "77e3d70ac04f134899116193322d043c7aaf4cefea0a25d9a295421cc8b28837",
+      "role": "Earlier integration advice; no-new-repository recommendation superseded by current user instruction.",
+      "content_committed": false,
+      "retrieval": "Project/conversation artefact or approved operational store; ask only if unavailable."
+    }
+  ],
+  "current_user_requirements": [
+    "Create standalone repository with complete Conductor context",
+    "Pin verified current tool version as a Git submodule",
+    "Four distinct value-led MVP tracks",
+    "No detailed long-term tracks",
+    "No unnecessary software approval or broad testing gates"
+  ],
+  "notes": "Prior contents are not copied wholesale. Source-derived constraints are distinguished from proposed implementation. Runtime source and permissions remain unverified here."
+}

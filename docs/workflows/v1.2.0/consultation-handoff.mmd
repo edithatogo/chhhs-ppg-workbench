@@ -1,0 +1,11 @@
+flowchart TD
+  start["Human records request response or handoff"]
+  start --> n0["Record proposed handoff or consultation request"]
+  n0 --> n1["Record explicit response"]
+  n1 --> n2["Preserve parent and supersession links"]
+  n2 --> n3["Check exact version and open conditions"]
+  n3 --> n4["For organisational succession record a stable role and separate effective-dated appointments"]
+  n4 --> n5["Record handover evidence without rewriting historical actors"]
+  n5 --> n6["Use manual dated projection; resolve overlap or delegation scope gaps before relying on ownership"]
+  n6 --> output["Append-only assertions distinct from case projection"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

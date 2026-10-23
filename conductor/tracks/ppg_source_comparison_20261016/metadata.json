@@ -1,0 +1,18 @@
+{
+  "track_id": "ppg_source_comparison_20261016",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-16",
+  "description": "Source-change comparison and affected cases",
+  "capability_key": "source-comparison",
+  "next_action": "Use the dated report in Start Here; refresh manually from qualified retained acquisitions when needed",
+  "implementation_started": true,
+  "readiness": "native_verified_teams_web_manual_refresh",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "qw3_safe_source_sync_20261013"
+  ],
+  "evidence_directory": ".local/source-comparison/",
+  "updated_at": "2026-10-16"
+}

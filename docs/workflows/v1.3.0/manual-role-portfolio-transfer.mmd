@@ -1,0 +1,12 @@
+flowchart TD
+  start["A separately selected portfolio move is recorded"]
+  start --> n0["Prepare a proposed handover and account for every scoped source assignment"]
+  n0 --> n1["Record the actual responsibility decision and acceptance through the existing authorised operator"]
+  n1 --> n2["Retain the source assignment and end its interval exclusively at the transfer date"]
+  n2 --> n3["Create or accept a separate destination assignment starting on that date; retain roles and appointments"]
+  n3 --> n4["Record handover actor, time and evidence separately; never infer access or clinical authority"]
+  n4 --> n5["Export all four registers completely and run the read-only portfolio-transfer audit"]
+  n5 --> n6["Hold proposed, incomplete, overlapping or conflicting transfers and preserve original evidence"]
+  n6 --> n7["After reconciliation store a new dated responsibility snapshot; preserve previous actors, versions and outputs"]
+  n7 --> output["Version-bound audit and dated responsibility records; no automatic permission or clinical-authority change"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

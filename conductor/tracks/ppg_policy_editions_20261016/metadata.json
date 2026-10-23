@@ -1,0 +1,20 @@
+{
+  "track_id": "ppg_policy_editions_20261016",
+  "type": "feature",
+  "status": "completed",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "created_at": "2026-10-16",
+  "description": "Authority/currency fields and edition views",
+  "capability_key": "policy-editions",
+  "dependencies": [
+    "qw1_actionable_queue_20261013",
+    "ppg_evidence_navigation_20261015"
+  ],
+  "next_action": "Use existing native edition views; record human verification and acquire historical editions through the established archive process when operationally undertaken",
+  "evidence_directory": ".local/policy-versions/revalidation-20261016/",
+  "implementation_started": true,
+  "updated_at": "2026-10-16",
+  "readiness": "native_revalidated_teams_web",
+  "native_evidence": ".local/policy-versions/revalidation-20261016/completion-audit.json"
+}

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "guideVersion": "1.0.0",
+  "asOf": "2026-10-19",
+  "title": "PPG review-intelligence pilot — operator guide",
+  "subject": "Discharge Summary — Completion & Distribution Procedure",
+  "notice": "Held for current procedure/template verification. Historical V6 content and provisional suggestions are available; they are not a verified review of the requested V7 edition.",
+  "sections": [
+    {
+      "id": "sources",
+      "title": "1. Confirm the source and preserve originals",
+      "trigger": "Before substantive review",
+      "steps": [
+        "Check requested edition and template authority. Both remain unverified in this pilot.",
+        "Use the exact-byte archive for the historical V6 original and inspection inventory; preserve tracked changes and attachments.",
+        "Read catalogue coverage before interpreting a retrieval match as a comparison."
+      ],
+      "links": [
+        {
+          "key": "sourceArchive",
+          "label": "Download preserved historical source"
+        },
+        {
+          "key": "coverage",
+          "label": "Open catalogue coverage and reference leads"
+        }
+      ],
+      "hold": "Hold current-edition conclusions and mandatory template checks until verified sources exist."
+    },
+    {
+      "id": "content",
+      "title": "2. Inspect and edit structured draft content",
+      "trigger": "Authorised draft preparation",
+      "steps": [
+        "Open Draft body modules; use ReviewText and ReviewedModule for your proposed edits.",
+        "Keep SourceText and source identities unchanged. StableSectionId needs deliberate section reconciliation.",
+        "Use the complete capture and original archive for headers, comments, tables, images and unresolved content. The conversion is an inspection aid, not verified Word parity."
+      ],
+      "links": [
+        {
+          "key": "bodyModules",
+          "label": "Edit draft body modules"
+        },
+        {
+          "key": "completeCapture",
+          "label": "Inspect complete historical capture"
+        }
+      ],
+      "hold": "Do not regenerate over human edits or treat proposed modules as approved mandatory rules."
+    },
+    {
+      "id": "findings",
+      "title": "3. Review evidence-backed suggestions",
+      "trigger": "Review preparation",
+      "steps": [
+        "Open the latest historical review pack and its preserved passage citations.",
+        "Use the criteria register as an advisory checklist, recording missing evidence explicitly.",
+        "The three current suggestions are provisional historical observations; wider semantic comparison remains incomplete."
+      ],
+      "links": [
+        {
+          "key": "reviewPack",
+          "label": "Read review pack and limitations"
+        },
+        {
+          "key": "criteria",
+          "label": "Open review criteria"
+        }
+      ],
+      "hold": "No finding establishes current-policy deficiency, compliance or an authorised decision."
+    },
+    {
+      "id": "annotations",
+      "title": "4. Capture suggestions and reconcile versions",
+      "trigger": "Out-of-session contribution or review",
+      "steps": [
+        "Add a suggestion to the annotation register with document version, section locator where known and evidence.",
+        "Keep original wording. Use append-only additions and a rationale when recording disposition.",
+        "Received, Triaged, Deferred and Accepted remain unresolved until incorporated or otherwise disposed of. Reconcile historical annotations to the current edition before incorporation."
+      ],
+      "links": [
+        {
+          "key": "annotations",
+          "label": "Open unresolved review suggestions"
+        }
+      ],
+      "hold": "Suggestion acceptance is separate from clinical approval, publication and role assignment."
+    },
+    {
+      "id": "standards",
+      "title": "5. Review standards and document links",
+      "trigger": "Standards or dependency review",
+      "steps": [
+        "Keep second edition and third-edition draft mappings distinct. Draft material is not a current obligation.",
+        "Inspect proposed mappings and reference targets against actual passages and applicable editions.",
+        "Six reference candidates are Proposed; one target is unidentified. Title matches alone do not establish duplication, conflicts or consolidation."
+      ],
+      "links": [
+        {
+          "key": "frameworks",
+          "label": "Open framework editions"
+        },
+        {
+          "key": "requirements",
+          "label": "Open requirements"
+        },
+        {
+          "key": "mappings",
+          "label": "Open proposed standards mappings"
+        },
+        {
+          "key": "relationships",
+          "label": "Check proposed document references"
+        },
+        {
+          "key": "relationshipReport",
+          "label": "Read relationship evidence and uncertainty"
+        }
+      ],
+      "hold": "Accepted hierarchy and supersession history are distinct; preserve evidence and reject circular authority links."
+    },
+    {
+      "id": "roles",
+      "title": "6. Maintain role responsibilities and dated output",
+      "trigger": "Confirmed organisational role change",
+      "steps": [
+        "Keep stable roles separate from assignments and effective-dated appointments. Preserve earlier holders and decisions.",
+        "Record acting appointments, delegation scope, vacancies and accepted handovers with evidence. A portfolio transfer is a separate action.",
+        "Dated output refresh is on demand. Select one run and inspect its as-of date/source identity. Current native examples are fictional technical data only."
+      ],
+      "links": [
+        {
+          "key": "roleInputs",
+          "label": "Open organisational role records"
+        },
+        {
+          "key": "assignments",
+          "label": "Open responsibility assignments"
+        },
+        {
+          "key": "appointments",
+          "label": "Open role appointments"
+        },
+        {
+          "key": "handovers",
+          "label": "Open handover records"
+        },
+        {
+          "key": "responsibilities",
+          "label": "Inspect dated responsibility output"
+        }
+      ],
+      "hold": "Role records grant neither SharePoint access nor clinical authority; a stored snapshot is not a live owner service."
+    },
+    {
+      "id": "surveillance",
+      "title": "7. Inspect quiet source surveillance",
+      "trigger": "On-demand selected-source review",
+      "steps": [
+        "Read the source register and exact capture comparison. Two selected NSQHS sources were unchanged in the qualified pair.",
+        "Changed bytes may be formatting; failed reads are exceptions, not no-change results. Missing relationships leave affected scope unassessed.",
+        "The bridge prepares deduplicated review leads through recorded standards relationships. No schedule, owner alert or automatic baseline promotion is enabled."
+      ],
+      "links": [
+        {
+          "key": "surveillance",
+          "label": "Open source register, captures and signals"
+        }
+      ],
+      "hold": "No monitoring result determines applicability, changes policy content or notifies an owner automatically."
+    },
+    {
+      "id": "decisions",
+      "title": "8. Record the human next action",
+      "trigger": "Authorised review decision",
+      "steps": [
+        "Use the decision vocabulary to consider retain, revise, consolidate, split, adopt/adapt, change type, pathway placement, supersede, withdraw or further evidence.",
+        "Record the authorised human decision and evidence in the existing case process; the vocabulary register itself records no decisions.",
+        "Keep review progress, document lifecycle, suggestion state, approval, publication and responsibility separate. Preserve issued history."
+      ],
+      "links": [
+        {
+          "key": "decisionOptions",
+          "label": "Inspect decision options"
+        },
+        {
+          "key": "workspace",
+          "label": "Return to existing PPG workspace"
+        }
+      ],
+      "hold": "This guide issues no policy, assigns no person, changes no access and enables no AI or stopped pilot."
+    }
+  ],
+  "clinicalApproval": false,
+  "notificationsEnabled": false
+}

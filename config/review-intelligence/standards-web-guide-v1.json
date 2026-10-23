@@ -1,0 +1,114 @@
+{
+  "guideVersion": "1.0.0",
+  "asOf": "2026-10-21",
+  "title": "Standards and relationship check \u2014 web operator guide",
+  "subject": "Discharge-summary historical review pilot and other explicitly identified PPG versions",
+  "notice": "Historical V6 and the retained template candidate are development inputs. Current-source verification stays open and nonblocking. This check does not establish clinical authority or compliance.",
+  "clinicalApproval": false,
+  "notificationsEnabled": false,
+  "sections": [
+    {
+      "title": "1. Choose the document and inspected version",
+      "trigger": "Start a fresh standards check",
+      "steps": [
+        "Use the stable Document UID from the catalogue; a title alone does not identify a document.",
+        "Enter the exact inspected version label recorded for this review. A catalogue assertion is not verified current document content.",
+        "Keep different inspection, document and framework editions separate; do not overwrite old labels to make a match."
+      ],
+      "links": [
+        {
+          "key": "catalogue",
+          "label": "Open the catalogue identity view"
+        },
+        {
+          "key": "pilot",
+          "label": "Return to the historical review pilot"
+        }
+      ],
+      "hold": "Unknown document identity or blank version refuses context. Current procedure/template authority remains unverified."
+    },
+    {
+      "title": "2. Run the check in the web",
+      "trigger": "Explicit on-demand review",
+      "steps": [
+        "Open the existing standards check flow and select Run. Enter Document UID and Document version, then select Run flow once.",
+        "Use the existing qualified connections. Do not add a new connection, consent, licence or permission to clear an error.",
+        "The launch acknowledgement only confirms submission. Open that exact run in its run history; do not substitute another successful run."
+      ],
+      "links": [
+        {
+          "key": "run",
+          "label": "Run the on-demand standards and relationship check"
+        }
+      ],
+      "hold": "There is no schedule, policy-owner notification action or automatic clinical decision. Per-flow failure alerts are off; global digest settings are separate."
+    },
+    {
+      "title": "3. Inspect the final report and relevant records",
+      "trigger": "The selected run has finished",
+      "steps": [
+        "Require the run to succeed and the final Report_context action to succeed after Source_snapshot_stable.",
+        "Inspect registerCounts, selected document/version, directProposed versus directAccepted and exact-version upstream/downstream links.",
+        "Other-version mappings remain separate. Proposed or unresolved records are review leads; draft frameworks are not current obligations.",
+        "Use the register views to inspect evidence and separately recorded human decision references. A reference presence check does not authenticate authority."
+      ],
+      "links": [
+        {
+          "key": "frameworks",
+          "label": "Inspect framework editions"
+        },
+        {
+          "key": "requirements",
+          "label": "Inspect requirements"
+        },
+        {
+          "key": "mappings",
+          "label": "Inspect PPG mappings"
+        },
+        {
+          "key": "crosswalks",
+          "label": "Inspect requirement crosswalks"
+        },
+        {
+          "key": "relationships",
+          "label": "Inspect document relationships"
+        }
+      ],
+      "hold": "Parsed_context and script output alone are not a final report. This current-row check does not validate full native history or enforce direct SharePoint saves."
+    },
+    {
+      "title": "4. Resolve a refusal without changing clinical state",
+      "trigger": "A check fails or a report is skipped",
+      "steps": [
+        "For an unknown identity or version, reconcile the exact catalogue identity and inspected version before a new run.",
+        "For StandardsSourceChanged, preserve the run reference and inspect the changed records. Run a fresh check after reconciliation.",
+        "Do not accept or modify a policy, mapping or relationship merely to clear a technical failure. Preserve old evidence, drafts and history.",
+        "The qualified mismatch test changed only a temporary read query, never a catalogue row. Its normal definition was restored. Timed concurrent-edit testing is not claimed."
+      ],
+      "links": [
+        {
+          "key": "proof",
+          "label": "Inspect the bounded qualification summary"
+        }
+      ],
+      "hold": "A failed or skipped final report must not be used as a successful check, even if intermediate script output exists."
+    },
+    {
+      "title": "5. Retain evidence and recover",
+      "trigger": "Use a report in review preparation or investigate a failure",
+      "steps": [
+        "Retain the exact run link, inspected document/version, source context and script/contract versions with the review evidence. Native run history has finite retention.",
+        "Use the existing evidence library and supported manual versioned-record process; preserve earlier evidence rather than overwriting it.",
+        "The recovery companion preserves qualified inputs, reports, definition/bindings and code. Its isolated verifier makes no native writes.",
+        "Restore into a separate target only after checking current connections, source/script bindings, access and alert preferences. Do not replay archived mutation scripts or old run identifiers."
+      ],
+      "links": [
+        {
+          "key": "recovery",
+          "label": "Open the standards web-check recovery companion"
+        }
+      ],
+      "hold": "Native copied restore and broader ordinary-user adoption remain unverified. Real clinical decisions, AI and current-edition authority are separate."
+    }
+  ]
+}

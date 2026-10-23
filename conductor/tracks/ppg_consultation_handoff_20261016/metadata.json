@@ -1,0 +1,21 @@
+{
+  "track_id": "ppg_consultation_handoff_20261016",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-16T04:57:11.413288+00:00",
+  "updated_at": "2026-10-16T05:10:05.426124+00:00",
+  "description": "Consultation and ownership handoff",
+  "capability_key": "consultation-handoff",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "ppg_assurance_readiness_20261015"
+  ],
+  "owner_role": "Workbench integration; native recording only",
+  "next_action": "Operational use: record actual consultation/ownership assertions through Start Here; no real consultation or role transfer performed.",
+  "evidence_directory": ".local/consultation-handoff/",
+  "implementation_started": true,
+  "implementation_evidence": "Native 20-field/five-view contract, duplicate-free reprovisioning, UI save/reopen, versions1/2/3, seven negative rejections and exact view counts verified. Seven fictional events archived/recycled, real case unchanged. Hosted guide/tool hashes, actual downloads/extracted execution, manifest and published17.0 hub repeat verified; all14 previous controls preserved.",
+  "delivery_boundary": "native recording and optional deterministic validation; no messaging, assignment, responsibility transfer or policy approval",
+  "native_qualified": true
+}

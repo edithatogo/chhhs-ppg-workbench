@@ -1,0 +1,17 @@
+{
+  "track_id": "qw4_remove_repetition_20261013",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-13T08:44:08Z",
+  "updated_at": "2026-10-15T04:29:00Z",
+  "description": "Monthly due/overdue report preparation",
+  "quick_win": "QW4",
+  "readiness": "native_monthly_reporting_active",
+  "dependencies": [],
+  "outcomes": [
+    "O2",
+    "O4"
+  ],
+  "plan_source": "Accepted v0.6 plus current repository-setup instruction",
+  "implementation_evidence": "Native output/readback, 985-row independent comparison, boundary/formula probes, repeat versions, active monthly schedule; .local/monthly-report/completion-receipt.json"
+}

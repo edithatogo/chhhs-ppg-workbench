@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "track": "ppg_archive_reconciliation_20261017",
+  "reviewedOn": "2026-10-23",
+  "allOriginalRequirementsImplemented": true,
+  "allOriginalRequirementsReviewed": true,
+  "fullTechnicalAcceptance": true,
+  "archived": true,
+  "tasks": [
+    {
+      "id": "AR-01",
+      "complete": true,
+      "proof": "Original backup identity exact; all724 ZIP members/1986 WARC records/606 Office parts accounted"
+    },
+    {
+      "id": "AR-02",
+      "complete": true,
+      "proof": "All666 source occurrences exact; all105 distinct document streams native-covered; per-member provenance and exclusions retained"
+    },
+    {
+      "id": "AR-03",
+      "complete": true,
+      "proof": "2 absent-only source-page creates;659 actual native downloads/hash proofs;667 original file frames unchanged"
+    },
+    {
+      "id": "AR-04",
+      "complete": true,
+      "proof": "Zero-write source/metadata/control replay, existing native views, published accounting/index/guide and reviewed handoff"
+    }
+  ],
+  "privateEvidence": ".local/archive-closeout-20261023/qualification-audit.json",
+  "remainingTrackBlockers": [],
+  "separateScopes": [
+    "Policy family/edition decisions and real edition management",
+    "Current policy authority and clinical acceptance",
+    "Final user-deferred third-party testing"
+  ]
+}

@@ -1,0 +1,8 @@
+flowchart TD
+  start["Operator opens Start Here"]
+  start --> n0["Choose a task"]
+  n0 --> n1["Open canonical resource"]
+  n1 --> n2["Check identity and evidence"]
+  n2 --> n3["Continue in the owning workflow"]
+  n3 --> output["Correct workspace or visible missing information"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

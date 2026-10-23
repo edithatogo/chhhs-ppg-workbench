@@ -1,0 +1,8 @@
+flowchart TD
+  start["Operator opens completed fictional walkthrough"]
+  start --> n0["Open completed fictional review"]
+  n0 --> n1["Inspect edited draft and filtered evidence"]
+  n1 --> n2["Inspect decision implementation and verification"]
+  n2 --> n3["Open separate next review"]
+  n3 --> output["Connected example understood without changing it"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

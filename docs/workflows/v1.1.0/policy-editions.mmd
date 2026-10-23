@@ -1,0 +1,11 @@
+flowchart TD
+  start["New capture or human currency finding"]
+  start --> n0["Retain source-stated edition"]
+  n0 --> n1["Distinguish native file revision"]
+  n1 --> n2["Record authority or currency evidence"]
+  n2 --> n3["Show current historical and unresolved views"]
+  n3 --> n4["Keep published and draft standards editions distinct"]
+  n4 --> n5["Record version-bound proposed requirement mappings and typed document relationships"]
+  n5 --> n6["Validate references and hierarchy before accepting mappings; native form enforcement remains open"]
+  n6 --> output["Edition and currency history"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

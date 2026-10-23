@@ -1,0 +1,40 @@
+name: Publication checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publication-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - name: Install verified Gitleaks 8.30.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl --fail --silent --show-error --location \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            --output gitleaks.tar.gz
+          echo '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tar.gz' | sha256sum --check --strict
+          tar -xzf gitleaks.tar.gz gitleaks
+          mkdir -p "$RUNNER_TEMP/ppg-bin"
+          mv gitleaks "$RUNNER_TEMP/ppg-bin/"
+          echo "$RUNNER_TEMP/ppg-bin" >> "$GITHUB_PATH"
+      - name: Check complete history and tracked content
+        run: python scripts/check_publication.py --mode history
+      - name: Verify publication controls
+        if: always()
+        run: python -m unittest discover -s tests -p 'test_publication_checks.py'
+      - name: Check repository contracts
+        if: always()
+        run: python scripts/check_setup.py

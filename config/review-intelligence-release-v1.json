@@ -1,0 +1,71 @@
+{
+  "releaseVersion": "1.0.0",
+  "status": "draft-pilot-assets",
+  "nativeStorageVerified": true,
+  "nativeRuntimeVerified": false,
+  "ordinaryUserVerified": false,
+  "assets": [
+    {
+      "sourcePath": "config/review-intelligence/criteria-v1.json",
+      "sha256": "aaafbf3c9982eca12263658a79c1916cc2a28fda80d49ec7fa600976b50d046d",
+      "nativeName": "PPG-review-intelligence-v1.0.0-criteria-v1.json"
+    },
+    {
+      "sourcePath": "config/review-intelligence/frameworks-v1.json",
+      "sha256": "24f88d467af732399537b6bf5adcb3ff9e835ab7d07e1ac790f51fae4fc3a4b7",
+      "nativeName": "PPG-review-intelligence-v1.0.0-frameworks-v1.json"
+    },
+    {
+      "sourcePath": "config/review-intelligence/roles-v1.json",
+      "sha256": "32c335f8c1446312d0b559b3816a236e2a8eed560d48fc66c034df4d57a074b5",
+      "nativeName": "PPG-review-intelligence-v1.0.0-roles-v1.json"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/applicability.md",
+      "sha256": "5ffc48f5ae38309d4c18774cb30c822eb5c5bd758b0fe293798ab359d380d6ee",
+      "nativeName": "PPG-review-intelligence-v1.0.0-applicability.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/classification.md",
+      "sha256": "cdfd514a7cef87b9679de0ee9a07511701c7a1ac9cf4e9ec1c84f3d1819b36e9",
+      "nativeName": "PPG-review-intelligence-v1.0.0-classification.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/content-quality.md",
+      "sha256": "4d7fe46617122c0d3ece6166fbf87ea9372d5ad4be411c88f655de87487fd3c0",
+      "nativeName": "PPG-review-intelligence-v1.0.0-content-quality.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/document-type.md",
+      "sha256": "d31b2c55dba3d3b9b186826d01f2f0eeee574c207f2f2181f86614df972cc386",
+      "nativeName": "PPG-review-intelligence-v1.0.0-document-type.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/duplication.md",
+      "sha256": "050eedcb7dff36b23b3cc5e5d90a620a84cedf4672a50e4d7163cf8cbe26fdaa",
+      "nativeName": "PPG-review-intelligence-v1.0.0-duplication.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/external-changes.md",
+      "sha256": "49afd7ef51153f0b8ba98ab094458bebf0167f31ebd94fb93174b80bfec5ad5c",
+      "nativeName": "PPG-review-intelligence-v1.0.0-external-changes.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/implementation.md",
+      "sha256": "a31476cc5c5490b32f31782412655c768e15e248f321338109cad1c9702af75a",
+      "nativeName": "PPG-review-intelligence-v1.0.0-implementation.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/manual-review-guide.md",
+      "sha256": "698a8f8304d2f19f05ced7d6312683fb958a435636d3dc69fa7af44a84a1f193",
+      "nativeName": "PPG-review-intelligence-v1.0.0-manual-review-guide.md"
+    },
+    {
+      "sourcePath": "templates/review-intelligence/v1.0.0/run-contract.json",
+      "sha256": "1bea400adb4ba0111ce919ed981fa104c8c85a089600d2a05e38b071229671ca",
+      "nativeName": "PPG-review-intelligence-v1.0.0-run-contract.json"
+    }
+  ],
+  "bindingLocation": "Private native-kit-receipts.json; no tenant IDs in Git",
+  "recovery": "Read existing immutable path and compare hash before reuse. Do not overwrite changed files; create a new release version. Preserve prior versions and original documents."
+}

@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "documentKind": "review-package",
+  "preferredRoute": "SharePoint structured document generation",
+  "nativeEligibility": "fictional-developer-pilot-verified-off; production-entitlement-unqualified",
+  "fallback": "Existing manual DRAFT generator and submission assembler; no replacement commissioned",
+  "sourceTemplate": "templates/review-package.md",
+  "sourceTemplateSHA256": "dd779e65d2b42cbf0730baadc929bf3e7f3cc66d10789dcd6ec4e95db4980c47",
+  "templateVersion": "review-package-20261016-planned-native-mapping-v1",
+  "outputStatus": "DRAFT / HUMAN CHECK REQUIRED",
+  "technicalIdentityRequired": [
+    "documentKind",
+    "CaseUID",
+    "sourceSnapshotRef",
+    "sourceSHA256",
+    "templateVersion",
+    "templateSHA256",
+    "outputRevision",
+    "includedRecordIDs"
+  ],
+  "preservationRules": [
+    "Keep source selection/calculations and business decisions in their current authoritative layers",
+    "Use immutable output occurrence/revision identity; no silent replacement of manual edits or issued history",
+    "Retain exact source/template/input/output references and hashes in existing records/receipts",
+    "Missing technical identity fails preparation; missing human findings/roles/approval stays pending",
+    "Native template/reference number is not a replacement for existing CaseUID or DocumentUID"
+  ],
+  "mapping": [
+    {
+      "placeholder": "case_title",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted case_title from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "CaseUID",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted CaseUID from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "source_snapshot",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted source_snapshot from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "version",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted version from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "intended_result",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted intended_result from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "source_manifest",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted source_manifest from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "comparison_rows",
+      "shape": "repeating-rows",
+      "meaning": "Source/control comparison rows",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "draft_links_and_changes",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted draft_links_and_changes from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "ownership_and_implementation",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted ownership_and_implementation from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "decision_route",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted decision_route from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "consultation_rows",
+      "shape": "repeating-rows",
+      "meaning": "Consultation questions and actual-response rows",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "candidate_reference",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted candidate_reference from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "reviewer_response",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted reviewer_response from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "operative_confirmation",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted operative_confirmation from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "role_acceptance",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted role_acceptance from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "review_findings",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted review_findings from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "decision_evidence",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted decision_evidence from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "next_action",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted next_action from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    },
+    {
+      "placeholder": "measures",
+      "shape": "scalar-or-multiline",
+      "meaning": "Preserve accepted measures from maintained review-package input",
+      "nativeQualification": "native output verified within empty/one/three-group fictional pilot"
+    }
+  ],
+  "qualificationCases": [
+    {
+      "key": "empty-rows",
+      "comparisonRows": 0,
+      "consultationRows": 0
+    },
+    {
+      "key": "single-row",
+      "comparisonRows": 1,
+      "consultationRows": 1
+    },
+    {
+      "key": "many-long-unicode",
+      "comparisonRows": 3,
+      "consultationRows": 3,
+      "include": "long text, multiline paragraphs, M\u0101ori and Aboriginal/Torres Strait Islander names without synthetic clinical content"
+    },
+    {
+      "key": "optional-sections",
+      "include": "explicit included and excluded sections; no condition is a policy decision"
+    },
+    {
+      "key": "missing-technical-key",
+      "expect": "visible failure; no success/output receipt"
+    },
+    {
+      "key": "repeat-after-human-edit",
+      "expect": "new revision; original edit and issued history preserved"
+    },
+    {
+      "key": "duplicate-retry-and-failure",
+      "expect": "same operation retained; no silent overwrite or false completion"
+    }
+  ],
+  "limitations": [
+    "Developer-only pilot; production entitlement and adoption unqualified",
+    "Plain optional text and repeating paragraph groups; arbitrary section deletion, repeating tables and embedded hyperlink authoring not implemented",
+    "Each resubmission creates a separate attempt; not exactly-once deduplication",
+    "Existing manual operational outputs remain authoritative and preserved"
+  ],
+  "observedNativeQualification": {
+    "candidateVersion": "PPG-native-word-candidate-v2",
+    "scope": "Fictional Developer pilot; no production adoption",
+    "nativeGeneration": "Native structured input, validation, Word/file/receipt save/run/download verified",
+    "optionalInclusion": "empty/nonempty text verified; arbitrary section deletion excluded",
+    "editSaveReopen": "native version2.0/reopen and later generation preserve edited hash",
+    "flowState": "Off, full graph/owner/references verified; checker0errors, expected Off warning",
+    "remaining": [],
+    "repeatingGroups": "empty, one and three long multiline Unicode paragraph groups verified",
+    "failureRecovery": "missing source hash rejected before Word; corrected attempt succeeds; native resubmission preserves distinct outputs/receipts"
+  },
+  "operatorInputSchema": "config/native-document-input.schema.json",
+  "operatorInputExample": "templates/native-document/operator-input.example.json",
+  "operatorGuide": "docs/native-document-operator-guide.md"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "tool": "Conductor",
+  "repository": "https://github.com/gemini-cli-extensions/conductor.git",
+  "submodule_path": ".agents/plugins/conductor",
+  "selection": "latest published non-prerelease release at check time",
+  "tag": "conductor-v0.4.1",
+  "commit": "7a5c560a4fdf5297be58594cc37527eb12790272",
+  "release_published_at": "2026-03-11T15:33:13Z",
+  "checked_at": "2026-10-13T08:44:08Z",
+  "tag_type": "commit",
+  "upstream_files_modified": false,
+  "auto_update": false,
+  "evidence_urls": [
+    "https://api.github.com/repos/gemini-cli-extensions/conductor/releases/latest",
+    "https://api.github.com/repos/gemini-cli-extensions/conductor/git/ref/tags/conductor-v0.4.1"
+  ],
+  "materialisation_at_delivery": "gitlink_pinned_checkout_not_downloaded",
+  "reason": "Container Git DNS/network unavailable; initialise on connected development machine."
+}

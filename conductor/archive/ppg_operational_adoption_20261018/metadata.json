@@ -1,0 +1,118 @@
+{
+  "track_id": "ppg_operational_adoption_20261018",
+  "type": "feature",
+  "status": "in_progress",
+  "created_at": "2026-10-18T00:00:00+10:00",
+  "description": "Final third-party review, acceptance and benefit measurement",
+  "phase": "follow_on",
+  "execution_eligibility": "participant_required",
+  "dependencies": [
+    "ppg_process_reporting_20261016",
+    "ppg_guided_workspace_20261017"
+  ],
+  "owner_role": "Integration owns existing operator guide and measures; actual users retain their own identities",
+  "next_action": "When an intended participant is actually available, preflight exact fictional fixtures and execute OA-02/06/07 in their normal session; record actual outcomes. No invitations, new permissions or active availability question.",
+  "native_qualified": false,
+  "full_track_acceptance_achieved": false,
+  "priority_rank": 3,
+  "task_slice_priority": {
+    "OA-01": 3,
+    "OA-03": 3,
+    "OA-02": 6,
+    "OA-04": 7,
+    "OA-05": 6
+  },
+  "capability_evidence": "docs/maturity-capability-plan-20261018.md",
+  "execution_route": "Existing qualified M365 CLI; scoped native fallback only where needed",
+  "dispatch_order": 999,
+  "readiness_scope": "First local/read-only preparation; native mutation requires current exact-target check and existing writer availability",
+  "fallback_next_action": "Use local CSV with fictional validation; no Forms, Power BI or participant dependency for the instrumentation slice.",
+  "slice_acceptance": "Reusable kit with sample/denominator/missingness definitions and fictional checks; real benefits remain unmeasured.",
+  "instrumentation": {
+    "implementation_status": "completed",
+    "route": "Existing local CSV and process-reporting CLI; standard library only",
+    "tests_passed": 22,
+    "real_benefits": "Not measured",
+    "ordinary_user_access": "unverified",
+    "forms": "deferred; no unmet capture need",
+    "power_bi": "conditional OA-04; not required",
+    "guide": "docs/operator-usability-observation.md",
+    "review": "conductor/archive/ppg_operational_adoption_20261018/reviews/20261018-observation-kit-review.md"
+  },
+  "ordinary_user_acceptance": {
+    "inventory_evidence": ".local/access-inventory/20261018/summary.json",
+    "reviewer_availability": "User clarified no reviewer had been asked; third-party review postponed",
+    "observed_execution": "Unverified; deferred by user, not acceptance",
+    "recording_access": "No additional run-only grant observed in twelve inspected permission collections; effective execution unverified",
+    "guide": "docs/guided-workspace.md",
+    "permissions_changed": false,
+    "navigation_fix": {
+      "status": "native_saved_and_rendered",
+      "landing_version": "32.0",
+      "secondary_version": "1.0",
+      "main_task_links": 5,
+      "prior_content_preserved": true,
+      "evidence": ".local/usability/landing-simplification-20261018/"
+    },
+    "status": "deferred_by_user"
+  },
+  "review_intelligence_extension": {
+    "status": "instrumentation_complete_observation_user_deferred",
+    "tasks": [
+      "OA-06"
+    ],
+    "plan": "conductor/ppg-review-intelligence.md",
+    "native_qualified": true,
+    "qualification_scope": "Manual outcome templates/reports in existing evidence library; blank and fictional qualification only. Actual observations, clinical authority and ordinary-user access unverified.",
+    "outcome_instrumentation_verified": true,
+    "real_benefits": "not_measured",
+    "actual_observations_complete": false,
+    "ordinary_user_access": "unverified_user_deferred",
+    "review": "conductor/review-intelligence-extensions-review-20261021.md"
+  },
+  "technical_usability_result": {
+    "status": "published_native_readback_and_current_account_rendering_verified",
+    "configured_cycles": 2,
+    "cycle_runs": 72,
+    "cycle_actions": 18600,
+    "real_user_sample": 0,
+    "benefits": "not measured",
+    "third_party_testing": "user_deferred",
+    "guide": "docs/recovery-qualification-20261021.md"
+  },
+  "updated_at": "2026-10-23",
+  "third_party_scope_consolidated_20261023": {
+    "userDeferred": true,
+    "sequence": "last",
+    "includes": [
+      "SP-07d ordinary-user exercise",
+      "OA-02 ordinary-user functional access",
+      "OA-06 actual reviewer usefulness/benefit",
+      "SP-07b actual third-party substantive decisions",
+      "Repo-wide participant/expert/adoption reviews"
+    ],
+    "runtimeAcceptanceUnverified": true,
+    "technicalAgentReviewsDeferred": false
+  },
+  "archived_at": "2026-10-23",
+  "archive_disposition": "reviewed_partial_participant_acceptance_and_benefits_unperformed",
+  "closeout_20261023": {
+    "reviewedTasks": 7,
+    "deliveredTasks": [
+      "OA-01",
+      "OA-03",
+      "OA-04",
+      "OA-05"
+    ],
+    "unperformedTasks": [
+      "OA-02",
+      "OA-06",
+      "OA-07"
+    ],
+    "actualParticipantSample": 0,
+    "benefits": "Not measured",
+    "nativeWrites": 0,
+    "reportingRoute": "existing Lists/CSV; Power BI not required",
+    "report": "docs/adoption-closeout-20261023.md"
+  }
+}

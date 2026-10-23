@@ -1,0 +1,21 @@
+{
+  "track_id": "ppg_evidence_navigation_20261015",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-15T05:39:55.050951Z",
+  "updated_at": "2026-10-16T02:15:29.930831+00:00",
+  "description": "Evidence finder and archive navigation",
+  "capability_key": "evidence-navigation",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "qw1_actionable_queue_20261013"
+  ],
+  "owner_role": "Workbench integration lane; archive originals immutable",
+  "plan_source": "User-directed incorporation of panel recommendations, 15 October 2026; docs/roadmap-assessment-20261015.md",
+  "next_action": "Operate existing navigation; desktop acceptance remains unverified because native capture failed.",
+  "evidence_directory": ".local/evidence-navigation/",
+  "implementation_started": true,
+  "readiness": "native_verified_teams_web_desktop_unverified",
+  "last_revalidation": "16 October 2026: published hub 12.0, four task paths, exact archive memberships, index provenance/hashes, checkpoint visibility and live registration verified. No archive/navigation/permission writes. Existing desktop limitation retained."
+}

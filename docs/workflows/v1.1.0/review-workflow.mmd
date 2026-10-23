@@ -1,0 +1,13 @@
+flowchart TD
+  start["Authorised package preparation"]
+  start --> n0["Select recorded metadata"]
+  n0 --> n1["Populate draft template"]
+  n1 --> n2["Retain source and output revision"]
+  n2 --> n3["Open and edit draft"]
+  n3 --> n4["Record missing review inputs"]
+  n4 --> n5["For review intelligence verify source and template before substantive comparison"]
+  n5 --> n6["Account for every catalogue item and preserve unmapped content"]
+  n6 --> n7["Carry unresolved annotations with full retained history and version reconciliation"]
+  n7 --> n8["Store a new preparation revision with hash readback; hold missing evidence"]
+  n8 --> output["Editable unapproved draft package"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

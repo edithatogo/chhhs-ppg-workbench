@@ -1,0 +1,24 @@
+flowchart TD
+  A["Monthly run: 1st at 08:00 Brisbane"] --> B["Read verified catalogue, checkpoint and source snapshot"]
+  B --> C{"Identity, count and source fields match?"}
+  C -- No --> D["Stop generation; inspect failure; retain prior report"]
+  C -- Yes --> E{"Source changed or check stale?"}
+  E -- Yes --> F["Add last-verified-catalogue warning"]
+  E -- No --> G["Record latest observed source match"]
+  F --> H["Classify recorded review months"]
+  G --> H
+  H --> I["Select overdue, due this month, next 3 months and date exceptions"]
+  H --> J["Count later documents in summary"]
+  I --> K["Group recorded roles and save CSV"]
+  J --> K
+  K --> L{"Saved CSV matches generated output?"}
+  L -- No --> D
+  L -- Yes --> M["Save monthly summary with provenance"]
+  M --> N["Human: check freshness, source evidence and relevant rows"]
+  N --> O["Human: confirm responsibility and agree next action"]
+  O --> P["Record agreed follow-up in Review Queue"]
+  P --> Q["Use draft package and human approval route when needed"]
+  style N fill:#e0f2fe,stroke:#0369a1
+  style O fill:#e0f2fe,stroke:#0369a1
+  style P fill:#e0f2fe,stroke:#0369a1
+  style Q fill:#e0f2fe,stroke:#0369a1

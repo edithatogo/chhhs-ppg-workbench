@@ -1,0 +1,22 @@
+{
+  "track_id": "ppg_guided_workspace_20261017",
+  "type": "feature",
+  "status": "completed",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "created_at": "2026-10-17",
+  "updated_at": "2026-10-17",
+  "description": "Guided workspace and case navigation",
+  "dependencies": [
+    "qw1_actionable_queue_20261013",
+    "ppg_consultation_handoff_20261016",
+    "ppg_evidence_navigation_20261015"
+  ],
+  "owner_role": "Workbench and integration",
+  "next_action": "Use five task routes and grouped case form; continue existing Status clarity track through the shared native writer.",
+  "evidence_directory": ".local/usability/uw/",
+  "implementation_started": true,
+  "permission_policy": "Existing rights only; verify exact operations; no access or entitlement changes",
+  "readiness": "native_verified_sharepoint_web",
+  "native_evidence": ".local/usability/uw/completion-audit.json"
+}

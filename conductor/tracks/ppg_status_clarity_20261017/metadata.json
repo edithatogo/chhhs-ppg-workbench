@@ -1,0 +1,24 @@
+{
+  "track_id": "ppg_status_clarity_20261017",
+  "type": "feature",
+  "status": "completed",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "created_at": "2026-10-17",
+  "updated_at": "2026-10-17",
+  "description": "Freshness and capability status clarity",
+  "dependencies": [
+    "qw1_actionable_queue_20261013",
+    "qw3_safe_source_sync_20261013"
+  ],
+  "owner_role": "Workbench and integration",
+  "next_action": "Use existing native status card; dependent Operator usability owner can complete its final acceptance against page27.0 and existing guide0.5.",
+  "evidence_directory": ".local/usability/us/",
+  "implementation_started": true,
+  "permission_policy": "Existing rights only; verify exact operations; no access or entitlement changes",
+  "preparation_owner": "QW2 status inventory and frozen mapping; Workbench retains native presentation writer",
+  "preparation_evidence": "Five existing GET reads succeeded;11 native field types, four action resource refs and existing projection/freshness semantics verified. Mapping only; no native deployment/write-right claim.",
+  "mapping_version": "1.0.0",
+  "readiness": "native_view_page_verified_with_local_state_fixtures",
+  "native_evidence": ".local/usability/us/native-20261017/completion-audit.json"
+}

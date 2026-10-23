@@ -1,0 +1,13 @@
+flowchart TD
+  start["Operator launches existing cloud flow with an explicit as-of date"]
+  start --> n0["Open the role-refresh operator page and existing flow; enter an explicit as-of date and run once"]
+  n0 --> n1["Read all four role registers; validate references, dates and evidence without changing inputs"]
+  n1 --> n2["Project roles using the separate hosted script; preserve historical actors and unresolved states"]
+  n2 --> n3["Re-read all four inputs and hold any changed source before persistence"]
+  n3 --> n4["Preflight every snapshot key; exact existing rows may be reused and conflicting wording is preserved"]
+  n4 --> n5["Create only missing derived snapshots with unique keys and no automatic create retry"]
+  n5 --> n6["Read every saved field back; recheck all four sources before the completed report"]
+  n6 --> n7["Use Report_projection completed state, RunKey and expected count to filter Dated responsibilities; inspect exceptions"]
+  n7 --> n8["On failure retain partial rows and exact run identity; explicit conflict/source holds require operator reconciliation"]
+  n8 --> output["Append-only dated derived snapshots and a completed report; no appointment, transfer, access or clinical decision"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

@@ -1,0 +1,12 @@
+flowchart TD
+  start["Explicit operator check with stable Document UID and inspected version"]
+  start --> n0["Open the standards web operator page and existing flow; enter exact document UID and inspected version and run once"]
+  n0 --> n1["Read all five standards registers and the catalogue without changing any source"]
+  n1 --> n2["Validate required values, choices, identity/reference/edition bindings, decision-reference presence and hierarchy cycles"]
+  n2 --> n3["Create exact-version context with Proposed/Accepted and other-version records kept separate"]
+  n3 --> n4["Re-read all six inputs and terminate an inconsistent source snapshot before final reporting"]
+  n4 --> n5["Require that exact run and final Report_context to succeed; intermediate output or launch acknowledgement is insufficient"]
+  n5 --> n6["Preserve run/source/version/script/contract evidence with review preparation through the supported manual evidence route"]
+  n6 --> n7["Reconcile holds and retain prior records; recovery uses separate stopped targets and verified current bindings"]
+  n7 --> output["Read-only current-row review context; no compliance, clinical decision, record update or owner alert"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

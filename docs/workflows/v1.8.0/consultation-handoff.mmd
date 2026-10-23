@@ -1,0 +1,13 @@
+flowchart TD
+  start["Human records request response or handoff"]
+  start --> n0["Enter exact YYYY-MM-DD calendar dates through the five native role date checks; invalid input shows a message and does not save"]
+  n0 --> n1["Record proposed handoff or consultation request"]
+  n1 --> n2["Record explicit response"]
+  n2 --> n3["Preserve parent and supersession links"]
+  n3 --> n4["Check exact version and open conditions"]
+  n4 --> n5["For organisational succession record a stable role and separate effective-dated appointments"]
+  n5 --> n6["Record handover evidence without rewriting historical actors"]
+  n6 --> n7["Use manual dated projection; resolve overlap or delegation scope gaps before relying on ownership"]
+  n7 --> n8["Validate interval ordering, references, overlap and accepted authority separately; a calendar-valid date does not resolve responsibility"]
+  n8 --> output["Append-only assertions distinct from case projection"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

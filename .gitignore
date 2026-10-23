@@ -1,0 +1,34 @@
+# Operational material stays out of Git, including in a private repository.
+.local/
+private/
+outputs/
+receipts/
+.env
+.env.*
+!.env.example
+*.local.json
+*.xls
+*.xlsx
+*.xlsb
+*.xlsm
+*.msg
+*.eml
+*.pdf
+*.docx
+*.zip
+*.bundle
+*.pem
+*.pfx
+*.key
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+
+# One-time OpenXML template authoring build outputs.
+tools/native-document-template/bin/
+tools/native-document-template/obj/
+
+# Workflow PNG reading aids are generated and hosted; version text sources/hashes.
+docs/workflows/*/*.png

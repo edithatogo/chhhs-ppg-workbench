@@ -1,0 +1,9 @@
+flowchart TD
+  start["First day at 08:00 Brisbane"]
+  start --> n0["Validate counts identity and source values"]
+  n0 --> n1["Classify month dates and exceptions"]
+  n1 --> n2["Group recorded roles"]
+  n2 --> n3["Save CSV and summary"]
+  n3 --> n4["Verify output and show freshness"]
+  n4 --> output["Monthly working report and exceptions"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

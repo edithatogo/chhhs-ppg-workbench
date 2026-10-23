@@ -1,0 +1,23 @@
+{
+  "track_id": "ppg_identity_triage_20261015",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-15T05:39:55.050951Z",
+  "updated_at": "2026-10-16T04:47:06Z",
+  "description": "Guided identity-exception resolution",
+  "capability_key": "identity-triage",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "qw1_actionable_queue_20261013",
+    "qw3_safe_source_sync_20261013"
+  ],
+  "owner_role": "Source-sync lane; integration owner controls identity contract",
+  "plan_source": "User-directed incorporation of panel recommendations, 15 October 2026; docs/roadmap-assessment-20261015.md",
+  "next_action": "Operational only: responsible operator supplies explicit real identity decisions; use the published guide. Native Word eligibility remains a separate track.",
+  "evidence_directory": ".local/identity-triage/",
+  "implementation_started": true,
+  "implementation_evidence": "44 identity/source-sync checks; native fictional creation, alias continuity, partial failure/recovery, zero-write replay, local-edit survival and stale source/contract/collision rejection verified. Production restored and read back; real held run 984 rows/25 fields, zero writes, catalogue 985 and last-good checkpoint unchanged. Hosted/downloaded tool and Start Here15 repeat verified. Fifty fictional files archived/recycled; retention-held fictional List labelled inactive and unbound.",
+  "delivery_boundary": "end-to-end guided identity application delivered; real identity decisions remain operational",
+  "native_application_qualified": true
+}

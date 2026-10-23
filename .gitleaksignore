@@ -1,0 +1,3 @@
+# Reviewed prose-only match: "opaque tokens,\nadverse/ambiguous history".
+# Exact historical finding only; no file, rule or whole-commit suppression.
+06dc8d14da6a003cdbb490e5b79848c89b7d5668:docs/lifecycle-binary-publication-preparation.md:generic-api-key:88

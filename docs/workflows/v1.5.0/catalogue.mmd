@@ -1,0 +1,8 @@
+flowchart TD
+  start["Policy lookup"]
+  start --> n0["Search catalogue"]
+  n0 --> n1["Confirm DocumentUID"]
+  n1 --> n2["Read source baseline and freshness"]
+  n2 --> n3["Open retained source"]
+  n3 --> output["Source facts with provenance"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

@@ -1,0 +1,9 @@
+flowchart TD
+  start["Authorised operator observation"]
+  start --> n0["Record actual task outcome and timing"]
+  n0 --> n1["Retain failures missing values and help"]
+  n1 --> n2["Validate comparable baseline pairs"]
+  n2 --> n3["Calculate supported per-task measures"]
+  n3 --> n4["Separate fictional from operational observations"]
+  n4 --> output["Observation report with honest denominators"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

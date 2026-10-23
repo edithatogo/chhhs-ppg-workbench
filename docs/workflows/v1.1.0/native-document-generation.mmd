@@ -1,0 +1,9 @@
+flowchart TD
+  start["Explicit Developer pilot operation"]
+  start --> n0["Check qualified pilot connection"]
+  n0 --> n1["Populate template"]
+  n1 --> n2["Retain input template and output identities"]
+  n2 --> n3["Open and inspect editable output"]
+  n3 --> n4["Preserve human edits"]
+  n4 --> output["Fictional editable DRAFT and generation receipt"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

@@ -1,0 +1,12 @@
+flowchart TD
+  start["Authorised operator selects a suggestion disposition"]
+  start --> n0["Read complete original and current annotation history with document/version/section binding"]
+  n0 --> n1["Record explicit human target and nonblank rationale; Incorporated requires an incorporated version"]
+  n1 --> n2["Read exact native item ETag; no-metadata export alone is insufficient"]
+  n2 --> n3["Prepare a new conditional patch using the disposition CLI; no native write occurs"]
+  n3 --> n4["Re-read ETag and document/version/section before the qualified assisted native update"]
+  n4 --> n5["Use exact IF-MATCH; refuse stale412 and preserve concurrent human edits"]
+  n5 --> n6["Read both history versions to verify original contribution and new rationale; latest append-only note alone cannot prove preservation"]
+  n6 --> n7["On timeout reconcile operation identity in history; exact replay requests no write and never resets later dispositions"]
+  n7 --> output["Versioned suggestion disposition and rationale; no policy approval or automatic decision"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

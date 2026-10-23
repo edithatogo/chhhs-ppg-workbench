@@ -1,0 +1,9 @@
+flowchart TD
+  start["Explicit fictional Autofill pilot"]
+  start --> n0["Preserve raw content"]
+  n0 --> n1["Generate candidate metadata"]
+  n1 --> n2["Review suggestions separately"]
+  n2 --> n3["Apply only accepted correction with guards"]
+  n3 --> n4["Retain retry and recovery evidence"]
+  n4 --> output["Separate suggestions and reviewed metadata"]
+  start -. "Missing, stale or conflicting evidence" .-> hold["Hold affected operation; preserve evidence; reconcile before retry"]

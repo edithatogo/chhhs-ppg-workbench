@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "familyId": "nsqhs-editions-reference-pilot",
+  "registryVersion": "1.0.0",
+  "sources": [
+    {
+      "sourceKey": "nsqhs-second-edition-2021",
+      "canonicalUrl": "https://www.safetyandquality.gov.au/sites/default/files/resources/additional/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+      "frameworkEditionId": "nsqhs-2-2021",
+      "representation": "fixed_edition_pdf",
+      "editionStatus": "published",
+      "purpose": "Retain the selected second-edition requirements reference; verify actual applicability separately.",
+      "publisher": "Australian Commission on Safety and Quality in Health Care",
+      "jurisdiction": "Australia",
+      "applicability": "Selected framework relationships only; document/service applicability requires review",
+      "previousURL": "https://www.safetyandquality.gov.au/sites/default/files/2021-05/national_safety_and_quality_health_service_nsqhs_standards_second_edition_-_updated_may_2021.pdf",
+      "canonicalRedirectCheckedOn": "2026-10-19",
+      "checkedEditionSha256": "f9432f4b52e8465d36f4ec5ff9c7bbc849d98f2877df05b3f6a37b16784d0f97"
+    },
+    {
+      "sourceKey": "nsqhs-third-edition-development",
+      "canonicalUrl": "https://www.safetyandquality.gov.au/national-standards/third-edition-engagement-hub",
+      "frameworkEditionId": "nsqhs-3-initial-draft-2026",
+      "representation": "development_status_page",
+      "editionStatus": "draft",
+      "purpose": "Observe third-edition development; not a current accreditation-obligation register.",
+      "publisher": "Australian Commission on Safety and Quality in Health Care",
+      "jurisdiction": "Australia",
+      "applicability": "Selected framework relationships only; document/service applicability requires review"
+    }
+  ],
+  "mode": "on_demand",
+  "ownerNotificationsEnabled": false,
+  "automaticBaselinePromotion": false
+}

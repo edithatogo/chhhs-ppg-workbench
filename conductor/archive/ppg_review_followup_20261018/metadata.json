@@ -1,0 +1,160 @@
+{
+  "track_id": "ppg_review_followup_20261018",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-18T00:00:00+10:00",
+  "description": "Review follow-up, prioritisation and change candidates",
+  "phase": "follow_on",
+  "execution_eligibility": "ready",
+  "dependencies": [
+    "ppg_consultation_handoff_20261016",
+    "ppg_process_reporting_20261016"
+  ],
+  "owner_role": "Integration owns case schema/views; lifecycle and source writers retain their existing objects",
+  "next_action": "Use the delivered manual follow-up/history and quiet preview. Planner/Approvals/custom forms and surveillance extension are deferred pending a demonstrated need; ordinary-user adoption remains user-deferred. Hand v5 to the existing ALM owner before a later release export.",
+  "native_qualified": true,
+  "full_track_acceptance_achieved": false,
+  "priority_rank": 1,
+  "task_slice_priority": {
+    "RF-01": 1,
+    "RF-03a": 1,
+    "RF-02": 4,
+    "RF-04": 4,
+    "RF-05": 9,
+    "RF-06": 8,
+    "RF-03b": 9
+  },
+  "capability_evidence": "docs/maturity-capability-plan-20261018.md",
+  "execution_route": "Existing qualified M365 CLI; scoped native fallback only where needed",
+  "dispatch_order": 2,
+  "readiness_scope": "First local/read-only preparation; native mutation requires current exact-target check and existing writer availability",
+  "fallback_next_action": "Prepare exact view deltas locally from existing schema/receipts; preserve native state and continue RC/OA local slices.",
+  "slice_acceptance": "Useful views saved/read back with source/case preservation; ordinary-user usability remains separately evidenced.",
+  "native_view_configuration_verified": true,
+  "view_slice": {
+    "implementation_status": "completed",
+    "cli_configuration_verified": true,
+    "cli_navigation_targets_verified": 6,
+    "visual_acceptance": "current_account_three_views_verified_20261023",
+    "ordinary_user_acceptance": "user_deferred",
+    "review": "conductor/archive/ppg_review_followup_20261018/reviews/20261018-followup-views-revalidation.md"
+  },
+  "digest_slice": {
+    "implementation_status": "completed_native_manual_web",
+    "native_deployment": "fictional_current_account_qualified",
+    "delivery_eligible": false,
+    "review": "conductor/archive/ppg_review_followup_20261018/reviews/20261021-native-followup-review.md"
+  },
+  "review_intelligence_extension": {
+    "status": "completed",
+    "tasks": [
+      "RF-08",
+      "RF-09",
+      "RF-10"
+    ],
+    "plan": "conductor/ppg-review-intelligence.md",
+    "native_qualified": true,
+    "annotationRegister": {
+      "nativeSchemaVerified": true,
+      "fictionalHistoryVerified": true,
+      "staleUpdateRefused": true,
+      "duplicateKeyRefused": true,
+      "currentAccountViewRendered": true,
+      "ordinaryUserVerified": false,
+      "reviewPackIntegrationVerified": true,
+      "historicalContextExportVerified": true,
+      "nativeRationaleEnforcementVerified": true,
+      "assistedDispositionQualificationVerified": true,
+      "assistedDispositionScope": "Documented assisted preparation/conditional fictional qualification. No general writer, automatic trigger or direct-form enforcement.",
+      "assistedDispositionWorkflowRelease": "1.6.0",
+      "nativeRationaleEnforcementScope": "Native list presence validation: short summary beyond Received and incorporation version for Incorporated. Detailed append-only rationale retained; no authority/quality validation.",
+      "webFormQualificationVerified": true,
+      "webFormScope": "Fictional browser refusal/save plus native four-version readback; working form field visible. No ordinary-user claim.",
+      "webDispositionWorkflowRelease": "1.8.0"
+    },
+    "qualification_scope": "Criteria/decision storage, annotation history/pack integration, native summary/incorporation-version presence validation. No automatic trigger, clinical authority/quality judgement or ordinary-user acceptance.",
+    "criteria_advisory_delivery_complete": true,
+    "criteria_fresh_native_records": 19,
+    "criteria_mandatory_authority_verified": false,
+    "web_navigation": {
+      "guide_version": "3.1.0",
+      "sections": 9,
+      "qualified_links": 34,
+      "unchanged_replay_verified": true,
+      "prior_objects_preserved": 6,
+      "ordinary_user_verified": false,
+      "desktop_required": false
+    },
+    "completion_scope": "RF-08\u201310 supported manual route: advisory criteria, traceable annotations with native reason/version presence validation, manual review-pack/view integration and workflow/recovery. No clinical decisions, automatic trigger or ordinary-user adoption.",
+    "workflow_release": "1.8.0"
+  },
+  "change_impact_increment": {
+    "status": "completed_manual_web_draft",
+    "date": "2026-10-21",
+    "current_authority": "open_nonblocking",
+    "owner": "Workbench integration",
+    "tasks": [
+      "RF-11",
+      "RF-12"
+    ],
+    "current_account_verified": true,
+    "ordinary_user_verified": false,
+    "clinical_approval": false
+  },
+  "native_followup_slice": {
+    "status": "completed_selected_native_increment",
+    "current_account_verified": true,
+    "ordinary_user_verified": false,
+    "script_revision": "v5",
+    "flow_content_version": "1.4.0.0",
+    "successful_paths": [
+      "first_followup",
+      "exact_retry",
+      "changed_stage",
+      "first_preview",
+      "unchanged_preview",
+      "future_event_exception",
+      "stale_scope_exception",
+      "unknown_freshness_exception",
+      "unresolved_recipient_exception",
+      "completed_followup_empty_candidate_suppression",
+      "candidate_visible_stage_and_priority"
+    ],
+    "expected_refusals": [
+      "stale_context",
+      "stale_predecessor",
+      "duplicate_event_identity",
+      "duplicate_predecessor",
+      "edited_snapshot_retry"
+    ],
+    "source_case_ownership_writes": false,
+    "notifications_enabled": false,
+    "alm_handback": "docs/followup-alm-handback.md",
+    "workflow_release": "1.11.0",
+    "native_successful_runs": 12,
+    "expected_runtime_refusals": 3,
+    "history_events": 3,
+    "copied_history_recovery_verified": true,
+    "copied_recovery_replay_creates": 0,
+    "downloaded_recovery_archive_verified": true,
+    "human_snapshot_edit_preserved": true,
+    "full_native_disaster_restore_verified": false,
+    "solution_membership_verified": false,
+    "as_of_ownership_guard_native_qualified": true,
+    "native_guard_controls_passed": 2
+  },
+  "updated_at": "2026-10-23",
+  "archived_at": "2026-10-23",
+  "archive_disposition": "technical_scope_complete_optional_integrations_and_adoption_deferred",
+  "technical_acceptance_achieved": true,
+  "closeout_20261023": {
+    "review": "conductor/archive/ppg_review_followup_20261018/review.md",
+    "planner": "HTTP403_no_creation_defer",
+    "approvals": "no_unmet_requirement_or_qualified_audience_defer",
+    "custom_form": "no_native_form_gap_defer",
+    "surveillance_extension": "no_real_relevant_change_existing_on_demand_route_reused_defer",
+    "private_evidence": ".local/review-followup/closeout-20261023/qualification-audit.json",
+    "native_source_case_ownership_writes": false,
+    "third_party_testing": "user_deferred"
+  }
+}
