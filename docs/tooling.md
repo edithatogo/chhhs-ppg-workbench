@@ -61,35 +61,33 @@ Public references: GitHub release/tag APIs recorded in the lock file; upstream
 `GEMINI.md` (index protocol), `commands/conductor/newTrack.toml` (track artifacts),
 `templates/workflow.md` (customisable defaults); GitHub CLI `gh repo create` manual.
 
-## Standard project runtime — 18 October 2026
+## Required project runtime — 23 October 2026
 
-`.python-version` pins stable 3.15.0. The current private installation and `.venv`
-were created without changing global Python or an existing environment. Python
-reports releaselevel `final`; 39 representative offline tests passed (source sync,
-monthly report, generation contract, prepared decision outcome). This is scoped
-compatibility evidence, not full test-suite or native acceptance.
+Every active Python use in this repository uses Python 3.15.1, selected through
+`.python-version` and the repo-local `.venv/bin/python`. Verify the actual patch
+and final release level before running builders, checks or automation. Historical
+receipts/version-test inputs retain their original values; they are not active
+compatibility targets. Finish any in-flight operation before replacing its runtime.
 
-For a new checkout with no existing `.venv`, using the installed uv:
+For a new checkout without an existing `.venv`:
 
 ```sh
-uv python install 3.15.0 --install-dir .local/runtimes --no-bin --cache-dir .local/uv-cache
-UV_PYTHON_INSTALL_DIR=.local/runtimes uv venv --no-project --managed-python --python 3.15.0 .venv
-.venv/bin/python -c 'import sys; assert sys.version_info[:3] == (3,15,0) and sys.version_info.releaselevel == "final"'
+uv python install 3.15.1 --install-dir .local/runtimes --no-bin --cache-dir .local/uv-cache
+UV_PYTHON_INSTALL_DIR=.local/runtimes uv venv --no-project --managed-python --python 3.15.1 .venv
+.venv/bin/python -c 'import sys; assert sys.version_info[:3] == (3,15,1) and sys.version_info.releaselevel == "final"'
 .venv/bin/python scripts/check_setup.py
 ```
 
-Inspect/reuse an existing environment; never add `--clear`/`--force` to get past a
-conflict. The package uses the standard library, so no pip dependency installation
-is required for these checks. On Windows use the corresponding venv Scripts path.
-The `.venv` and runtime downloads remain ignored. Bare `python`/`python3` in older
-historical examples denotes their original runtime; use the explicit project
-interpreter for new work. Preserve live automation's existing interpreter until
-its exact owner qualifies migration.
+Inspect existing environments and their running processes first; preserve the old
+environment for recovery, then create and qualify the new one. Do not use force or
+clear to discard it. These tools use the standard library; there is no Python
+package dependency or lock requiring installation for the release/publication path.
+CI creates a repo-local venv from the exact selected patch without pip, prints its
+actual version and executes every check through that path. Local publication hooks
+refuse a missing repo interpreter or a patch that differs from the pin. On Windows
+use the corresponding venv Scripts path. Ignored runtimes/settings remain private.
 
-Latest stable Python 3.15.0 was checked against
-[Python.org](https://www.python.org/downloads/release/python-3150/).
-[NuGet](https://www.nuget.org/packages/DocumentFormat.OpenXml/) still lists the
-already pinned Open XML 3.5.1 as current. Stable .NET SDK selection/qualification
-remains ALM-02 work; do not claim the shared .NET 11 RC was upgraded. Recheck new
-releases for security/compatibility and adopt in isolated project scope, not by
-blindly updating shared CLIs/authentication or the pinned upstream submodule.
+Python 3.15.1 was verified as an actual final interpreter in an isolated environment
+before promotion. Release/publication tests and setup checks are recorded in the
+[ALM-06 handoff](alm06-release-20261023.md). Existing native auth, shared runtimes,
+Microsoft objects and the pinned upstream submodule were not changed.

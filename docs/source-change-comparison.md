@@ -7,10 +7,10 @@ shows cases linked to changed DocumentUIDs. It does not compare the policy text,
 establish current authority, perform review or update case decisions. The tool and operator guide are hosted in the existing evidence library, with
 a frozen comparison linked from Start Here. Refresh remains local/manual.
 
-Use Python 3.11+ from this repository:
+Use repo-local Python 3.15.1 from this repository:
 
 ```sh
-python3 scripts/ppg_source_comparison.py \
+.venv/bin/python scripts/ppg_source_comparison.py \
   --baseline templates/source-comparison/baseline.json \
   --candidate templates/source-comparison/candidate.json \
   --cases templates/source-comparison/cases.json \

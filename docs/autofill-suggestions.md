@@ -26,8 +26,8 @@ The working command uses the existing named Microsoft 365 CLI connection. Retain
 bindings, snapshots, values and receipts in private approved storage:
 
 ```sh
-python3 scripts/ppg_autofill_review.py --binding PRIVATE_BINDING.json --output NEW_SNAPSHOT.json snapshot --item EXISTING_ITEM_ID
-python3 scripts/ppg_autofill_review.py --binding PRIVATE_BINDING.json --output NEW_RECEIPT.json apply --snapshot NEW_SNAPSHOT.json --values REVIEWED_VALUES.json --actor "OPERATOR_LABEL" --operation-id NEW_UUID
+.venv/bin/python scripts/ppg_autofill_review.py --binding PRIVATE_BINDING.json --output NEW_SNAPSHOT.json snapshot --item EXISTING_ITEM_ID
+.venv/bin/python scripts/ppg_autofill_review.py --binding PRIVATE_BINDING.json --output NEW_RECEIPT.json apply --snapshot NEW_SNAPSHOT.json --values REVIEWED_VALUES.json --actor "OPERATOR_LABEL" --operation-id NEW_UUID
 ```
 
 The values file contains exactly the three `Reviewed*` names. Recording a

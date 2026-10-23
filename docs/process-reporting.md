@@ -70,10 +70,10 @@ read window, not a transactional multi-List snapshot. Keep real exports, IDs,
 source details and deployment receipts in ignored `.local/process-reporting/`.
 Do not put them in Git or use a smaller subset as a complete portfolio.
 
-Run Python 3.11+ (standard library only):
+Run repo-local Python 3.15.1 (standard library only):
 
 ```sh
-python3 scripts/ppg_process_measures.py \
+.venv/bin/python scripts/ppg_process_measures.py \
   --input templates/process-reporting/input.json \
   --output .local/process-reporting/example-1
 ```

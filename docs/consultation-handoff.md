@@ -93,7 +93,7 @@ identity. Supply private event/history JSON; history must omit the event being
 validated while including its parents and later superseding assertions:
 
 ```sh
-python3 scripts/ppg_consultation.py --event PRIVATE-EVENT.json --history PRIVATE-HISTORY.json --case-uid EXISTING_CASE_UID --document-ref STABLE_DOCUMENT_REFERENCE --version-ref EXACT_VERSION_REFERENCE --document PRIVATE-EXACT-DOCUMENT
+.venv/bin/python scripts/ppg_consultation.py --event PRIVATE-EVENT.json --history PRIVATE-HISTORY.json --case-uid EXISTING_CASE_UID --document-ref STABLE_DOCUMENT_REFERENCE --version-ref EXACT_VERSION_REFERENCE --document PRIVATE-EXACT-DOCUMENT
 ```
 
 A recordedOwnershipAcceptance result is an evidenced record state for that exact

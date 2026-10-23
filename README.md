@@ -28,7 +28,7 @@ The [longer-term roadmap](docs/roadmap.md) is deliberately not a task backlog.
 ```
 
 Create/reuse the [project Python environment](docs/tooling.md#standard-project-runtime--18-october-2026) first.
-The check uses pinned stable Python 3.15.0 and Git, with no packages or tenant access. It checks
+The check uses pinned stable Python 3.15.1 and Git, with no packages or tenant access. It checks
 this repository setup, not clinical content or Microsoft deployment. To download
 the exact pinned Conductor release on a network-enabled machine:
 

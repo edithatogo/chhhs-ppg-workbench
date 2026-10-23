@@ -98,7 +98,7 @@ output route, with currently unqualified maker/production eligibility. Its curre
 conditional-section/web-edit and form-versus-flow visibility limitations remain
 part of output qualification. [Microsoft guidance](https://learn.microsoft.com/en-us/sharepoint/copilot-in-sharepoint-structured-document-generation)
 
-Stable Python 3.15.0 is now installed privately and selected for local work. The
+Stable Python 3.15.1 is now installed privately and selected for local work. The
 pinned Open XML 3.5.1 matches the current NuGet package. Other shared runtime/CLI
 upgrades need affected-operation compatibility, rather than wholesale refresh.
 ALM-02 stays open for .NET and remaining runtime coverage. No new dependency or

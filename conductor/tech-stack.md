@@ -6,8 +6,8 @@ for bounded source ingestion. Existing work-account operations are qualified per
 resource; prefer the qualified CLI route, with native UI for unsupported actions.
 No custom app registration, tenant administration or external service is assumed.
 
-Python 3.15.0 stable is pinned for local development; 3.11+ remains the documented
-compatibility floor. Use `.venv/bin/python` for setup, builders and offline checks.
+Python 3.15.1 is pinned for every active development, build, test and CI use.
+Older compatibility runners are retired; historical evidence retains its dated scope. Use `.venv/bin/python` for setup, builders and offline checks.
 GitHub CLI handles publication after its protection gate. Some current manual
 utilities require local execution; do not describe them as cloud services.
 

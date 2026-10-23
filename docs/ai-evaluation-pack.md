@@ -15,7 +15,7 @@ requests, empty search and unknown operative authority.
 Run from the repository root:
 
 ```sh
-python3 scripts/ppg_ai_evaluation.py --runs templates/ai-evaluation/empty-runs.json
+.venv/bin/python scripts/ppg_ai_evaluation.py --runs templates/ai-evaluation/empty-runs.json
 ```
 
 The initial report must show all cases `not-run`, not pass. Exit 1 means incomplete
@@ -77,8 +77,8 @@ runtime only when that track's runtime/source-access requirements are met.
 Verification:
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_ai_evaluation.py'
-python3 -m unittest discover -s tests -p 'test_evidence*.py'
+.venv/bin/python -m unittest discover -s tests -p 'test_ai_evaluation.py'
+.venv/bin/python -m unittest discover -s tests -p 'test_evidence*.py'
 ```
 
 Custom packs passed with `--pack` must include, per case, `caseId`, `question`,

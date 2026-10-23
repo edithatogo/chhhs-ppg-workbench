@@ -50,7 +50,7 @@ six-dataset checker does not migrate or reconcile those artifacts automatically.
 
 ## Offline reconciliation
 
-Requires Python3.11+ standard library; no Dataverse login or package installation.
+Requires repo-local Python3.15.1 standard library; no Dataverse login or package installation.
 Create a complete normalized export from each side using existing original field
 names. Explicitly map target physical columns, lookup GUIDs and choice values back
 to this representation in a separately qualified export adapter; that adapter is
@@ -58,7 +58,7 @@ not implemented here. Do not omit fields, records or unresolved identities to ma
 parity pass. Keep native export receipts, completeness counts and projection rules.
 
 ```sh
-python3 scripts/ppg_dataverse_reconcile.py --source PRIVATE-SOURCE.json --target PRIVATE-TARGET.json --output .local/dataverse-migration/NEW-REPORT
+.venv/bin/python scripts/ppg_dataverse_reconcile.py --source PRIVATE-SOURCE.json --target PRIVATE-TARGET.json --output .local/dataverse-migration/NEW-REPORT
 ```
 
 The maintained fictional example is

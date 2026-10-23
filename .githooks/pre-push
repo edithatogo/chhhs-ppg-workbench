@@ -3,5 +3,9 @@ set -eu
 root=$(git rev-parse --show-toplevel)
 cd "$root"
 python="$root/.venv/bin/python"
-if [ ! -x "$python" ]; then python=python3; fi
+if [ ! -x "$python" ]; then
+    echo 'repo-local-python-required' >&2
+    exit 1
+fi
+"$python" -c 'from pathlib import Path; import sys; pin=Path(".python-version").read_text().strip(); actual=".".join(map(str,sys.version_info[:3])); sys.exit(0 if pin == actual and pin.startswith("3.15.") and sys.version_info.releaselevel == "final" else "project-python-pin-mismatch")'
 exec "$python" scripts/check_publication.py --mode pre-push --remote-url "${2-}"

@@ -54,7 +54,7 @@ signatures, hash correspondence, current authority or conditions adequacy.
 For deterministic format and exact-byte comparison, use the read-only helper:
 
 ```sh
-python3 scripts/ppg_readiness.py --event PRIVATE-EVENT.json --version-ref EXACT-REVIEWED-VERSION --document PRIVATE-REVIEWED-DOCUMENT.docx
+.venv/bin/python scripts/ppg_readiness.py --event PRIVATE-EVENT.json --version-ref EXACT-REVIEWED-VERSION --document PRIVATE-REVIEWED-DOCUMENT.docx
 ```
 
 It validates hexadecimal SHA-256, open-condition notes and human evidence fields,

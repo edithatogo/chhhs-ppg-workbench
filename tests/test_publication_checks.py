@@ -309,6 +309,10 @@ class PublicationChecks(unittest.TestCase):
     def test_hooks_execute_and_block_synthetic_commit_and_push(self):
         shutil.copytree(ROOT / '.githooks', self.root / '.githooks')
         hooks.install(self.root)
+        interpreter = self.root / '.venv/bin/python'
+        interpreter.parent.mkdir(parents=True)
+        interpreter.symlink_to(sys.executable)
+        self.write('.python-version', '.'.join(map(str, sys.version_info[:3])))
         self.write('sample.txt', 'access_token = "' + secret() + '"\n')
         self.git('add', 'sample.txt')
         result = subprocess.run(['git', 'commit', '-qm', 'must fail'], cwd=self.root,
@@ -324,6 +328,19 @@ class PublicationChecks(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn(b'secret-or-binding-findings', result.stderr)
         self.assertNotIn(secret().encode(), result.stdout + result.stderr)
+
+    def test_hooks_refuse_missing_or_mismatched_repo_python(self):
+        shutil.copytree(ROOT / '.githooks', self.root / '.githooks')
+        result = subprocess.run([str(self.root / '.githooks/pre-commit')], cwd=self.root, capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(b'repo-local-python-required', result.stderr)
+        interpreter = self.root / '.venv/bin/python'
+        interpreter.parent.mkdir(parents=True)
+        interpreter.symlink_to(sys.executable)
+        self.write('.python-version', '3.14.0')  # Deliberate mismatch fixture.
+        result = subprocess.run([str(self.root / '.githooks/pre-commit')], cwd=self.root, capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(b'project-python-pin-mismatch', result.stderr)
 
     def test_pre_push_requires_review_before_destination_network_lookup(self):
         args = ['check_publication.py', '--mode', 'pre-push', '--remote-url',

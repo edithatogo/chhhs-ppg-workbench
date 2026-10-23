@@ -50,7 +50,10 @@ def check(require_submodule: bool = False) -> tuple[list[str], list[str], list[s
         record('file: '+name, (ROOT/name).is_file() and (ROOT/name).stat().st_size > 0)
     if failed:
         return passed, failed, pending
-    record('stable project Python pin', bool(re.fullmatch(r'3\.\d+\.\d+', (ROOT/'.python-version').read_text().strip())))
+    python_pin = (ROOT/'.python-version').read_text().strip()
+    record('project Python 3.15 patch pin', bool(re.fullmatch(r'3\.15\.\d+', python_pin)))
+    record('actual Python matches project pin', '.'.join(map(str, sys.version_info[:3])) == python_pin and sys.version_info.releaselevel == 'final')
+    record('repo-local Python environment', Path(sys.prefix).resolve() == (ROOT/'.venv').resolve())
     adapters = [(ROOT/n).read_text() for n in ['CLAUDE.md', 'GEMINI.md', '.github/copilot-instructions.md']]
     record('agent entry points use one instruction contract', len(set(adapters)) == 1)
     tracked = [n for n in git('ls-files').splitlines() if not n.startswith('.agents/plugins/conductor/')]

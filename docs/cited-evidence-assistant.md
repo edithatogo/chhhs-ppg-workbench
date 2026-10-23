@@ -70,7 +70,7 @@ answers contain no factual claims. The mechanical checker compares citation URLs
 versions, hashes, labels, locators and exact quotations against retrieved receipts:
 
 ```sh
-python3 scripts/ppg_evidence_check.py --answer PRIVATE-ANSWER.json --sources PRIVATE-SOURCES.json --allowed-prefix QUALIFIED_HTTPS_FOLDER_PREFIX
+.venv/bin/python scripts/ppg_evidence_check.py --answer PRIVATE-ANSWER.json --sources PRIVATE-SOURCES.json --allowed-prefix QUALIFIED_HTTPS_FOLDER_PREFIX
 ```
 
 This check cannot assess whether a paraphrase is entailed, whether the question was

@@ -33,9 +33,9 @@ Commands run from the extracted tool folder. Every output must be new; existing
 reports, decisions and evidence are not silently replaced.
 
 ```sh
-python3 scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action html --output PRIVATE/report.html
-python3 scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action report --output PRIVATE/report.json
-python3 scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action propose --exception-key EXCEPTION_KEY --output PRIVATE/proposal.json
+.venv/bin/python scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action html --output PRIVATE/report.html
+.venv/bin/python scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action report --output PRIVATE/report.json
+.venv/bin/python scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action propose --exception-key EXCEPTION_KEY --output PRIVATE/proposal.json
 ```
 
 Open the HTML report. Investigate every ambiguity, duplicate or missing identity.
@@ -45,7 +45,7 @@ proposal: select `existing_uid` and its evidenced `existingUID`, or
 `evidenceReferences`. Leave unresolved/ambiguous records held.
 
 ```sh
-python3 scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action accept --proposal PRIVATE/proposal.json --actor OPERATOR --decision-evidence DECISION_REFERENCE --output PRIVATE/accepted.json
+.venv/bin/python scripts/ppg_identity_triage.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --action accept --proposal PRIVATE/proposal.json --actor OPERATOR --decision-evidence DECISION_REFERENCE --output PRIVATE/accepted.json
 ```
 
 Use `--action reject` to record rejection of a proposed decision. Acceptance records
@@ -74,8 +74,8 @@ already present in the active source-qualified contract. A new UID must not
 collide with any existing or newly authorised UID.
 
 ```sh
-python3 scripts/ppg_identity_application.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --proposals PRIVATE/accepted.json --new-authorisations PRIVATE/new-authorisations.json --output PRIVATE/application.json
-python3 scripts/ppg_identity_application.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --verify-package PRIVATE/application.json --output PRIVATE/application-check.json
+.venv/bin/python scripts/ppg_identity_application.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --proposals PRIVATE/accepted.json --new-authorisations PRIVATE/new-authorisations.json --output PRIVATE/application.json
+.venv/bin/python scripts/ppg_identity_application.py --snapshot PRIVATE/current-snapshot.json --ledger PRIVATE/current-contract.json --allowed config/identity-application-fields.json --verify-package PRIVATE/application.json --output PRIVATE/application-check.json
 ```
 
 `--proposals` accepts one accepted object or an array of accepted proposals. The
@@ -112,7 +112,7 @@ source hash, contract hash and complete readback count. Downloaded receipts alon
 are not human policy approval.
 
 ```sh
-python3 scripts/ppg_identity_application.py --verify-outcome PRIVATE/application.json --receipt PRIVATE/qw3-run-RUN.json --checkpoint PRIVATE/checkpoint-for-that-run.json --output PRIVATE/outcome.json
+.venv/bin/python scripts/ppg_identity_application.py --verify-outcome PRIVATE/application.json --receipt PRIVATE/qw3-run-RUN.json --checkpoint PRIVATE/checkpoint-for-that-run.json --output PRIVATE/outcome.json
 ```
 
 The result keeps three states distinct:

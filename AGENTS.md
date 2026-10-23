@@ -138,7 +138,7 @@ actual policy denials remain boundaries; never transfer credentials between clie
 
 ## Consistent implementation — 18 October 2026
 
-Follow docs/implementation-guide.md. Use .venv/bin/python (stable3.15.0) for new
+Follow docs/implementation-guide.md. Use .venv/bin/python (Python3.15.1) for new
 local work; keep live automation's interpreter until its owner qualifies migration.
 Task-slice eligibility outranks a broad track-ready label. Reuse dated exact-target
 receipts, classify expiry separately from denial, and hold only the affected step.

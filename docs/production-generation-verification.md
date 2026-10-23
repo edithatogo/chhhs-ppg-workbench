@@ -49,7 +49,7 @@ Word document and do not satisfy the production-generation acceptance steps belo
 Run from the repository with explicit private files:
 
 ```text
-python3 scripts/ppg_generation_contract.py \
+.venv/bin/python scripts/ppg_generation_contract.py \
   --request <frozen-request.json> --receipt <downloaded-generation-receipt.json> \
   --input <frozen-input.json> --template <downloaded-template.docx> \
   --document <downloaded-generated.docx> --observation <native-readback.json>

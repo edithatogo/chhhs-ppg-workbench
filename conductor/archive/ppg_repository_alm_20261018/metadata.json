@@ -460,11 +460,16 @@
     "cleanCommittedRecovery": true,
     "focusedTests": 25,
     "setupChecks": 4031,
-    "hostedCiForThisIncrement": "pending publication/actual hosted result",
+    "hostedCiForThisIncrement": "source CI39944799118 succeeded; subsequent 3.15.1 handover gets its own exact-head verification",
     "originalPrivateBindings": 192,
     "publicVariantExactMaterialisation": true,
-    "publicationTestsPassed": 63,
-    "publicCopySetupChecks": 3065,
-    "publicCopySetupPending": 2
+    "publicationTestsPassed": 64,
+    "publicCopySetupChecks": 3070,
+    "publicCopySetupPending": 2,
+    "publicSourceCommit": "50565280d1a3f805c386499ebd1159f414455cbb",
+    "publicSourceTree": "cb47daa8587c683c1f3042baff8962790f0e6128",
+    "publicSourceCI": 39944799118,
+    "publicSourceCISucceeded": true,
+    "activePython": "3.15.1"
   }
 }

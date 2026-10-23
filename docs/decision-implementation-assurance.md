@@ -87,7 +87,7 @@ It never writes, publishes or marks policyApproved true. Download the validator
 package, extract it and run with private inputs outside Git:
 
 ```sh
-python3 scripts/ppg_assurance.py --event PRIVATE-EVENT.json --case-uid EXISTING_CASE_UID --document-ref STABLE_DOCUMENT_REFERENCE --version-ref EXACT_VERSION_REFERENCE --document PRIVATE-EXACT-DOCUMENT.docx
+.venv/bin/python scripts/ppg_assurance.py --event PRIVATE-EVENT.json --case-uid EXISTING_CASE_UID --document-ref STABLE_DOCUMENT_REFERENCE --version-ref EXACT_VERSION_REFERENCE --document PRIVATE-EXACT-DOCUMENT.docx
 ```
 
 For a proposed new event, add `--history PRIVATE-PRIOR-ASSURANCE-EVENTS.json` and
