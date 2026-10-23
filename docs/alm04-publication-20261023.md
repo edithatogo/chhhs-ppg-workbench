@@ -101,3 +101,20 @@ current remote main and inspect its real step results. Retain exact commit/run
 identity, recheck local/remote parity and privacy, then update ALM-04 status.
 ALM-06 release/production requirements and other tracks are not resolved here.
 The original checkout and all pre-existing dirty-file hashes remain preserved.
+
+## Email restriction and independent Renovate work
+
+The user subsequently required explicit approval before any email. The authoritative
+workflow now records that per-message recipient/content/attachment/scope requirement.
+Maintained source inspection found no static send-email/SMTP/provider implementation;
+notification configurations inspected remain false. This publication owner has no
+native sender assignment, sent no email, enabled no delivery and changed no tenant
+object. This is source inspection only; native owners retain actual sender-state
+readback responsibility. No all-native-email audit is claimed.
+
+Renovate independently opened [onboarding PR1](https://github.com/edithatogo/chhhs-ppg-workbench/pull/1)
+after initial publication. Its only change is a six-line `renovate.json` extending
+the owner's shared configuration. Its branch/content is preserved and unmerged;
+it is independent of the selected source snapshot and this publication work.
+The documentation run39934759742 atde42721 also failed; no successful hosted CI
+is inferred. This policy-only follow-up retains the same account-level blocker.

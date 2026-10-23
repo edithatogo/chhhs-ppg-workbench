@@ -77,3 +77,12 @@ an actual successful hosted run; ALM-06 remains separate.
 Reviewed this documentation-only final delta against observed API evidence; no
 native bindings, private receipts or new source data are added. Renew the agent
 receipt for the final documentation commit before pushing without force.
+
+## Final policy delta review
+
+Reviewed the user-required email restriction added to the authoritative workflow:
+per-message human approval, Off/fail-closed default, no real test sends, private
+evidence and native-owner readback boundaries. Source sender scan found no static
+email-send implementation; publication owns no native senders and does not claim
+native audit. Inspected the independent Renovate onboarding PR1 (only shared-config
+extension); preserved its branch and left it unmerged. No public/native data added.
