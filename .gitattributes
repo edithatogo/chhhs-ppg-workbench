@@ -1,1 +1,4 @@
 * text=auto eol=lf
+
+# Release source templates must retain exact native line endings for hydration hashes.
+/solutions/CHHHSPPGWorkbench/v0.1.0.0/**/*.in -text whitespace=cr-at-eol

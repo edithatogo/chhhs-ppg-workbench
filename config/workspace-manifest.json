@@ -2314,12 +2314,21 @@
         "templates/recovery/fictional-record.json",
         "templates/recovery/draft-v1.txt",
         "templates/recovery/draft-v2.txt",
-        "templates/recovery/reference.txt"
+        "templates/recovery/reference.txt",
+        "scripts/ppg_release_source.py",
+        "scripts/check_email_safety.py",
+        "tests/test_release_source.py",
+        "tests/test_email_safety.py",
+        "solutions/CHHHSPPGWorkbench/v0.1.0.0",
+        "docs/alm06-release-20261023.md",
+        ".gitattributes",
+        ".github/workflows/publication-checks.yml"
       ],
       "deploymentMethod": "Existing local CLI/manual tool; no automatic deployment",
       "recoverySection": "local-tools",
       "receiptRoots": [
-        ".local/history-remediation-20261018"
+        ".local/history-remediation-20261018",
+        ".local/alm06-release-20261023"
       ],
       "runtimeState": "local-manual; no persistent runtime",
       "connectionDependencies": []

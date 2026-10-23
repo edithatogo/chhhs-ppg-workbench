@@ -38,3 +38,9 @@ jobs:
       - name: Check repository contracts
         if: always()
         run: python scripts/check_setup.py
+
+      - name: Verify release source and recovery controls
+        if: always()
+        run: |
+          python scripts/ppg_release_source.py --source solutions/CHHHSPPGWorkbench/v0.1.0.0
+          python -m unittest tests.test_release_source tests.test_email_safety tests.test_artefact_inventory

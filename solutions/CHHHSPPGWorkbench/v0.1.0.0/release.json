@@ -1,0 +1,1037 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "alm06-20261023.1",
+  "solution": "CHHHSPPGWorkbench",
+  "solutionVersion": "0.1.0.0",
+  "publisherPrefix": "chppg",
+  "sourceFormat": "PAC unpacked source templates; materialise private bindings before PAC pack",
+  "workflowCount": 18,
+  "connectionReferenceCount": 3,
+  "files": [
+    {
+      "template": "Other/Customizations.xml.in",
+      "target": "Other/Customizations.xml",
+      "sha256": "07825dfdc56bfaf0d9fdae607f43e564fafbfbc328a0dbfc820e20a68bb1c7e2"
+    },
+    {
+      "template": "Other/Solution.xml.in",
+      "target": "Other/Solution.xml",
+      "sha256": "28ba16231c73f5752ec65cb506ce407b190b23422a7a8f317679e54a92a97591"
+    },
+    {
+      "template": "Workflows/component-01.json.in",
+      "target": "Workflows/Copyof-PPGLifecycleFICTIONALcasework-__PPG_BINDING_00050__.json",
+      "sha256": "d1f15153387025fb3cdfe20866aed6bff669d1d56fda6c20615c86923ed3c4b4"
+    },
+    {
+      "template": "Workflows/component-01.json.data.xml.in",
+      "target": "Workflows/Copyof-PPGLifecycleFICTIONALcasework-__PPG_BINDING_00050__.json.data.xml",
+      "sha256": "ccc85b6b8480fab1c72f711b523643b9735c1e0f63b9515cbed0375a5bdd2953"
+    },
+    {
+      "template": "Workflows/component-02.json.in",
+      "target": "Workflows/PPGGeneratecoverandexistingpack-__PPG_BINDING_00107__.json",
+      "sha256": "8804a95ed54aa8f5e7f58383a96cc22468ed692cc28b8f7c5eb0cfc1f85fb6bc"
+    },
+    {
+      "template": "Workflows/component-02.json.data.xml.in",
+      "target": "Workflows/PPGGeneratecoverandexistingpack-__PPG_BINDING_00107__.json.data.xml",
+      "sha256": "f2e4e0c51743b2c7756496c61a2320dd1cda3e47e42586a1821f4ee2a87adada"
+    },
+    {
+      "template": "Workflows/component-03.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALcasework-__PPG_BINDING_00108__.json",
+      "sha256": "d1f15153387025fb3cdfe20866aed6bff669d1d56fda6c20615c86923ed3c4b4"
+    },
+    {
+      "template": "Workflows/component-03.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALcasework-__PPG_BINDING_00108__.json.data.xml",
+      "sha256": "418e178ef2afd06baa0e976ceb47a245d52a0d6d303b41f3ffeb0a532154e09a"
+    },
+    {
+      "template": "Workflows/component-04.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALclosureoperation-__PPG_BINDING_00114__.json",
+      "sha256": "704f77ebd71638489d1867fd81b9d2567957e834a6cd628338c395be729f5753"
+    },
+    {
+      "template": "Workflows/component-04.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALclosureoperation-__PPG_BINDING_00114__.json.data.xml",
+      "sha256": "40f6248178d258af20a763844356958e77610bc7e7914da4045b0b13ffec9ff6"
+    },
+    {
+      "template": "Workflows/component-05.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALdecisionpurposequalification-__PPG_BINDING_00119__.json",
+      "sha256": "d937bae2c80e4d8b37b75d05f444a98411bdad47c8140b9b0dda5922bd285c75"
+    },
+    {
+      "template": "Workflows/component-05.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALdecisionpurposequalification-__PPG_BINDING_00119__.json.data.xml",
+      "sha256": "692aa5f2c5e5bdb74d3d0ae28c0e3a52bd389dc746683f653cafbd1249bbed39"
+    },
+    {
+      "template": "Workflows/component-06.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALimplementationandverification-__PPG_BINDING_00122__.json",
+      "sha256": "1523e967bb93541df5f8ad0cfe0e61649a9107f995a19875b40865bb9c4c5ab1"
+    },
+    {
+      "template": "Workflows/component-06.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALimplementationandverification-__PPG_BINDING_00122__.json.data.xml",
+      "sha256": "a425e66797e3e108ec777e86d47ca50a5afbda127e1c861bd265937a3ce3f93b"
+    },
+    {
+      "template": "Workflows/component-07.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoffersandconsultationrequests-__PPG_BINDING_00125__.json",
+      "sha256": "8d93744d24756a6252bf45f2db560bcdda1bf9e2ca197abe090013f8bf0d4ac1"
+    },
+    {
+      "template": "Workflows/component-07.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoffersandconsultationrequests-__PPG_BINDING_00125__.json.data.xml",
+      "sha256": "111ba1fd8212c25620076fd9399a5ccc77e1cab94334bb8da4a0de85b7c9f883"
+    },
+    {
+      "template": "Workflows/component-08.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoperatorinitiation-__PPG_BINDING_00137__.json",
+      "sha256": "25e53891358f7e8fdce308c617456688cc271490be034b9e71949c2ba703e97b"
+    },
+    {
+      "template": "Workflows/component-08.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoperatorinitiation-__PPG_BINDING_00137__.json.data.xml",
+      "sha256": "62b629bd8f9f65f89ed9796f41acc1f10a51d2382874cea2a5446032602374f6"
+    },
+    {
+      "template": "Workflows/component-09.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoperatorverificationoutcomes-__PPG_BINDING_00140__.json",
+      "sha256": "30c237eea49a5d911ffc3cda1401f91a213ec09743a85cfd39920753a0a9a9ee"
+    },
+    {
+      "template": "Workflows/component-09.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALoperatorverificationoutcomes-__PPG_BINDING_00140__.json.data.xml",
+      "sha256": "f99a0ac449684960ddf13bc2d7b525cf4be4750cd1ddf76e5bc484fd4ecceeef"
+    },
+    {
+      "template": "Workflows/component-10.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALpublicationevidencequalificat-__PPG_BINDING_00141__.json",
+      "sha256": "fb6042d25fe8f15bbcbe60045272cdd159a6e491c607e5e2d4eb7956b5e60d62"
+    },
+    {
+      "template": "Workflows/component-10.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALpublicationevidencequalificat-__PPG_BINDING_00141__.json.data.xml",
+      "sha256": "d31493bb78e600dea8179a9b3c2619840b7d354ac25183ae920c3359a107bcfb"
+    },
+    {
+      "template": "Workflows/component-11.json.in",
+      "target": "Workflows/PPGLifecycleFICTIONALselectedresponses-__PPG_BINDING_00145__.json",
+      "sha256": "d64abab5422497d2b9b41a6a1aef5e5313a6c67b9c55e501b64e1159472d6d8c"
+    },
+    {
+      "template": "Workflows/component-11.json.data.xml.in",
+      "target": "Workflows/PPGLifecycleFICTIONALselectedresponses-__PPG_BINDING_00145__.json.data.xml",
+      "sha256": "9ed8f68b9a3fc50c447d076bc6e182d330bc2e7a83652e586b1187ea7a65dddb"
+    },
+    {
+      "template": "Workflows/component-12.json.in",
+      "target": "Workflows/PPGMonthlydueandoverduereport-__PPG_BINDING_00148__.json",
+      "sha256": "78e489d3c2e46405f377aff82e4fd0413eeda999b09c9765a23b37171fab63ad"
+    },
+    {
+      "template": "Workflows/component-12.json.data.xml.in",
+      "target": "Workflows/PPGMonthlydueandoverduereport-__PPG_BINDING_00148__.json.data.xml",
+      "sha256": "3b2416b77a8bb6f556ae812f1c0b7a81d4b20c15b8e6d4a2b356a20dd42562dd"
+    },
+    {
+      "template": "Workflows/component-13.json.in",
+      "target": "Workflows/PPGOn-demandfollow-upanddigestpreview-__PPG_BINDING_00160__.json",
+      "sha256": "be64e244ac81323163ae6438cfd83f3e9df3b169fe78d745d0dde282c8196766"
+    },
+    {
+      "template": "Workflows/component-13.json.data.xml.in",
+      "target": "Workflows/PPGOn-demandfollow-upanddigestpreview-__PPG_BINDING_00160__.json.data.xml",
+      "sha256": "43323279a41f9ee62318cdcbe2ba9b1490d1dcd44b9dc2ab4ba696e2ace5f1a5"
+    },
+    {
+      "template": "Workflows/component-14.json.in",
+      "target": "Workflows/PPGOn-demandroleresponsibilityprojection-__PPG_BINDING_00170__.json",
+      "sha256": "b5f06caf25399b8aeca50d8523d6ba428914ca84c2d91e0b2d734298ade8d390"
+    },
+    {
+      "template": "Workflows/component-14.json.data.xml.in",
+      "target": "Workflows/PPGOn-demandroleresponsibilityprojection-__PPG_BINDING_00170__.json.data.xml",
+      "sha256": "08fb9dfc438808678b63fd256ef5b8919987ef553022e95f8254522006900263"
+    },
+    {
+      "template": "Workflows/component-15.json.in",
+      "target": "Workflows/PPGOn-demandstandardsandrelationshipcheck-__PPG_BINDING_00180__.json",
+      "sha256": "6114da4b947674c6cf7b3d4674e02691b87230d26902e2df87e08634d40d2573"
+    },
+    {
+      "template": "Workflows/component-15.json.data.xml.in",
+      "target": "Workflows/PPGOn-demandstandardsandrelationshipcheck-__PPG_BINDING_00180__.json.data.xml",
+      "sha256": "f9c0c0bf1af7c2de4fff3137927a39f7adc7c437fd4d8ba3466dff179ce8e410"
+    },
+    {
+      "template": "Workflows/component-16.json.in",
+      "target": "Workflows/PPGQW3Source-onlyreconciliation-__PPG_BINDING_00186__.json",
+      "sha256": "1fbaa78a856ee071f2ee88dd9378bff6a6f235482c09304ada4fff938f56d715"
+    },
+    {
+      "template": "Workflows/component-16.json.data.xml.in",
+      "target": "Workflows/PPGQW3Source-onlyreconciliation-__PPG_BINDING_00186__.json.data.xml",
+      "sha256": "2b5cc374485ac9f4a3ab20a1f75b78e11e61f4ec2623154d2d1e92732132ef31"
+    },
+    {
+      "template": "Workflows/component-17.json.in",
+      "target": "Workflows/PPGWebguidereconciliation-__PPG_BINDING_00190__.json",
+      "sha256": "eb9e6e72d28b9eaa108c6ace57364d572caa47cba1d8ba5bf80f447bc1949f82"
+    },
+    {
+      "template": "Workflows/component-17.json.data.xml.in",
+      "target": "Workflows/PPGWebguidereconciliation-__PPG_BINDING_00190__.json.data.xml",
+      "sha256": "5373f1a53084789f70cf1ac7696503a24598bc096c666d4733ed0a9d097564a0"
+    },
+    {
+      "template": "Workflows/component-18.json.in",
+      "target": "Workflows/PPGWorkspacequietstatusprojection-__PPG_BINDING_00193__.json",
+      "sha256": "5c35735a8ae0126af79d8d6185c13966ed0788fbf4d5122e18235a8eaee955e6"
+    },
+    {
+      "template": "Workflows/component-18.json.data.xml.in",
+      "target": "Workflows/PPGWorkspacequietstatusprojection-__PPG_BINDING_00193__.json.data.xml",
+      "sha256": "300beec29e7f0b0a161e0152b4eac9ee9972df906e59ff245183b78cc0bd71b2"
+    }
+  ],
+  "bindings": {
+    "__PPG_BINDING_00001__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00002__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00003__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00004__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00005__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00006__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00007__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00008__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00009__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00010__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00011__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00012__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00013__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00014__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00015__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00016__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00017__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00018__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00019__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00020__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00021__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00022__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00023__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00024__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00025__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00026__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00027__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00028__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00029__": {
+      "kind": "private-native-item-reference",
+      "private": true
+    },
+    "__PPG_BINDING_00031__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00032__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00033__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00034__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00035__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00036__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00037__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00038__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00039__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00040__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00041__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00042__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00043__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00044__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00045__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00046__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00047__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00048__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00049__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00050__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00051__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00052__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00053__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00054__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00055__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00056__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00057__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00058__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00059__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00060__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00061__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00062__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00063__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00064__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00065__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00066__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00067__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00068__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00069__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00070__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00071__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00072__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00073__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00074__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00075__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00076__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00077__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00078__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00079__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00080__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00081__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00082__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00083__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00084__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00085__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00086__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00087__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00088__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00089__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00090__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00091__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00092__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00093__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00094__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00095__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00096__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00097__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00098__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00099__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00100__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00101__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00102__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00103__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00104__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00105__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00106__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00107__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00108__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00109__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00110__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00111__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00112__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00113__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00114__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00115__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00116__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00117__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00118__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00119__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00120__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00121__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00122__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00123__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00124__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00125__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00126__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00127__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00128__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00129__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00130__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00131__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00132__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00133__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00134__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00135__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00136__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00137__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00138__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00139__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00140__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00141__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00142__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00143__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00144__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00145__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00146__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00147__": {
+      "kind": "private-source-timestamp",
+      "private": true
+    },
+    "__PPG_BINDING_00148__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00149__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00150__": {
+      "kind": "private-fixed-record-input",
+      "private": true
+    },
+    "__PPG_BINDING_00151__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00152__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00153__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00154__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00155__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00156__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00157__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00158__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00159__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00160__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00161__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00162__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00163__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00164__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00165__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00166__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00167__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00168__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00169__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00170__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00171__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00172__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00173__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00174__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00175__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00176__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00177__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00178__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00179__": {
+      "kind": "private-content-pin",
+      "private": true
+    },
+    "__PPG_BINDING_00180__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00181__": {
+      "kind": "private-native-url",
+      "private": true
+    },
+    "__PPG_BINDING_00182__": {
+      "kind": "private-target-resource",
+      "private": true
+    },
+    "__PPG_BINDING_00183__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00184__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00185__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00186__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00187__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00188__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00189__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00190__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00191__": {
+      "kind": "private-native-item-reference",
+      "private": true
+    },
+    "__PPG_BINDING_00192__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00193__": {
+      "kind": "private-or-fixture-identity",
+      "private": true
+    },
+    "__PPG_BINDING_00194__": {
+      "kind": "private-component-or-schedule-binding",
+      "private": true
+    },
+    "__PPG_BINDING_00195__": {
+      "kind": "private-component-or-schedule-binding",
+      "private": true
+    },
+    "__PPG_BINDING_00196__": {
+      "kind": "private-component-or-schedule-binding",
+      "private": true
+    },
+    "__PPG_BINDING_00197__": {
+      "kind": "private-component-or-schedule-binding",
+      "private": true
+    },
+    "__PPG_BINDING_00198__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00199__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00200__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00201__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00202__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00203__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00204__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00205__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00206__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    },
+    "__PPG_BINDING_00207__": {
+      "kind": "private-server-path-or-fixed-evidence-key",
+      "private": true
+    }
+  },
+  "deploymentOrder": [
+    "existing target dependencies and private bindings",
+    "materialise source",
+    "PAC pack",
+    "email-capability refusal check",
+    "isolated managed import",
+    "full definition/reference/state readback"
+  ],
+  "nativeRecoveryScope": "Existing exact-configuration 23 October import/uninstall/absence/reimport evidence; no production or runtime acceptance."
+}

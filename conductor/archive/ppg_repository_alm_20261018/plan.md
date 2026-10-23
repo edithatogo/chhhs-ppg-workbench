@@ -9,7 +9,7 @@
 - [x] ALM-03 Refresh source inventory and copied recovery; register the separate Stopped timing fixture; reconcile current18-member Default export, existing reference declarations and v5 delta while keeping unknown/outside-solution scope explicit.
 - [x] ALM-04 Sanitised source and genuine agent review published; subsequent user-authorised public visibility verified. Protected public push, remote parity and actual hosted CI39936760160 pass at7011951. [Handoff](../../../docs/alm04-publication-20261023.md). Original history/dirty work preserved; no enforced branch-protection claim.
 - [x] ALM-05 Preserve qualified existing publisher/solution inclusion and dated isolated managed import/upgrade/recovery/selected runtime routes.
-- [~] ALM-06 Preserve source/release/recovery infrastructure and produce corrected fresh unmanaged/managed snapshots. Exact23October managed snapshot imported/read back, uninstalled/absence verified and reimported in a newly authorised isolated Developer target:18 Draft flows,3 unbound references,21 Managed components; full definitions/references exact. Final publishable source/release closure remains incomplete; no connected production runtime claim.
+- [x] ALM-06 Versioned sanitised 38-file solution source, exact private materialisation, hashed PAC builds and rebuilt managed import/readback/uninstall/absence/reimport verified. Final 18 Stopped, three unbound references, 21 managed components, zero runs. [Release and recovery handoff](../../../docs/alm06-release-20261023.md); production/connected runtime and external-object recovery remain separate.
 - [x] ALM-07 Close proportionate assessment by deferring native Git/pipelines; existing qualified CLI/manual route addresses current need. No premium setup/roles/hosts or new entitlement requested.
 - [x] ALM-08 Retain completed workflow/evidence inventory extension and review current increment; apply export-reference guard/native repair and documentation fixes.
 
@@ -20,3 +20,7 @@
 status in_progress and full acceptance false. Not every original requirement is
 implemented. All delivered slices and current dispositions are reviewed; third-party
 adoption/benefit reviews remain in the final deferred track.
+
+## ALM-06 publication continuation
+
+Versioned source and bounded release/recovery completed in original source commits `c34dec6` and `361373f`. Current public transport/readback is recorded in [the release handoff](../../../docs/alm06-release-20261023.md).

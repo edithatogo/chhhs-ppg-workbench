@@ -9,6 +9,14 @@ User-authorised public visibility, protected push and remote parity verified;
 hosted run39936760160 passes at7011951. Original history/private evidence/dirty
 work preserved. No branch-protection enforcement claim; ALM-06 remains separate.
 
+## ALM-06 publication continuation
+
+[Versioned release source and recovery handoff](../docs/alm06-release-20261023.md).
+Bounded release/recovery complete; this public source variant retains 38 templates
+and 206 private binding declarations. Both variants reconstruct exact native bytes.
+Public transport and hosted verification are recorded in that handoff. Original
+history, packages, settings and unrelated dirty work remain private and preserved.
+
 ## Latest reviewed delivery
 
 [Source surveillance](../docs/surveillance-closeout-20261023.md): all five original tasks and SV-04 delivered and reviewed. Twenty tests, nine retained evidence hashes and exact comparison/copied-snapshot recovery replay pass. No new acquisition or native write. Archived with SV-05 scheduling conditional/unperformed: useful real change/applicability and supported acquisition/recovery required. No schedule, notification or baseline advancement.
