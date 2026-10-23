@@ -410,7 +410,7 @@
     "syntheticExceptionsValueAndNamedPathScoped": true
   },
   "alm04_publication_20261023": {
-    "status": "published_private_hosted_ci_blocked_by_account_billing",
+    "status": "public_visibility_authorised_verified_hosted_ci_queued",
     "sourceCommit": "18365b7293a5b0361b25604cafd4ddc562003e3c",
     "independentCleanHistory": true,
     "agentContentInspectionCompleted": true,
@@ -431,6 +431,9 @@
     "branchProtected": false,
     "rulesets": [],
     "finalFocusedTestsPassed": 46,
-    "finalContractChecksPassed": 3063
+    "finalContractChecksPassed": 3063,
+    "visibility": "public",
+    "publicVisibilityExplicitlyAuthorised": true,
+    "publicationControlTestsPassed": 38
   }
 }

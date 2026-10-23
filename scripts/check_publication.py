@@ -208,7 +208,7 @@ def history_hash(root: Path, extra_refs: tuple[str, ...] = ()) -> str:
 
 
 def verify_content_review(root: Path, receipt: Path | None, repo: str,
-                          extra_refs: tuple[str, ...] = ()) -> None:
+                          extra_refs: tuple[str, ...] = (), *, visibility: str = 'private') -> None:
     """Require actual content review bound to exact commit/tree/policy/destination."""
     if receipt is not None and not receipt.is_absolute():
         receipt = root / receipt
@@ -231,7 +231,9 @@ def verify_content_review(root: Path, receipt: Path | None, repo: str,
             'repository': repo,
             'confidentialContentReviewed': True,
         }
-        if (value.get('confidentialContentReviewed') is not True
+        if (visibility not in ('private', 'public')
+                or value.get('visibility', 'private') != visibility
+                or value.get('confidentialContentReviewed') is not True
                 or any(value.get(k) != v for k, v in expected.items())):
             raise ValueError('scope')
         if not isinstance(value.get('reviewer'), str) or not value['reviewer'].strip():
@@ -258,26 +260,34 @@ def repository_from_url(url: str | None) -> str:
     return match.group(1)
 
 
-def verify_private_destination(repo: str) -> None:
+def verify_destination(repo: str, visibility: str = 'private') -> None:
+    if visibility not in ('private', 'public'):
+        raise PublicationError('invalid-publication-visibility')
     executable = shutil.which('gh')
     if not executable:
-        raise PublicationError('github-cli-required-for-private-check')
+        raise PublicationError('github-cli-required-for-visibility-check')
     result = subprocess.run([executable, 'repo', 'view', repo, '--json', 'nameWithOwner,isPrivate'],
                             capture_output=True, text=True, timeout=30)
     if result.returncode:
         raise PublicationError('github-destination-unverified')
     try:
         value = json.loads(result.stdout)
-        if value.get('isPrivate') is not True or value.get('nameWithOwner', '').lower() != repo.lower():
+        if value.get('isPrivate') is not (visibility == 'private') or value.get('nameWithOwner', '').lower() != repo.lower():
             raise ValueError('destination')
     except (ValueError, AttributeError) as exc:
-        raise PublicationError('github-destination-not-private') from exc
+        raise PublicationError('github-destination-not-' + visibility) from exc
+
+
+def verify_private_destination(repo: str) -> None:
+    verify_destination(repo, 'private')
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--mode', choices=('staged', 'history', 'pre-push'), default='history')
     parser.add_argument('--remote-url', help='Supplied by the pre-push hook, not a new remote.')
+    parser.add_argument('--visibility', choices=('private', 'public'),
+                        default=os.environ.get('PPG_PUBLICATION_VISIBILITY', 'private'))
     args = parser.parse_args()
     try:
         refs = pushed_refs(sys.stdin.read()) if args.mode == 'pre-push' else ()
@@ -285,8 +295,11 @@ def main() -> int:
         if args.mode == 'pre-push':
             repo = repository_from_url(args.remote_url)
             receipt = Path(os.environ.get('PPG_CONTENT_REVIEW', str(ROOT / '.local/publication-review.json')))
-            verify_content_review(ROOT, receipt, repo, refs)
-            verify_private_destination(repo)
+            verify_content_review(ROOT, receipt, repo, refs, visibility=args.visibility)
+            if args.visibility == 'private':
+                verify_private_destination(repo)
+            else:
+                verify_destination(repo, args.visibility)
         print(json.dumps(result, sort_keys=True))
         return 0
     except (PublicationError, OSError, subprocess.TimeoutExpired, UnicodeError) as exc:

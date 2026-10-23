@@ -1,5 +1,12 @@
 # ALM-04 publication — 23 October 2026
 
+> Current user direction: the sanitised GitHub repository is now **public**.
+> The user explicitly requested this visibility change in this chat. Private-only
+> restrictions and rejected-run accounts below are historical; a rerun is queued.
+> Content review and all confidentiality controls remain required. Public source
+> does not grant clinical publication authority or a public software licence.
+
+
 This separate publication copy starts from committed source
 `18365b7293a5b0361b25604cafd4ddc562003e3c`. Uncommitted changes are excluded.
 The original repository, full history, local evidence and working files are retained.
@@ -118,3 +125,18 @@ the owner's shared configuration. Its branch/content is preserved and unmerged;
 it is independent of the selected source snapshot and this publication work.
 The documentation run39934759742 atde42721 also failed; no successful hosted CI
 is inferred. This policy-only follow-up retains the same account-level blocker.
+
+## Public visibility continuation
+
+Rechecked main99188f1 and the only additional branch, Renovate onboarding PR1;
+its sole six-line configuration addition contains no confidential material. The
+user explicitly authorised public visibility; GitHub readback now confirms public.
+Original source history, operational receipts and dirty work remain local.
+
+Publisher support now retains private defaults and requires `--visibility public`
+plus an exact-scope receipt explicitly bound to public visibility. Legacy private
+receipts cannot authorise public pushes. The same identity/visibility checks run
+again in the pre-push hook; no scan or content-review gate is bypassed.38 publication
+control tests pass, including new visibility mismatch and public push propagation
+checks. Existing11 inventory/recovery tests retain their unchanged qualified scope.
+The rerun of39935231016 is queued; actual hosted success remains to be verified.

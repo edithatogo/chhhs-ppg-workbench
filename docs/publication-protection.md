@@ -174,3 +174,25 @@ inline-ignore refusal, shallow/incomplete history, receipt invalidation, existin
 hook preservation and actual hook execution. Destination privacy and reviewed-commit
 push contracts are checked without an external push. CI is configured, not observed
 running on GitHub; hosted enforcement stays with ALM-04.
+
+## Explicit public visibility — 23 October 2026
+
+The user subsequently authorised making this sanitised repository public.
+Private remains the publisher's default. Public publishing requires
+`--visibility public` and a genuine exact-scope receipt with `visibility: public`.
+Legacy receipts without that field apply only to private publication. Changing
+visibility invalidates the applicable receipt; content/history/policy/destination
+bindings, scanners, private receipt storage and exact-commit non-force push remain
+required. The hook receives the same visibility through
+`PPG_PUBLICATION_VISIBILITY`; a mismatch with the receipt or actual remote refuses.
+The publisher does not silently change an existing repository's visibility.
+
+```sh
+.venv/bin/python scripts/publish_github.py --resume --visibility public --content-review .local/publication-review.json
+```
+
+The visibility change applies only to the separate reviewed publication copy.
+The original checkout/history, operational evidence and uncommitted work remain
+local. Public source is not clinical publication, a public licence grant or native
+production acceptance. Older private-only qualification sections retain their
+historical scope and are superseded for this expressly authorised destination.

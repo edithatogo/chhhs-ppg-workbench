@@ -240,6 +240,28 @@ class PublicationChecks(unittest.TestCase):
         with self.assertRaisesRegex(gate.PublicationError, 'stale-or-invalid'):
             gate.verify_content_review(self.root, receipt, 'example/fictional')
 
+    def test_review_visibility_is_explicit_and_bound(self):
+        receipt = self.review_receipt()
+        with self.assertRaisesRegex(gate.PublicationError, 'stale-or-invalid'):
+            gate.verify_content_review(self.root, receipt, 'example/fictional', visibility='public')
+        value = json.loads(receipt.read_text()); value['visibility'] = 'public'
+        receipt.write_text(json.dumps(value))
+        gate.verify_content_review(self.root, receipt, 'example/fictional', visibility='public')
+        with self.assertRaisesRegex(gate.PublicationError, 'stale-or-invalid'):
+            gate.verify_content_review(self.root, receipt, 'example/fictional')
+
+    def test_public_destination_must_match_reviewed_visibility_and_identity(self):
+        for private, repo, accepted in [(False, 'example/fictional', True),
+                                         (True, 'example/fictional', False),
+                                         (False, 'example/other', False)]:
+            result = subprocess.CompletedProcess([], 0, json.dumps({'nameWithOwner': repo, 'isPrivate': private}), '')
+            with patch.object(gate.shutil, 'which', return_value='gh'), patch.object(gate.subprocess, 'run', return_value=result):
+                if accepted:
+                    gate.verify_destination('example/fictional', 'public')
+                else:
+                    with self.assertRaisesRegex(gate.PublicationError, 'destination-not-public'):
+                        gate.verify_destination('example/fictional', 'public')
+
     def test_review_is_invalidated_by_new_branch_history_without_head_change(self):
         self.git('checkout', '-qb', 'other')
         self.write('branch.txt', 'Fictional branch')
@@ -362,6 +384,33 @@ class PublicationChecks(unittest.TestCase):
         self.assertEqual(len(pushes), 1)
         self.assertEqual(pushes[0][0], ('git', 'push', 'origin', head + ':refs/heads/main'))
         self.assertEqual(pushes[0][1]['env']['PPG_CONTENT_REVIEW'], str(receipt.resolve()))
+
+    def test_publisher_public_mode_propagates_reviewed_visibility_to_hook(self):
+        head = self.git('rev-parse', 'HEAD').decode().strip()
+        receipt = self.review_receipt(); value = json.loads(receipt.read_text())
+        value['visibility'] = 'public'; receipt.write_text(json.dumps(value))
+        calls = []
+        def simulated(*args, **kwargs):
+            calls.append((args, kwargs))
+            if args[:2] == ('git', 'rev-parse'): return head
+            if args[:2] == ('git', 'branch'): return 'main'
+            if args == ('git', 'remote'): return 'origin'
+            if args[:3] == ('git', 'remote', 'get-url'): return 'https://github.com/example/fictional.git'
+            if args[:3] == ('gh', 'api', 'user'): return 'example'
+            if args[:3] == ('gh', 'repo', 'view'):
+                return json.dumps({'nameWithOwner': 'example/fictional', 'isPrivate': False})
+            if args[:2] == ('git', 'ls-remote'): return head + '\trefs/heads/main'
+            return ''
+        args = ['publish_github.py', '--repo', 'example/fictional', '--resume',
+                '--visibility', 'public', '--content-review', str(receipt)]
+        with patch.object(publisher, 'ROOT', self.root), patch.object(publisher, 'run', simulated), \
+             patch.object(publisher, 'check', return_value={}), \
+             patch.object(publisher.shutil, 'which', return_value='gh'), \
+             patch.object(sys, 'argv', args), patch.object(sys, 'stdout', io.StringIO()):
+            self.assertEqual(publisher.main(), 0)
+        pushes = [(a, k) for a, k in calls if a[:2] == ('git', 'push')]
+        self.assertEqual(pushes[0][0], ('git', 'push', 'origin', head + ':refs/heads/main'))
+        self.assertEqual(pushes[0][1]['env']['PPG_PUBLICATION_VISIBILITY'], 'public')
 
     def test_mismatched_or_multiple_push_urls_are_refused(self):
         for urls in ('https://github.com/other/unreviewed.git',

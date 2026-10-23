@@ -86,3 +86,13 @@ evidence and native-owner readback boundaries. Source sender scan found no stati
 email-send implementation; publication owns no native senders and does not claim
 native audit. Inspected the independent Renovate onboarding PR1 (only shared-config
 extension); preserved its branch and left it unmerged. No public/native data added.
+
+## Review: explicit public destination
+
+User requested public visibility. Rechecked the sanitised main/history scope and
+independent Renovate configuration branch; no private evidence or native bindings
+are exposed. Public readback verified. Reviewed visibility-bound content receipt,
+private default, explicit public flag, destination checks and hook propagation.
+38 publication tests pass; negative cases retain fail-closed private behaviour.
+Public-mode push remains exact-commit/non-force and preserves private receipts.
+Hosted rerun queued; no successful CI or branch enforcement claimed yet.
