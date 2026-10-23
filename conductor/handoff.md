@@ -6,8 +6,8 @@ Use the [ordered track map](remaining-tracks-20261021.md) and selected archived 
 
 [Prepared source and exact remaining human gate](../docs/alm04-publication-20261023.md).
 Separate clean-history copy excludes uncommitted work; local scans/tests pass.
-Human confidential-content review/attestation remains required. No push, parity or
-hosted CI; destination remains private and empty. Original history/work preserved.
+The user waived the additional human review for this private publication; agent
+review remains exact-scope. Push/parity/hosted CI pending; original work preserved.
 ALM-06 and other acceptance requirements remain separate.
 
 ## Latest reviewed delivery

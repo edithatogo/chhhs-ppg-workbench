@@ -410,7 +410,7 @@
     "syntheticExceptionsValueAndNamedPathScoped": true
   },
   "alm04_publication_20261023": {
-    "status": "prepared_pending_required_human_content_review",
+    "status": "prepared_user_waived_additional_human_review_private_publication_pending",
     "sourceCommit": "18365b7293a5b0361b25604cafd4ddc562003e3c",
     "independentCleanHistory": true,
     "agentContentInspectionCompleted": true,
@@ -421,6 +421,7 @@
     "hostedCIPerformed": false,
     "originalHistoryAndDirtyWorkPreserved": true,
     "handoff": "docs/alm04-publication-20261023.md",
-    "review": "conductor/archive/ppg_repository_alm_20261018/review-publication-20261023.md"
+    "review": "conductor/archive/ppg_repository_alm_20261018/review-publication-20261023.md",
+    "additionalHumanReviewWaivedByUser": true
   }
 }

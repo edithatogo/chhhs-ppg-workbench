@@ -6,9 +6,10 @@ The original repository, full history, local evidence and working files are reta
 No original history is rewritten or pushed. This copy has an independent Git directory.
 
 Destination: https://github.com/edithatogo/chhhs-ppg-workbench (private).
-Publication is held for the expressly required human confidential-content review.
-No push occurred; remote has no refs, so remote parity and hosted CI are unperformed.
-This preparation is not ALM-04 completion.
+The user subsequently waived the additional human-review requirement for this
+private publication and directed use of the completed agent content review.
+Push, parity and hosted CI are pending verification. This preparation is not
+ALM-04 completion.
 
 ## Publication configuration
 
@@ -55,3 +56,16 @@ contracts and the staged/history Gitleaks gates pass. The only local materialisa
 pending items are generated workflow reading aids and the upstream submodule checkout;
 the exact gitlink remains intact. GitHub rulesets were empty at readback; no required
 checks or branch protection are claimed. ALM-06 remains separate and incomplete.
+
+## Subsequent user direction — private publication
+
+The user expressly waived the additional human-review requirement for this private
+publication and instructed use of the completed content review. Direct user-message
+evidence was verified and retained privately. This supersedes the human gate described
+above only for this publication; the earlier interruption/no-push account is retained
+as history. The reviewer remains an agent. There is no human attestation.
+
+Renew the private agent receipt for the actual committed tree/history/policy and
+exact private destination after inspecting subsequent documentation changes. All
+confidentiality controls, clean-tree checks and private-destination checks remain
+active. No public visibility change or tenant action is authorised by this waiver.

@@ -2,7 +2,7 @@
 
 ## Summary
 
-The separate sanitised source is prepared and agent-reviewed; required human content review, push, remote parity and hosted CI remain unperformed.
+The sanitised source and agent content review are prepared; the user waived the additional human review for this private publication. Push, parity and hosted CI still require verification.
 
 ## Verification Checks
 
@@ -52,3 +52,13 @@ other tracks retain their separate unresolved requirements.
 - **Remaining**: Actual human confidential-content review and genuine attestation;
   then gated push, parity and hosted CI. ALM-04 stays in progress. This is an
   outstanding release requirement, not a failed test or ALM-06 acceptance claim.
+
+## Subsequent review disposition
+
+Direct user instruction waived the additional human review for this private
+publication, retaining the completed agent content review. Verified user-message
+evidence remains private. The preceding human hold was respected until this waiver;
+no human attestation is claimed. Reviewed the authored documentation delta since the
+initial content inspection: it records the hold, candidate status and the waiver;
+no confidential bindings or operational records were added. Renew the exact-scope
+agent receipt and use the unchanged publisher/gates. Hosted results remain pending.
