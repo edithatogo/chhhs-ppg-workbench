@@ -2,7 +2,7 @@
 
 ## Summary
 
-The sanitised source and agent content review are prepared; the user waived the additional human review for this private publication. Push, parity and hosted CI still require verification.
+The sanitised source and agent content review are prepared; the user waived the additional human review for this private publication. Private push and full remote parity are verified; successful hosted CI remains blocked by GitHub account billing/spending controls.
 
 ## Verification Checks
 
@@ -62,3 +62,18 @@ no human attestation is claimed. Reviewed the authored documentation delta since
 initial content inspection: it records the hold, candidate status and the waiver;
 no confidential bindings or operational records were added. Renew the exact-scope
 agent receipt and use the unchanged publisher/gates. Hosted results remain pending.
+
+## Hosted verification and unresolved acceptance
+
+Published0a3d908 with unchanged protection gates, agent receipt and verified user
+waiver. Private main/commit parity and complete hosted tree/modes/blob/gitlink
+comparison pass. Final46 focused tests and3063 repository checks pass locally.
+GitHub run39934220926 failed before any step: account payments/spending restriction.
+No test execution or hosted success is inferred. Main is unprotected; rulesets
+empty; no enforcement claim. This external billing restriction is not fixable
+within the authorised no-billing-change scope. ALM-04 stays in progress pending
+an actual successful hosted run; ALM-06 remains separate.
+
+Reviewed this documentation-only final delta against observed API evidence; no
+native bindings, private receipts or new source data are added. Renew the agent
+receipt for the final documentation commit before pushing without force.

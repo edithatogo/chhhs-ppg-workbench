@@ -8,8 +8,9 @@ No original history is rewritten or pushed. This copy has an independent Git dir
 Destination: https://github.com/edithatogo/chhhs-ppg-workbench (private).
 The user subsequently waived the additional human-review requirement for this
 private publication and directed use of the completed agent content review.
-Push, parity and hosted CI are pending verification. This preparation is not
-ALM-04 completion.
+Private push and exact remote parity are verified below. Hosted CI was triggered
+but rejected before execution by GitHub account billing/spending controls.
+ALM-04 remains incomplete until an actual hosted run succeeds.
 
 ## Publication configuration
 
@@ -69,3 +70,34 @@ Renew the private agent receipt for the actual committed tree/history/policy and
 exact private destination after inspecting subsequent documentation changes. All
 confidentiality controls, clean-tree checks and private-destination checks remain
 active. No public visibility change or tenant action is authorised by this waiver.
+
+## Observed private publication and remaining hosted blocker
+
+Published reviewed source: `0a3d908d092c81a5215519f3ea4c1d6b95df039b` at
+https://github.com/edithatogo/chhhs-ppg-workbench . The unchanged publisher and
+pre-push gate passed with Python3.15.0, genuine agent review plus the scoped user
+waiver, and private-destination readback. Push used an explicit commit without
+force. Remote main matched exactly; the complete untruncated hosted Git tree
+matched every local file mode/blob and the retained upstream gitlink (1500 entries).
+Repository is private; main reports `protected=false`, and rulesets list is empty.
+No enforced branch protection/required checks are claimed or configured.
+
+[Initial hosted run](https://github.com/edithatogo/chhhs-ppg-workbench/actions/runs/39934220926)
+failed before any step ran. GitHub's failure annotation states that the job was not
+started because recent account payments failed or the spending limit needs to be
+increased. This is an account billing/spending gate, not a source/test failure.
+No billing setting, spending limit, permission, runner or workflow bypass was changed.
+Successful hosted CI remains unperformed; workflow presence and a triggered failure
+are not CI acceptance. Do not repeatedly rerun the unchanged blocked job.
+
+Final local focused verification:46 tests pass on Python3.15.0 (35 publication,
+11 inventory/recovery);3063 repository checks pass,0 fail. Reading aids and upstream
+checkout remain the two documented local materialisation items. This documentation
+follow-up is also agent-reviewed and must pass renewed exact-scope publication gates.
+
+After the account holder resolves the actual GitHub billing/spending restriction
+through their own authorised account process, run the existing workflow against
+current remote main and inspect its real step results. Retain exact commit/run
+identity, recheck local/remote parity and privacy, then update ALM-04 status.
+ALM-06 release/production requirements and other tracks are not resolved here.
+The original checkout and all pre-existing dirty-file hashes remain preserved.
