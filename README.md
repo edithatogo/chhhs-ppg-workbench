@@ -85,22 +85,22 @@ actual runtime checks and scoped acceptance are recorded.
 
 ## Publish to GitHub
 
-From a connected development machine with GitHub CLI already authenticated:
+The sanitised source is published publicly under explicit user instruction.
+[ALM-04 publication evidence and scope](docs/alm04-publication-20261023.md) records
+source provenance, confidential-content review, hosted CI and retained boundaries.
+Use the separate publication checkout, never the original unsanitised history.
 
 ```sh
-.venv/bin/python scripts/publish_github.py --repo edithatogo/chhhs-ppg-workbench --content-review .local/publication-review.json
+.venv/bin/python scripts/publish_github.py --resume --visibility public --repo edithatogo/chhhs-ppg-workbench --content-review .local/publication-review.json
 ```
 
-First activate and satisfy [publication protection](docs/publication-protection.md).
-Historical binding findings currently block publication; no GitHub sync is claimed.
-After those checks and actual content review, this creates a **private** remote for this standalone repository and pushes the
-committed main branch. It fails rather than overwrite an existing repository or
-use another account. It does not create Issues, change other projects, send mail
-or access Microsoft 365. A source-only ZIP must be restored from the included Git
-bundle first; the delivered repository ZIP already contains `.git`.
-
-Real registry data, source bindings, policy texts, drafts, correspondence and run
-receipts belong in approved work storage or ignored `.local/`, not in GitHub.
+First satisfy [publication protection](docs/publication-protection.md). The private
+receipt must bind actual reviewed content/history/policy/destination and public
+visibility. Private remains the default for other explicit publication scopes.
+The publisher checks the exact remote and commit and never force-pushes or silently
+changes visibility. It does not send email or access Microsoft 365.
+Real registry data, native bindings, policy source texts, drafts, correspondence
+and detailed run receipts remain in approved private storage or ignored `.local/`.
 
 [Portfolio and process measures](docs/process-reporting.md) adds live case/history views and manual evidence-bound measures; missing stage history stays not measurable.
 

@@ -1,5 +1,10 @@
 # Repository protection and ALM closeout — 23 October 2026
 
+> ALM-04 is now complete: [public publication, actual content review and successful hosted CI](alm04-publication-20261023.md).
+> The user expressly authorised public visibility. Older private-only/rejected-run
+> statements below are historical; ALM-06 remains separately incomplete.
+
+
 ## Delivered and verified
 
 - Existing fail-closed publication hooks/history scanning remain active. History

@@ -96,3 +96,15 @@ private default, explicit public flag, destination checks and hook propagation.
 38 publication tests pass; negative cases retain fail-closed private behaviour.
 Public-mode push remains exact-commit/non-force and preserves private receipts.
 Hosted rerun queued; no successful CI or branch enforcement claimed yet.
+
+## Final review — ALM-04 complete
+
+The user-authorised public destination is verified. Public-mode controls preserve
+private defaults and bind visibility to actual review;38 publication tests pass.
+Hosted run39936760160 executes all checks successfully on7011951, including the
+full-history/current-tree scan and repository contracts. Public push used the
+reviewed explicit commit without force. Original history/dirty work remain local.
+ALM-04 is complete; ALM-06/overall full acceptance remain separate and incomplete.
+No enforced branch protection, native acceptance, human attestation or email send
+is inferred. Reviewed this documentation-only closeout delta; renew its receipt
+and verify the final documentation push/hosted run before ending the goal.

@@ -101,7 +101,7 @@ QW1–QW4 complete. [Eligibility/ownership](./execution-queue.md). Technical com
 - [x] **Local document-control continuity and recovery**
 *Link: [./tracks/ppg_records_continuity_20261018/index.md](./tracks/ppg_records_continuity_20261018/index.md)*
 
-Repository protection and ALM: [reviewed technical archive](./archive/ppg_repository_alm_20261018/index.md); private publication/current-candidate release acceptance remain incomplete.
+Repository protection and ALM: [reviewed technical archive](./archive/ppg_repository_alm_20261018/index.md); ALM-04 public source publication is complete; ALM-06 current-candidate release acceptance remains incomplete.
 
 - [x] **Standards relationships — manual/web pilot technically complete; applicability decisions separate**
 *Link: [./tracks/ppg_standards_relationships_20261018/index.md](./tracks/ppg_standards_relationships_20261018/index.md)*

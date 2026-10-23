@@ -2,14 +2,12 @@
 
 Use the [ordered track map](remaining-tracks-20261021.md) and selected archived plan for exact scope. [Complete preceding handoff](handoff-before-surveillance-closeout-20261023.md) preserves dated checkpoints; [earlier history](handoff-history-20261023.md) remains retained. Historical statements do not establish current native state.
 
-## ALM-04 publication owner handoff
+## ALM-04 publication complete
 
-[Prepared source and exact remaining human gate](../docs/alm04-publication-20261023.md).
-Separate clean-history copy excludes uncommitted work; local scans/tests pass.
-The user waived the additional human review for this private publication; agent
-review remains exact-scope. Private push and remote/tree parity verified. Hosted job rejected before steps by
-account billing/spending controls; successful CI remains open. Original work preserved.
-ALM-06 and other acceptance requirements remain separate.
+[Public source, actual review and hosted CI](../docs/alm04-publication-20261023.md).
+User-authorised public visibility, protected push and remote parity verified;
+hosted run39936760160 passes at7011951. Original history/private evidence/dirty
+work preserved. No branch-protection enforcement claim; ALM-06 remains separate.
 
 ## Latest reviewed delivery
 

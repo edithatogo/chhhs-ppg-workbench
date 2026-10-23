@@ -410,7 +410,7 @@
     "syntheticExceptionsValueAndNamedPathScoped": true
   },
   "alm04_publication_20261023": {
-    "status": "public_visibility_authorised_verified_hosted_ci_queued",
+    "status": "complete_public_source_publication",
     "sourceCommit": "18365b7293a5b0361b25604cafd4ddc562003e3c",
     "independentCleanHistory": true,
     "agentContentInspectionCompleted": true,
@@ -418,7 +418,7 @@
     "validPublicationReceiptPresent": true,
     "pushed": true,
     "remoteParity": true,
-    "hostedCIPerformed": false,
+    "hostedCIPerformed": true,
     "originalHistoryAndDirtyWorkPreserved": true,
     "handoff": "docs/alm04-publication-20261023.md",
     "review": "conductor/archive/ppg_repository_alm_20261018/review-publication-20261023.md",
@@ -426,14 +426,16 @@
     "initialPublishedCommit": "0a3d908d092c81a5215519f3ea4c1d6b95df039b",
     "hostedTreeParity": true,
     "hostedCITriggered": true,
-    "hostedCIConclusion": "job_rejected_before_steps_account_billing_or_spending_limit",
-    "hostedRun": "https://github.com/edithatogo/chhhs-ppg-workbench/actions/runs/39934220926",
+    "hostedCIConclusion": "success",
+    "hostedRun": "https://github.com/edithatogo/chhhs-ppg-workbench/actions/runs/39936760160",
     "branchProtected": false,
     "rulesets": [],
     "finalFocusedTestsPassed": 46,
     "finalContractChecksPassed": 3063,
     "visibility": "public",
     "publicVisibilityExplicitlyAuthorised": true,
-    "publicationControlTestsPassed": 38
+    "publicationControlTestsPassed": 38,
+    "hostedCISucceeded": true,
+    "hostedCIVerifiedCommit": "7011951126705e1736642f6a6c11381121760883"
   }
 }
