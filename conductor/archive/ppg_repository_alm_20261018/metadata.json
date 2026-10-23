@@ -408,5 +408,19 @@
     "nativeRunHistoriesEmpty": 18,
     "currentDocumentationBindingsSanitisedFiles": 6,
     "syntheticExceptionsValueAndNamedPathScoped": true
+  },
+  "alm04_publication_20261023": {
+    "status": "prepared_pending_required_human_content_review",
+    "sourceCommit": "18365b7293a5b0361b25604cafd4ddc562003e3c",
+    "independentCleanHistory": true,
+    "agentContentInspectionCompleted": true,
+    "humanContentReviewCompleted": false,
+    "validPublicationReceiptPresent": false,
+    "pushed": false,
+    "remoteParity": false,
+    "hostedCIPerformed": false,
+    "originalHistoryAndDirtyWorkPreserved": true,
+    "handoff": "docs/alm04-publication-20261023.md",
+    "review": "conductor/archive/ppg_repository_alm_20261018/review-publication-20261023.md"
   }
 }

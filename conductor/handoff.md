@@ -2,6 +2,14 @@
 
 Use the [ordered track map](remaining-tracks-20261021.md) and selected archived plan for exact scope. [Complete preceding handoff](handoff-before-surveillance-closeout-20261023.md) preserves dated checkpoints; [earlier history](handoff-history-20261023.md) remains retained. Historical statements do not establish current native state.
 
+## ALM-04 publication owner handoff
+
+[Prepared source and exact remaining human gate](../docs/alm04-publication-20261023.md).
+Separate clean-history copy excludes uncommitted work; local scans/tests pass.
+Human confidential-content review/attestation remains required. No push, parity or
+hosted CI; destination remains private and empty. Original history/work preserved.
+ALM-06 and other acceptance requirements remain separate.
+
 ## Latest reviewed delivery
 
 [Source surveillance](../docs/surveillance-closeout-20261023.md): all five original tasks and SV-04 delivered and reviewed. Twenty tests, nine retained evidence hashes and exact comparison/copied-snapshot recovery replay pass. No new acquisition or native write. Archived with SV-05 scheduling conditional/unperformed: useful real change/applicability and supported acquisition/recovery required. No schedule, notification or baseline advancement.

@@ -2,11 +2,11 @@
 
 ## Summary
 
-The separate committed-source publication candidate is ready for gated private publication; push, remote parity and hosted CI still require actual verification.
+The separate sanitised source is prepared and agent-reviewed; required human content review, push, remote parity and hosted CI remain unperformed.
 
 ## Verification Checks
 
-- [x] **Plan Compliance**: Yes — independent clean-history copy from `18365b7293a5b0361b25604cafd4ddc562003e3c`; original history and dirty work excluded and preserved.
+- [x] **Plan Compliance**: Partial — independent clean-history copy from `18365b7293a5b0361b25604cafd4ddc562003e3c`; original history and dirty work excluded and preserved.
 - [x] **Style Compliance**: Pass — existing source/templates and narrowly scoped documentation changes; no native writes.
 - [x] **New Tests**: No — no publication-gate implementation changed; existing negative/positive tests apply.
 - [x] **Test Coverage**: Yes for publication controls and inventory/recovery; not a claim of clinical or production acceptance.
@@ -26,7 +26,7 @@ The separate committed-source publication candidate is ready for gated private p
 - **Context**: The selected commit referenced `.careops/module.json`, which exists only as uncommitted work and must not enter this publication.
 - **Resolution**: Point to the existing inline queue and state the exclusion. Repository link checks pass.
 
-All identified findings are fixed. Content review uses tracked-file/type inventory,
+All identified preparation findings are fixed. The retained human-review gate remains open. Content review uses tracked-file/type inventory,
 complete URL/UUID/address/operational-handle inventories and contextual inspection
 of the resulting content classes, including policy-source summaries, configuration,
 synthetic examples and historical qualification documentation. It is an agent review,
@@ -39,3 +39,16 @@ The original detector policy and narrow synthetic exceptions are unchanged.
 No branch protection is claimed. Workflow configuration is present; hosted run
 results and repository enforcement will be recorded after publication. ALM-06 and
 other tracks retain their separate unresolved requirements.
+
+### High — human requirement cannot be replaced by agent receipt — held
+
+- **File**: `review-closeout-20261023.md`, Gitleaks/managed-restore follow-up.
+- **Context**: It expressly states that human review remains required. The generic
+  gate schema does not encode reviewer type; a syntactically valid agent receipt
+  would not fulfil this requirement.
+- **Resolution**: Stopped the publisher before any push, verified no remote refs,
+  invalidated the agent-only receipt and removed the default receipt file. Retained
+  unsigned exact-scope human review request privately. No gate code or policy weakened.
+- **Remaining**: Actual human confidential-content review and genuine attestation;
+  then gated push, parity and hosted CI. ALM-04 stays in progress. This is an
+  outstanding release requirement, not a failed test or ALM-06 acceptance claim.

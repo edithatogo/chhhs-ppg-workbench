@@ -6,7 +6,9 @@ The original repository, full history, local evidence and working files are reta
 No original history is rewritten or pushed. This copy has an independent Git directory.
 
 Destination: https://github.com/edithatogo/chhhs-ppg-workbench (private).
-Publication and hosted CI are pending verification; this preparation is not ALM-04 completion.
+Publication is held for the expressly required human confidential-content review.
+No push occurred; remote has no refs, so remote parity and hosted CI are unperformed.
+This preparation is not ALM-04 completion.
 
 ## Publication configuration
 
@@ -26,3 +28,30 @@ The upstream repository is separately maintained and is not first-party content.
 Detailed source, sanitisation and review evidence remain private. Scanner success
 alone does not constitute confidential-content review. This publication does not
 qualify clinical content or resolve ALM-06 release/production requirements.
+
+## Exact remaining gate and recovery
+
+The retained [ALM closeout review](../conductor/archive/ppg_repository_alm_20261018/review-closeout-20261023.md)
+expressly says “human review remains required” in its Gitleaks/managed-restore
+follow-up. The machine gate accepts a reviewer string, but that does not waive
+the recorded human requirement. The agent performed preparation/content inspection;
+no human review or attestation has occurred. The attempted publisher was stopped
+before any remote write; the destination was independently verified empty afterward.
+The agent-only receipt was invalidated and removed from the publisher's default path.
+
+A human must review all reachable history and tracked HEAD of this separate copy,
+resolve any findings, then personally complete the private receipt described in
+[publication protection](publication-protection.md). Bind it to the actual HEAD,
+tree, complete history hash, policy hash and exact destination. Do not sign a
+statement solely because tests/scanners pass. A private unsigned request records
+those fields for convenience; it is not a valid receipt. Any content/history/policy
+change requires renewed review. Run the publisher with that genuine receipt and
+`--resume`; recheck the destination's private status and contents before writing.
+Then verify remote main equals the reviewed commit and inspect actual hosted CI.
+Do not change visibility, permissions, rulesets or native objects to close this task.
+
+Local verification: 35 publication tests, 11 inventory/recovery tests, repository
+contracts and the staged/history Gitleaks gates pass. The only local materialisation
+pending items are generated workflow reading aids and the upstream submodule checkout;
+the exact gitlink remains intact. GitHub rulesets were empty at readback; no required
+checks or branch protection are claimed. ALM-06 remains separate and incomplete.
